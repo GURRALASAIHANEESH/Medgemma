@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PregnancyBridge - ASHA Field Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f2f5;
+        }
+
+        .app-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .app-header h1 {
+            font-size: 24px;
+        }
+
+        .language-selector {
+            display: flex;
+            gap: 10px;
+        }
+
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid white;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .lang-btn.active {
+            background: white;
+            color: #667eea;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 20px 80px;
+        }
+
+        .screen {
+            display: none;
+        }
+
+        .screen.active {
+            display: block;
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .screen-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .screen-header h2 {
+            font-size: 28px;
+            color: #333;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+
+        .btn-danger {
+            background: #dc3545;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #c82333;
+        }
+
+        .btn-back {
+            background: #f8f9fa;
+            color: #333;
+            border: 2px solid #ddd;
+        }
+
+        .btn-large {
+            width: 100%;
+            padding: 16px;
+            font-size: 18px;
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .patient-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .patient-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .patient-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .patient-card h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .patient-card p {
+            margin: 6px 0;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .patient-info-card {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .patient-info-card h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+            color: #333;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .info-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-item label {
+            font-weight: bold;
+            color: #666;
+            font-size: 13px;
+            margin-bottom: 4px;
+        }
+
+        .info-item span {
+            color: #333;
+            font-size: 16px;
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .form {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-section {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-section h3 {
+            margin-bottom: 16px;
+            color: #333;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #333;
+            font-size: 15px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .image-upload-area {
+            border: 3px dashed #667eea;
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            background: #f8f9ff;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-bottom: 20px;
+        }
+
+        .image-upload-area:hover {
+            background: #eef0ff;
+            border-color: #5568d3;
+        }
+
+        .image-upload-area input[type="file"] {
+            display: none;
+        }
+
+        .upload-icon {
+            font-size: 48px;
+            margin-bottom: 12px;
+        }
+
+        .upload-text {
+            font-size: 18px;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .upload-hint {
+            font-size: 14px;
+            color: #666;
+            margin-top: 8px;
+        }
+
+        .image-preview {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .preview-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .preview-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .preview-remove {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .extracted-fields {
+            display: grid;
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .field-item {
+            background: #f8f9fa;
+            padding: 16px;
+            border-radius: 8px;
+            border-left: 4px solid #6c757d;
+        }
+
+        .field-item.high-confidence {
+            border-left-color: #28a745;
+        }
+
+        .field-item.medium-confidence {
+            border-left-color: #ffc107;
+        }
+
+        .field-item.low-confidence {
+            border-left-color: #dc3545;
+        }
+
+        .field-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .field-label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .confidence-badge {
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .confidence-high {
+            background: #28a745;
+        }
+
+        .confidence-medium {
+            background: #ffc107;
+            color: #333;
+        }
+
+        .confidence-low {
+            background: #dc3545;
+        }
+
+        .field-value {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .field-value input {
+            flex: 1;
+        }
+
+        .field-raw {
+            font-size: 12px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        .action-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 24px;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
+        .action-card h3 {
+            margin-bottom: 16px;
+            font-size: 22px;
+        }
+
+        .action-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .action-card li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .action-card li:last-child {
+            border-bottom: none;
+        }
+
+        .action-card li::before {
+            content: "✓ ";
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .settings-section {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .settings-section h3 {
+            margin-bottom: 16px;
+            color: #333;
+        }
+
+        .settings-section button {
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-around;
+            padding: 12px 0;
+            z-index: 1000;
+        }
+
+        .nav-btn {
+            background: none;
+            border: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            cursor: pointer;
+            padding: 8px 20px;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .nav-btn:hover {
+            background: #f0f2f5;
+        }
+
+        .nav-btn.active {
+            background: #667eea;
+            color: white;
+        }
+
+        .nav-icon {
+            font-size: 24px;
+        }
+
+        .nav-label {
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #999;
+            font-size: 16px;
+        }
+
+        #loading-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loader {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #667eea;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .loading-content {
+            text-align: center;
+            color: white;
+        }
+
+        .loading-content p {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        #notification-container {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            z-index: 10000;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideOut {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+
+            to {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+        }
+
+        .privacy-banner {
+            background: #17a2b8;
+            color: white;
+            padding: 12px 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .patient-list {
+                grid-template-columns: 1fr;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .screen-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Loading Overlay -->
+    <div id="loading-overlay">
+        <div class="loading-content">
+            <div class="loader"></div>
+            <p id="loading-text">Loading...</p>
+        </div>
+    </div>
+
+    <!-- Notification Container -->
+    <div id="notification-container"></div>
+
+    <!-- Privacy Banner -->
+    <div class="privacy-banner">
+        🔒 Data stored locally on device • No internet required • Your privacy is protected
+    </div>
+
+    <!-- Header -->
+    <header class="app-header">
+        <h1>📋 PregnancyBridge - ASHA Field Assistant</h1>
+        <div class="language-selector">
+            <button class="lang-btn active" onclick="changeLanguage('en')">EN</button>
+            <button class="lang-btn" onclick="changeLanguage('hi')">HI</button>
+            <button class="lang-btn" onclick="changeLanguage('te')">TE</button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- PATIENTS SCREEN -->
+        <div id="patients-screen" class="screen active">
+            <div class="screen-header">
+                <h2>👥 Patients</h2>
+                <button class="btn btn-primary" onclick="showAddPatient()">+ Add Patient</button>
+            </div>
+            <div id="patient-list" class="patient-list">
+                <p class="empty-state">Loading patients...</p>
+            </div>
+        </div>
+
+        <!-- PATIENT DETAIL SCREEN -->
+        <div id="patient-detail" class="screen">
+            <div class="screen-header">
+                <button class="btn btn-back" onclick="goBack()">← Back</button>
+                <h2>Patient Details</h2>
+                <button class="btn btn-primary" onclick="startNewVisit()">📸 New Visit</button>
+            </div>
+            <div class="patient-info-card">
+                <h3 id="patient-detail-name">-</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label>Age:</label>
+                        <span id="patient-detail-age">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Phone:</label>
+                        <span id="patient-detail-phone">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>LMP Date:</label>
+                        <span id="patient-detail-lmp">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Gestational Age:</label>
+                        <span id="patient-detail-ga">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Village:</label>
+                        <span id="patient-detail-village">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Risk Level:</label>
+                        <span id="patient-detail-risk">-</span>
+                    </div>
+                </div>
+            </div>
+            <h3 style="margin-bottom: 16px;">📅 Visit Timeline</h3>
+            <div id="patient-timeline" class="timeline">
+                <p class="empty-state">No visits recorded</p>
+            </div>
+        </div>
+
+        <!-- ADD PATIENT SCREEN -->
+        <div id="add-patient" class="screen">
+            <div class="screen-header">
+                <button class="btn btn-back" onclick="goBack()">← Back</button>
+                <h2>Add New Patient</h2>
+            </div>
+            <form id="patient-form" class="form" onsubmit="saveNewPatient(event)">
+                <div class="form-group">
+                    <label>Full Name *</label>
+                    <input type="text" name="name" required placeholder="Enter patient name">
+                </div>
+                <div class="form-group">
+                    <label>Age *</label>
+                    <input type="number" name="age" min="15" max="55" required placeholder="15-55 years">
+                </div>
+                <div class="form-group">
+                    <label>Phone Number *</label>
+                    <input type="tel" name="phoneNumber" pattern="[6-9][0-9]{9}" required
+                        placeholder="10-digit mobile number">
+                </div>
+                <div class="form-group">
+                    <label>Last Menstrual Period (LMP) Date *</label>
+                    <input type="date" name="lmpDate" required>
+                </div>
+                <div class="form-group">
+                    <label>Village / Area</label>
+                    <input type="text" name="village" placeholder="Village name">
+                </div>
+                <button type="submit" class="btn btn-primary btn-large">💾 Save Patient</button>
+            </form>
+        </div>
+
+        <!-- NEW VISIT SCREEN -->
+        <div id="new-visit" class="screen">
+            <div class="screen-header">
+                <button class="btn btn-back" onclick="cancelVisit()">← Cancel</button>
+                <h2>📸 New Visit</h2>
+            </div>
+
+            <!-- STEP 1: Upload Images -->
+            <div class="form-section">
+                <h3>Step 1: Upload Lab Report Images</h3>
+                <div class="image-upload-area" onclick="document.getElementById('image-upload').click()">
+                    <div class="upload-icon">📸</div>
+                    <div class="upload-text">Click to Upload Lab Report Photos</div>
+                    <div class="upload-hint">You can upload multiple images • JPG, PNG supported</div>
+                    <input type="file" id="image-upload" accept="image/*" multiple onchange="handleImageUpload(event)">
+                </div>
+                <div id="image-preview" class="image-preview"></div>
+                <button id="compress-btn" class="btn btn-primary" onclick="compressAllImages()" disabled
+                    style="width:100%; margin-top:16px;">
+                    🗜️ Compress & Process Images
+                </button>
+                <div id="compression-result" style="margin-top:12px;"></div>
+            </div>
+
+            <!-- STEP 2: Extract Fields -->
+            <div class="form-section">
+                <h3>Step 2: Extract Medical Values</h3>
+                <button id="extract-btn" class="btn btn-secondary" onclick="extractFields()" disabled
+                    style="width:100%;">
+                    🔍 Extract Fields from Images (OCR)
+                </button>
+                <div id="extraction-confidence" style="margin-top:12px;"></div>
+                <div id="extracted-fields" class="extracted-fields"></div>
+            </div>
+
+            <!-- STEP 3: Review & Confirm -->
+            <div class="form-section">
+                <h3>Step 3: Review & Confirm Values</h3>
+                <p style="color:#666; margin-bottom:16px;">Review the extracted values below. You can edit any field if
+                    needed.</p>
+
+                <div class="form-group">
+                    <label>Blood Pressure (Systolic/Diastolic) *</label>
+                    <div style="display:flex; gap:8px;">
+                        <input type="number" id="extracted-bp-sys" placeholder="120" style="flex:1;" required>
+                        <span style="line-height:46px; font-size:20px; font-weight:bold;">/</span>
+                        <input type="number" id="extracted-bp-dia" placeholder="80" style="flex:1;" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Weight (kg) *</label>
+                    <input type="number" id="extracted-weight" placeholder="65" step="0.1" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Hemoglobin (g/dL)</label>
+                    <input type="number" id="extracted-hb" placeholder="11.5" step="0.1">
+                </div>
+
+                <div class="form-group">
+                    <label>Platelets (/µL)</label>
+                    <input type="number" id="extracted-platelets" placeholder="150000">
+                </div>
+
+                <div class="form-group">
+                    <label>Proteinuria</label>
+                    <select id="extracted-proteinuria">
+                        <option value="">Not tested</option>
+                        <option value="Negative">Negative</option>
+                        <option value="+1">+1 (Trace)</option>
+                        <option value="+2">+2 (Moderate)</option>
+                        <option value="+3">+3 (High)</option>
+                    </select>
+                </div>
+
+                <button id="confirm-btn" class="btn btn-primary btn-large" onclick="confirmVisit()" disabled>
+                    ✅ Confirm & Assess Risk with MedGemma AI
+                </button>
+            </div>
+        </div>
+
+        <!-- SETTINGS SCREEN -->
+        <div id="settings-screen" class="screen">
+            <h2 style="margin-bottom:24px;">⚙️ Settings</h2>
+
+            <div class="settings-section">
+                <h3>🎭 Demo Mode</h3>
+                <p style="color:#666; margin-bottom:16px;">Load sample patient data for demonstration</p>
+                <button class="btn btn-primary" onclick="loadDemoData()">📦 Load Demo Data (10 Patients)</button>
+                <button class="btn btn-danger" onclick="clearAllData()">🗑️ Clear All Data</button>
+            </div>
+
+            <div class="settings-section">
+                <h3>💾 Data Export</h3>
+                <p style="color:#666; margin-bottom:16px;">Export all patient records for backup or transfer</p>
+                <button class="btn btn-secondary" onclick="exportAllData()">📤 Export Database (JSON)</button>
+            </div>
+
+            <div class="settings-section">
+                <h3>🧹 Retention Policy</h3>
+                <p style="color:#666; margin-bottom:8px;"><strong>Max visits per patient:</strong> 10</p>
+                <p style="color:#666; margin-bottom:8px;"><strong>Image retention:</strong> 2 years (730 days)</p>
+                <p style="color:#666; margin-bottom:16px;"><strong>Auto-cleanup:</strong> Enabled</p>
+                <button class="btn btn-secondary" onclick="runRetentionCleanup()">🧹 Run Cleanup Now</button>
+            </div>
+
+            <div class="settings-section">
+                <h3>ℹ️ About</h3>
+                <p><strong>PregnancyBridge v1.0</strong></p>
+                <p>AI-powered maternal health risk assessment for ASHA workers</p>
+                <p>Offline-first • IndexedDB • MedGemma AI Integration</p>
+                <p style="margin-top:12px; font-size:13px; color:#999;">
+                    Competition Submission • February 9, 2026<br>
+                    Chennai, Tamil Nadu, India
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <button class="nav-btn active" onclick="navigateTo('patients-screen')">
+            <span class="nav-icon">👥</span>
+            <span class="nav-label">Patients</span>
+        </button>
+        <button class="nav-btn" onclick="navigateTo('settings-screen')">
+            <span class="nav-icon">⚙️</span>
+            <span class="nav-label">Settings</span>
+        </button>
+    </nav>
+
+    <script src="field_app.js"></script>
+</body>
+
+</html>

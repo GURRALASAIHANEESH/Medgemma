@@ -1,0 +1,41 @@
+{
+    "case_id": "CASE_008_LAB_AGED",
+    "description": "Lab report 75 days old with moderate confidence penalty",
+    "anc_card_image": null,
+    "lab_report_image": null,
+    "lab_report_json": null,
+    "lab_report_date": "2025-11-20",
+    "visits": [
+        {
+            "date": "2025-10-01",
+            "ga_weeks": 16,
+            "bp_systolic": 128,
+            "bp_diastolic": 84,
+            "hb": 10.8,
+            "proteinuria": "+1",
+            "platelets": 170000
+        },
+        {
+            "date": "2025-11-05",
+            "ga_weeks": 20,
+            "bp_systolic": 134,
+            "bp_diastolic": 86,
+            "hb": 10.5,
+            "proteinuria": "+1",
+            "platelets": 165000
+        }
+    ],
+    "symptoms": {
+        "headache": true,
+        "blurred_vision": false,
+        "fever": false,
+        "bleeding_gums": false,
+        "epigastric_pain": false
+    },
+    "expected": {
+        "risk_category": "MODERATE",
+        "referral_required": false,
+        "evidence_items_count": 2,
+        "lab_age_warning": true
+    }
+}

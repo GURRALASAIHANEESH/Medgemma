@@ -1,0 +1,62 @@
+{
+  "case_id": "case_001",
+  "type": "preeclampsia_validated",
+  "seed": 9001,
+  "patient": {
+    "age": 28,
+    "gravida": 2,
+    "para": 1
+  },
+  "visits": [
+    {
+      "visit_id": "v1",
+      "date": "2026-01-10",
+      "gestational_age": 32,
+      "weight": 68.5,
+      "bp": {
+        "systolic": 128,
+        "diastolic": 84
+      },
+      "hemoglobin": 11.2,
+      "proteinuria": "nil",
+      "fundal_height": 30,
+      "fetal_heart_rate": 142
+    },
+    {
+      "visit_id": "v2",
+      "date": "2026-02-04",
+      "gestational_age": 36,
+      "weight": 72.0,
+      "bp": {
+        "systolic": 142,
+        "diastolic": 92
+      },
+      "hemoglobin": 10.8,
+      "proteinuria": "+1",
+      "fundal_height": 34,
+      "fetal_heart_rate": 148
+    }
+  ],
+  "current_symptoms": {
+    "symptoms": {
+      "headache": true,
+      "blurred_vision": true,
+      "facial_edema": false,
+      "pedal_edema": true,
+      "dizziness": false,
+      "breathlessness": false,
+      "reduced_fetal_movement": false,
+      "abdominal_pain": false,
+      "nausea_vomiting": false
+    }
+  },
+  "missing_labs": false,
+  "language": "en",
+  "expected_keywords_for_QC": [
+    "proteinuria: +1",
+    "BP: 142/92",
+    "blurred_vision",
+    "headache"
+  ],
+  "notes": "Validated integration test case - preeclampsia"
+}

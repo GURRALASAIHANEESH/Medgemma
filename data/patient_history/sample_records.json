@@ -1,0 +1,66 @@
+{
+  "Ana_Betz": [
+    {
+      "visit_date": "2026-01-01",
+      "hemoglobin": 11.5,
+      "bp_systolic": 120,
+      "bp_diastolic": 75,
+      "gestational_age": 28,
+      "weight": 65.0,
+      "proteinuria": "negative"
+    },
+    {
+      "visit_date": "2026-01-15",
+      "hemoglobin": 10.2,
+      "bp_systolic": 135,
+      "bp_diastolic": 85,
+      "gestational_age": 30,
+      "weight": 67.5,
+      "proteinuria": "trace"
+    },
+    {
+      "visit_date": "2011-08-25",
+      "hemoglobin": 12.0,
+      "bp_systolic": null,
+      "bp_diastolic": null,
+      "gestational_age": null,
+      "weight": null,
+      "proteinuria": null,
+      "fundal_height": null,
+      "edema": null
+    },
+    {
+      "visit_date": "2026-01-18",
+      "hemoglobin": 9.8,
+      "bp_systolic": 145,
+      "bp_diastolic": 95,
+      "gestational_age": 33,
+      "weight": 69.5,
+      "proteinuria": "2+",
+      "fundal_height": 30,
+      "edema": true
+    },
+    {
+      "visit_date": "2011-08-25",
+      "hemoglobin": 12.0,
+      "bp_systolic": null,
+      "bp_diastolic": null,
+      "gestational_age": null,
+      "weight": null,
+      "proteinuria": null,
+      "fundal_height": null,
+      "edema": null
+    },
+    {
+      "visit_date": "2026-01-18",
+      "hemoglobin": 9.8,
+      "bp_systolic": 145,
+      "bp_diastolic": 95,
+      "gestational_age": 33,
+      "weight": 69.5,
+      "proteinuria": "2+",
+      "fundal_height": 30,
+      "edema": true
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "case_id": "case_035",
+  "type": "severe_htn",
+  "seed": 1269,
+  "patient": {
+    "age": 37,
+    "gravida": 1,
+    "para": 1
+  },
+  "visits": [
+    {
+      "visit_id": "v1",
+      "date": "2025-12-18",
+      "gestational_age": 34,
+      "weight": 74.43043528361817,
+      "bp": {
+        "systolic": 133,
+        "diastolic": 86
+      },
+      "hemoglobin": 10.914768174316754,
+      "proteinuria": "trace",
+      "fundal_height": 30,
+      "fetal_heart_rate": 140
+    },
+    {
+      "visit_id": "v2",
+      "date": "2025-12-30",
+      "gestational_age": 35,
+      "weight": 75.91470343139312,
+      "bp": {
+        "systolic": 165,
+        "diastolic": 113
+      },
+      "hemoglobin": 10.745734430860375,
+      "proteinuria": "+3",
+      "fundal_height": 31,
+      "fetal_heart_rate": 138
+    }
+  ],
+  "current_symptoms": {
+    "symptoms": {
+      "headache": true,
+      "blurred_vision": true,
+      "facial_edema": true,
+      "pedal_edema": true,
+      "dizziness": true,
+      "breathlessness": false,
+      "reduced_fetal_movement": false,
+      "abdominal_pain": false,
+      "nausea_vomiting": false
+    }
+  },
+  "missing_labs": false,
+  "language": "en",
+  "expected_keywords_for_QC": [
+    "BP: 165/113",
+    "proteinuria: +3"
+  ],
+  "notes": "generator: v1.2, seed=1269"
+}

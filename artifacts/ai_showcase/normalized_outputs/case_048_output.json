@@ -1,0 +1,31 @@
+{
+  "case_id": "case_048",
+  "timestamp": "2026-02-08T12:38:15.583391Z",
+  "rule_assessment": {
+    "risk_category": "MODERATE",
+    "evidence": [],
+    "primary_reason": ""
+  },
+  "ai_explanation": {
+    "source": "medgemma",
+    "text": "```\n*   The evidence points to potential fetal compromise, indicated by [evidence_summary]. This raises concern for adverse outcomes.\n*   Escalation is warranted due to the [evidence_summary], which warrants closer monitoring and potential intervention.\n*   This assessment aims to prevent complications such as [evidence_summary].\n```\n```\n*   The evidence points to potential fetal compromise, indicated by [evidence_summary]. This raises concern for adverse outcomes.\n*   Escalation is warranted due to the [evidence_summary], which warrants closer monitoring and potential intervention.\n*   This assessment aims to prevent complications such as [evidence_summary].\n```\n```\n*   The evidence points to potential fetal compromise, indicated by [evidence_summary]. This raises concern for adverse outcomes.\n*   Escalation is warranted due to the [evidence_summary], which warrants closer monitoring and potential intervention.\n*   This assessment aims to prevent complications such as [evidence_summary].\n```\n```\n*   The evidence points to potential fetal compromise, indicated by [evidence_summary]. This raises concern for adverse outcomes.\n*   Escalation is warranted due to the [evidence_summary], which warrants closer monitoring and potential intervention.\n*   This assessment aims to prevent complications such as [evidence_summary].\n```\n```\n*   The evidence points to potential fetal compromise, indicated by [evidence_summary]. This raises concern for adverse outcomes.\n*   Escalation is warranted due to the [evidence_summary], which warrants closer monitoring and potential intervention.\n*   This assessment aims to prevent complications such as [evidence_summary].\n```\n```\n*   The evidence points to potential fetal compromise, indicated by [evidence_summary]. This raises concern for adverse outcomes.\n*   Escalation is warranted due to the [evidence_summary], which warrants closer monitoring and potential intervention.\n*   This assessment aims to prevent complications such as [evidence_summary].\n```\n```\n*   The evidence points to potential fetal compromise, indicated by [evidence_summary]. This raises concern for adverse outcomes.\n*   Escalation is warranted due to the [evidence_summary], which warrants closer monitoring and potential intervention.\n*   This assessment aims to prevent complications such as [evidence_summary].\n```\n```\n*   The evidence points to potential fetal compromise, indicated by [evidence_summary]. This raises concern for adverse outcomes.\n*",
+    "qc_pass": true,
+    "confidence": null,
+    "inference_time_ms": 1623056
+  },
+  "symptoms": {
+    "visit_id": "v2",
+    "gestational_age": 30,
+    "weight": 65.28704590908887,
+    "bp": {
+      "systolic": 127,
+      "diastolic": 81
+    },
+    "hemoglobin": 8.438381522079078,
+    "proteinuria": "nil",
+    "fundal_height": 27,
+    "fetal_heart_rate": 137,
+    "notes": "Late visit - patient delayed due to transport"
+  },
+  "visits_analyzed": 2
+}

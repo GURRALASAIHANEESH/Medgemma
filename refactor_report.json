@@ -1,0 +1,399 @@
+{
+  "timestamp": "2026-02-05T09:23:44.690155",
+  "dry_run": false,
+  "moves_count": 78,
+  "errors_count": 0,
+  "moves": [
+    {
+      "source": "D:\\MedGemma\\modules\\asha_phrase_composer.py",
+      "destination": "D:\\MedGemma\\src\\pregnancy_bridge\\modules\\asha_phrase_composer.py",
+      "timestamp": "2026-02-05T09:23:44.634854"
+    },
+    {
+      "source": "D:\\MedGemma\\modules\\clinical_parser.py",
+      "destination": "D:\\MedGemma\\src\\pregnancy_bridge\\modules\\clinical_parser.py",
+      "timestamp": "2026-02-05T09:23:44.634854"
+    },
+    {
+      "source": "D:\\MedGemma\\modules\\confidence_estimator_v1.py",
+      "destination": "D:\\MedGemma\\src\\pregnancy_bridge\\deprecated\\confidence_estimator_v1.py",
+      "timestamp": "2026-02-05T09:23:44.636560"
+    },
+    {
+      "source": "D:\\MedGemma\\modules\\confidence_estimator_v2.py",
+      "destination": "D:\\MedGemma\\src\\pregnancy_bridge\\modules\\confidence_estimator_v2.py",
+      "timestamp": "2026-02-05T09:23:44.636560"
+    },
+    {
+      "source": "D:\\MedGemma\\modules\\data_loader.py",
+      "destination": "D:\\MedGemma\\src\\pregnancy_bridge\\modules\\data_loader.py",
+      "timestamp": "2026-02-05T09:23:44.637567"
+    },
+    {
+      "source": "D:\\MedGemma\\modules\\dual_explanation_generator.py",
+      "destination": "D:\\MedGemma\\src\\pregnancy_bridge\\modules\\dual_explanation_generator.py",
+      "timestamp": "2026-02-05T09:23:44.638566"
+    },
+    {
+      "source": "D:\\MedGemma\\modules\\evidence_linker.py",
+      "destination": "D:\\MedGemma\\src\\pregnancy_bridge\\modules\\evidence_linker.py",
+      "timestamp": "2026-02-05T09:23:44.638566"
+    },
+    {
+      "source": "D:\\MedGemma\\modules\\explanation_generator.py",
+      "destination": "D:\\MedGemma\\src\\pregnancy_bridge\\modules\\explanation_generator.py",
+      "timestamp": "2026-02-05T09:23:44.638566"
+    },
+    {
+      "source": "D:\\MedGemma\\modules\\history_compare.py",
+      "destination": "D:\\MedGemma\\src\\pregnancy_bridge\\modules\\history_compare.py",
+      "timestamp": "2026-02-05T09:23:44.640071"
+    },
+    {
+      "source": "D:\\MedGemma\\modules\\history_manager.py",
+      "destination": "D:\\MedGemma\\src\\pregnancy_bridge\\modules\\history_manager.py",
+      "timestamp": "2026-02-05T09:23:44.640071"
+    },
+    {
+      "source": "D:\\MedGemma\\modules\\lab_risk_analyzer.py",
+      "destination": "D:\\MedGemma\\src\\pregnancy_bridge\\modules\\lab_risk_analyzer.py",
+      "timestamp": "2026-02-05T09:23:44.640071"
+    },
+    {
+      "source": "D:\\MedGemma\\modules\\medgemma_bridge.py",
+      "destination": "D:\\MedGemma\\src\\pregnancy_bridge\\modules\\medgemma_bridge.py",
+      "timestamp": "2026-02-05T09:23:44.641632"
+    },
+    {
+      "source": "D:\\MedGemma\\modules\\medgemma_extractor.py",
+      "destination": "D:\\MedGemma\\src\\pregnancy_bridge\\modules\\medgemma_extractor.py",
+      "timestamp": "2026-02-05T09:23:44.642195"
+    },
+    {
+      "source": "D:\\MedGemma\\modules\\medgemma_model.py",
+      "destination": "D:\\MedGemma\\src\\pregnancy_bridge\\modules\\medgemma_model.py",
+      "timestamp": "2026-02-05T09:23:44.643202"
+    },
+    {
+      "source": "D:\\MedGemma\\modules\\medgemma_prompt_template.py",
+      "destination": "D:\\MedGemma\\src\\pregnancy_bridge\\modules\\medgemma_prompt_template.py",
+      "timestamp": "2026-02-05T09:23:44.643202"
+    },
+    {
+      "source": "D:\\MedGemma\\modules\\ocr_utils.py",
+      "destination": "D:\\MedGemma\\src\\pregnancy_bridge\\modules\\ocr_utils.py",
+      "timestamp": "2026-02-05T09:23:44.643202"
+    },
+    {
+      "source": "D:\\MedGemma\\modules\\provenance_tracker.py",
+      "destination": "D:\\MedGemma\\src\\pregnancy_bridge\\modules\\provenance_tracker.py",
+      "timestamp": "2026-02-05T09:23:44.644771"
+    },
+    {
+      "source": "D:\\MedGemma\\modules\\risk_engine.py",
+      "destination": "D:\\MedGemma\\src\\pregnancy_bridge\\modules\\risk_engine.py",
+      "timestamp": "2026-02-05T09:23:44.646669"
+    },
+    {
+      "source": "D:\\MedGemma\\modules\\summary_writer.py",
+      "destination": "D:\\MedGemma\\src\\pregnancy_bridge\\modules\\summary_writer.py",
+      "timestamp": "2026-02-05T09:23:44.647674"
+    },
+    {
+      "source": "D:\\MedGemma\\modules\\symptom_intake.py",
+      "destination": "D:\\MedGemma\\src\\pregnancy_bridge\\modules\\symptom_intake.py",
+      "timestamp": "2026-02-05T09:23:44.647674"
+    },
+    {
+      "source": "D:\\MedGemma\\modules\\symptom_risk_engine.py",
+      "destination": "D:\\MedGemma\\src\\pregnancy_bridge\\modules\\symptom_risk_engine.py",
+      "timestamp": "2026-02-05T09:23:44.648680"
+    },
+    {
+      "source": "D:\\MedGemma\\modules\\temporal_highlight.py",
+      "destination": "D:\\MedGemma\\src\\pregnancy_bridge\\modules\\temporal_highlight.py",
+      "timestamp": "2026-02-05T09:23:44.649184"
+    },
+    {
+      "source": "D:\\MedGemma\\modules\\temporal_risk_engine.py",
+      "destination": "D:\\MedGemma\\src\\pregnancy_bridge\\modules\\temporal_risk_engine.py",
+      "timestamp": "2026-02-05T09:23:44.649184"
+    },
+    {
+      "source": "D:\\MedGemma\\modules\\translation_engine.py",
+      "destination": "D:\\MedGemma\\src\\pregnancy_bridge\\modules\\translation_engine.py",
+      "timestamp": "2026-02-05T09:23:44.650189"
+    },
+    {
+      "source": "D:\\MedGemma\\modules\\__init__.py",
+      "destination": "D:\\MedGemma\\src\\pregnancy_bridge\\modules\\__init__.py",
+      "timestamp": "2026-02-05T09:23:44.650189"
+    },
+    {
+      "source": "D:\\MedGemma\\data\\asha_phrase_library.json",
+      "destination": "D:\\MedGemma\\data\\i18n\\asha_phrase_library.json",
+      "timestamp": "2026-02-05T09:23:44.651190"
+    },
+    {
+      "source": "D:\\MedGemma\\data\\record_Ana_Betz_20260118_180915.json",
+      "destination": "D:\\MedGemma\\data\\patient_history\\record_Ana_Betz_20260118_180915.json",
+      "timestamp": "2026-02-05T09:23:44.652695"
+    },
+    {
+      "source": "D:\\MedGemma\\data\\record_Ana_Betz_20260118_180936.json",
+      "destination": "D:\\MedGemma\\data\\patient_history\\record_Ana_Betz_20260118_180936.json",
+      "timestamp": "2026-02-05T09:23:44.652695"
+    },
+    {
+      "source": "D:\\MedGemma\\data\\record_Ana_Betz_20260118_181853.json",
+      "destination": "D:\\MedGemma\\data\\patient_history\\record_Ana_Betz_20260118_181853.json",
+      "timestamp": "2026-02-05T09:23:44.652695"
+    },
+    {
+      "source": "D:\\MedGemma\\data\\record_Ana_Betz_20260118_181911.json",
+      "destination": "D:\\MedGemma\\data\\patient_history\\record_Ana_Betz_20260118_181911.json",
+      "timestamp": "2026-02-05T09:23:44.654375"
+    },
+    {
+      "source": "D:\\MedGemma\\data\\record_Ana_Betz_20260118_182130.json",
+      "destination": "D:\\MedGemma\\data\\patient_history\\record_Ana_Betz_20260118_182130.json",
+      "timestamp": "2026-02-05T09:23:44.654375"
+    },
+    {
+      "source": "D:\\MedGemma\\data\\record_Ana_Betz_20260119_115537.json",
+      "destination": "D:\\MedGemma\\data\\patient_history\\record_Ana_Betz_20260119_115537.json",
+      "timestamp": "2026-02-05T09:23:44.655946"
+    },
+    {
+      "source": "D:\\MedGemma\\data\\record_Ana_Betz_20260120_104010.json",
+      "destination": "D:\\MedGemma\\data\\patient_history\\record_Ana_Betz_20260120_104010.json",
+      "timestamp": "2026-02-05T09:23:44.656508"
+    },
+    {
+      "source": "D:\\MedGemma\\data\\sample_records.json",
+      "destination": "D:\\MedGemma\\data\\patient_history\\sample_records.json",
+      "timestamp": "2026-02-05T09:23:44.656508"
+    },
+    {
+      "source": "D:\\MedGemma\\images\\simple_test.png",
+      "destination": "D:\\MedGemma\\data\\images\\simple_test.png",
+      "timestamp": "2026-02-05T09:23:44.658034"
+    },
+    {
+      "source": "D:\\MedGemma\\images\\test_card.png",
+      "destination": "D:\\MedGemma\\data\\images\\test_card.png",
+      "timestamp": "2026-02-05T09:23:44.658591"
+    },
+    {
+      "source": "D:\\MedGemma\\images\\ultrasound_20weeks.jpg",
+      "destination": "D:\\MedGemma\\data\\images\\ultrasound_20weeks.jpg",
+      "timestamp": "2026-02-05T09:23:44.658591"
+    },
+    {
+      "source": "D:\\MedGemma\\test_real_data\\test1.png",
+      "destination": "D:\\MedGemma\\data\\images\\test1.png",
+      "timestamp": "2026-02-05T09:23:44.659596"
+    },
+    {
+      "source": "D:\\MedGemma\\test_real_data\\test_card.png",
+      "destination": "D:\\MedGemma\\data\\images\\test_card.png",
+      "timestamp": "2026-02-05T09:23:44.659596"
+    },
+    {
+      "source": "D:\\MedGemma\\test_clinical_reasoning.py",
+      "destination": "D:\\MedGemma\\tests\\integration\\test_clinical_reasoning.py",
+      "timestamp": "2026-02-05T09:23:44.660597"
+    },
+    {
+      "source": "D:\\MedGemma\\test_symptom_escalation.py",
+      "destination": "D:\\MedGemma\\tests\\integration\\test_symptom_escalation.py",
+      "timestamp": "2026-02-05T09:23:44.661736"
+    },
+    {
+      "source": "D:\\MedGemma\\test_real_world.py",
+      "destination": "D:\\MedGemma\\tests\\integration\\test_real_world.py",
+      "timestamp": "2026-02-05T09:23:44.662736"
+    },
+    {
+      "source": "D:\\MedGemma\\ocr_test.py",
+      "destination": "D:\\MedGemma\\tests\\integration\\test_ocr.py",
+      "timestamp": "2026-02-05T09:23:44.663243"
+    },
+    {
+      "source": "D:\\MedGemma\\test\\test_medgemma_extraction.py",
+      "destination": "D:\\MedGemma\\tests\\integration\\test_medgemma_extraction.py",
+      "timestamp": "2026-02-05T09:23:44.665101"
+    },
+    {
+      "source": "D:\\MedGemma\\test\\test_model.py",
+      "destination": "D:\\MedGemma\\tests\\integration\\test_model.py",
+      "timestamp": "2026-02-05T09:23:44.665101"
+    },
+    {
+      "source": "D:\\MedGemma\\competition_pipeline.py",
+      "destination": "D:\\MedGemma\\scripts\\competition_pipeline.py",
+      "timestamp": "2026-02-05T09:23:44.666107"
+    },
+    {
+      "source": "D:\\MedGemma\\competition_pipeline_v2.py",
+      "destination": "D:\\MedGemma\\scripts\\competition_pipeline_v2.py",
+      "timestamp": "2026-02-05T09:23:44.667107"
+    },
+    {
+      "source": "D:\\MedGemma\\demo_pregnancy_bridge.py",
+      "destination": "D:\\MedGemma\\scripts\\demo_pregnancy_bridge.py",
+      "timestamp": "2026-02-05T09:23:44.667107"
+    },
+    {
+      "source": "D:\\MedGemma\\run_full_validation.py",
+      "destination": "D:\\MedGemma\\scripts\\run_full_validation.py",
+      "timestamp": "2026-02-05T09:23:44.667107"
+    },
+    {
+      "source": "D:\\MedGemma\\run_full_validation_v2.py",
+      "destination": "D:\\MedGemma\\scripts\\run_full_validation_v2.py",
+      "timestamp": "2026-02-05T09:23:44.667107"
+    },
+    {
+      "source": "D:\\MedGemma\\quickload.py",
+      "destination": "D:\\MedGemma\\scripts\\quickload.py",
+      "timestamp": "2026-02-05T09:23:44.669396"
+    },
+    {
+      "source": "D:\\MedGemma\\fix_medgemma_download.py",
+      "destination": "D:\\MedGemma\\scripts\\fix_medgemma_download.py",
+      "timestamp": "2026-02-05T09:23:44.669396"
+    },
+    {
+      "source": "D:\\MedGemma\\config_medgemma.py",
+      "destination": "D:\\MedGemma\\scripts\\config_medgemma.py",
+      "timestamp": "2026-02-05T09:23:44.670407"
+    },
+    {
+      "source": "D:\\MedGemma\\test_ultrasound_vision.py",
+      "destination": "D:\\MedGemma\\scripts\\test_ultrasound_vision.py",
+      "timestamp": "2026-02-05T09:23:44.670407"
+    },
+    {
+      "source": "D:\\MedGemma\\process_image_now.py",
+      "destination": "D:\\MedGemma\\scripts\\process_image_now.py",
+      "timestamp": "2026-02-05T09:23:44.670407"
+    },
+    {
+      "source": "D:\\MedGemma\\test_real_world.py",
+      "destination": "D:\\MedGemma\\scripts\\test_real_world.py",
+      "timestamp": "2026-02-05T09:23:44.672541"
+    },
+    {
+      "source": "D:\\MedGemma\\REAL_RESULT.json",
+      "destination": "D:\\MedGemma\\outputs\\validation\\REAL_RESULT.json",
+      "timestamp": "2026-02-05T09:23:44.673547"
+    },
+    {
+      "source": "D:\\MedGemma\\SIMPLE_RESULT.json",
+      "destination": "D:\\MedGemma\\outputs\\validation\\SIMPLE_RESULT.json",
+      "timestamp": "2026-02-05T09:23:44.673547"
+    },
+    {
+      "source": "D:\\MedGemma\\test_card_results.json",
+      "destination": "D:\\MedGemma\\outputs\\validation\\test_card_results.json",
+      "timestamp": "2026-02-05T09:23:44.674545"
+    },
+    {
+      "source": "D:\\MedGemma\\test_results_20260204_102613.json",
+      "destination": "D:\\MedGemma\\outputs\\validation\\test_results_20260204_102613.json",
+      "timestamp": "2026-02-05T09:23:44.675050"
+    },
+    {
+      "source": "D:\\MedGemma\\test_results_20260204_105328.json",
+      "destination": "D:\\MedGemma\\outputs\\validation\\test_results_20260204_105328.json",
+      "timestamp": "2026-02-05T09:23:44.676056"
+    },
+    {
+      "source": "D:\\MedGemma\\validation_results_v2_20260205_090558.json",
+      "destination": "D:\\MedGemma\\outputs\\validation\\validation_results_v2_20260205_090558.json",
+      "timestamp": "2026-02-05T09:23:44.676597"
+    },
+    {
+      "source": "D:\\MedGemma\\test_results_20260204_102613.json",
+      "destination": "D:\\MedGemma\\outputs\\validation\\test_results_20260204_102613.json",
+      "timestamp": "2026-02-05T09:23:44.677604"
+    },
+    {
+      "source": "D:\\MedGemma\\test_results_20260204_105328.json",
+      "destination": "D:\\MedGemma\\outputs\\validation\\test_results_20260204_105328.json",
+      "timestamp": "2026-02-05T09:23:44.678904"
+    },
+    {
+      "source": "D:\\MedGemma\\competition_all_cases_20260204_115609.json",
+      "destination": "D:\\MedGemma\\outputs\\validation\\competition_all_cases_20260204_115609.json",
+      "timestamp": "2026-02-05T09:23:44.680912"
+    },
+    {
+      "source": "D:\\MedGemma\\competition_case_1_platelet_drop_+_proteinuria_(hellp_risk).json",
+      "destination": "D:\\MedGemma\\outputs\\validation\\competition_case_1_platelet_drop_+_proteinuria_(hellp_risk).json",
+      "timestamp": "2026-02-05T09:23:44.680912"
+    },
+    {
+      "source": "D:\\MedGemma\\competition_case_2_progressive_anemia_+_respiratory_symptoms.json",
+      "destination": "D:\\MedGemma\\outputs\\validation\\competition_case_2_progressive_anemia_+_respiratory_symptoms.json",
+      "timestamp": "2026-02-05T09:23:44.682115"
+    },
+    {
+      "source": "D:\\MedGemma\\competition_case_3_multi-lab_abnormality_+_infection_symptoms.json",
+      "destination": "D:\\MedGemma\\outputs\\validation\\competition_case_3_multi-lab_abnormality_+_infection_symptoms.json",
+      "timestamp": "2026-02-05T09:23:44.683626"
+    },
+    {
+      "source": "D:\\MedGemma\\competition_case_4_progressive_bp_+_neurological_symptoms.json",
+      "destination": "D:\\MedGemma\\outputs\\validation\\competition_case_4_progressive_bp_+_neurological_symptoms.json",
+      "timestamp": "2026-02-05T09:23:44.684636"
+    },
+    {
+      "source": "D:\\MedGemma\\summaries\\referral_Ana_Betz_20260118_180915.txt",
+      "destination": "D:\\MedGemma\\outputs\\summaries\\referral_Ana_Betz_20260118_180915.txt",
+      "timestamp": "2026-02-05T09:23:44.685145"
+    },
+    {
+      "source": "D:\\MedGemma\\summaries\\referral_Ana_Betz_20260118_180936.txt",
+      "destination": "D:\\MedGemma\\outputs\\summaries\\referral_Ana_Betz_20260118_180936.txt",
+      "timestamp": "2026-02-05T09:23:44.686150"
+    },
+    {
+      "source": "D:\\MedGemma\\summaries\\referral_Ana_Betz_20260118_181853.txt",
+      "destination": "D:\\MedGemma\\outputs\\summaries\\referral_Ana_Betz_20260118_181853.txt",
+      "timestamp": "2026-02-05T09:23:44.686150"
+    },
+    {
+      "source": "D:\\MedGemma\\summaries\\referral_Ana_Betz_20260118_181911.txt",
+      "destination": "D:\\MedGemma\\outputs\\summaries\\referral_Ana_Betz_20260118_181911.txt",
+      "timestamp": "2026-02-05T09:23:44.687162"
+    },
+    {
+      "source": "D:\\MedGemma\\summaries\\referral_Ana_Betz_20260118_182130.txt",
+      "destination": "D:\\MedGemma\\outputs\\summaries\\referral_Ana_Betz_20260118_182130.txt",
+      "timestamp": "2026-02-05T09:23:44.688155"
+    },
+    {
+      "source": "D:\\MedGemma\\summaries\\referral_Ana_Betz_20260119_115537.txt",
+      "destination": "D:\\MedGemma\\outputs\\summaries\\referral_Ana_Betz_20260119_115537.txt",
+      "timestamp": "2026-02-05T09:23:44.689155"
+    },
+    {
+      "source": "D:\\MedGemma\\summaries\\referral_Ana_Betz_20260120_104010.txt",
+      "destination": "D:\\MedGemma\\outputs\\summaries\\referral_Ana_Betz_20260120_104010.txt",
+      "timestamp": "2026-02-05T09:23:44.689155"
+    },
+    {
+      "source": "D:\\MedGemma\\summaries\\referral_PAC001_20260121_124840.txt",
+      "destination": "D:\\MedGemma\\outputs\\summaries\\referral_PAC001_20260121_124840.txt",
+      "timestamp": "2026-02-05T09:23:44.690155"
+    },
+    {
+      "source": "D:\\MedGemma\\config_medgemma.py",
+      "destination": "D:\\MedGemma\\src\\pregnancy_bridge\\config\\config_medgemma.py",
+      "timestamp": "2026-02-05T09:23:44.690155"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,16 @@
+{
+    "extraction_timestamp": "2026-02-09T08:35:12Z",
+    "patient_id": "DEMO_006",
+    "visit_id": "VISIT_006_001",
+    "ocr_engine": "Tesseract + Custom Rules",
+    "confidence_score": 0.92,
+    "extracted_data": {
+        "blood_pressure_systolic": "128",
+        "blood_pressure_diastolic": "84",
+        "blood_pressure_combined": "128/84",
+        "weight_kg": "65",
+        "hemoglobin_g_dl": "11.2",
+        "proteinuria": "Negative",
+        "glucose": "Normal"
+    }
+}

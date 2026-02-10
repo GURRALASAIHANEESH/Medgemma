@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-02-08T12:11:12.524426Z",
+  "case_id": "case_048",
+  "evidence_summary": [],
+  "rule_reason": "",
+  "risk_category": "MODERATE",
+  "symptoms": {
+    "visit_id": "v2",
+    "gestational_age": 30,
+    "weight": 65.28704590908887,
+    "bp": {
+      "systolic": 127,
+      "diastolic": 81
+    },
+    "hemoglobin": 8.438381522079078,
+    "proteinuria": "nil",
+    "fundal_height": 27,
+    "fetal_heart_rate": 137,
+    "notes": "Late visit - patient delayed due to transport"
+  },
+  "lab_age_days": 0
+}

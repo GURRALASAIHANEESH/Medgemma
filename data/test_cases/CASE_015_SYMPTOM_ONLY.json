@@ -1,0 +1,42 @@
+{
+    "case_id": "CASE_015_SYMPTOM_ONLY",
+    "description": "No lab changes but severe symptoms indicating preeclampsia",
+    "anc_card_image": null,
+    "lab_report_image": null,
+    "lab_report_json": null,
+    "lab_report_date": "2026-02-02",
+    "visits": [
+        {
+            "date": "2025-11-25",
+            "ga_weeks": 24,
+            "bp_systolic": 125,
+            "bp_diastolic": 82,
+            "hb": 11.5,
+            "proteinuria": "nil",
+            "platelets": 200000
+        },
+        {
+            "date": "2026-01-08",
+            "ga_weeks": 28,
+            "bp_systolic": 128,
+            "bp_diastolic": 84,
+            "hb": 11.4,
+            "proteinuria": "trace",
+            "platelets": 198000
+        }
+    ],
+    "symptoms": {
+        "headache": true,
+        "blurred_vision": true,
+        "fever": false,
+        "bleeding_gums": false,
+        "epigastric_pain": true,
+        "edema": true
+    },
+    "expected": {
+        "risk_category": "HIGH",
+        "referral_required": true,
+        "evidence_items_count": 1,
+        "lab_age_warning": false
+    }
+}

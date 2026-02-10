@@ -1,0 +1,64 @@
+{
+  "case_id": "case_047",
+  "type": "edge_bilingual",
+  "seed": 1281,
+  "patient": {
+    "age": 28,
+    "gravida": 2,
+    "para": 2
+  },
+  "visits": [
+    {
+      "visit_id": "v1",
+      "date": "2025-10-15",
+      "gestational_age": 29,
+      "weight": 69.68731139139203,
+      "bp": {
+        "systolic": 132,
+        "diastolic": 81
+      },
+      "hemoglobin": 10.847548383631691,
+      "proteinuria": "trace",
+      "platelets_k_ul": 227,
+      "fundal_height": 28,
+      "fetal_heart_rate": 139
+    },
+    {
+      "visit_id": "v2",
+      "date": "2025-11-05",
+      "gestational_age": 31,
+      "weight": 71.52804401436424,
+      "bp": {
+        "systolic": 143,
+        "diastolic": 93
+      },
+      "hemoglobin": 10.154234805854179,
+      "proteinuria": "+1",
+      "platelets_k_ul": 191,
+      "fundal_height": 30,
+      "fetal_heart_rate": 147,
+      "notes": "सिरदर्द और धुंधली दृष्टि (headache and blurred vision)"
+    }
+  ],
+  "current_symptoms": {
+    "symptoms": {
+      "headache": false,
+      "blurred_vision": false,
+      "facial_edema": true,
+      "pedal_edema": true,
+      "dizziness": false,
+      "breathlessness": false,
+      "reduced_fetal_movement": false,
+      "abdominal_pain": true,
+      "nausea_vomiting": false
+    }
+  },
+  "missing_labs": false,
+  "language": "hi",
+  "expected_keywords_for_QC": [
+    "proteinuria: +1",
+    "platelets: 191",
+    "BP: 143/93"
+  ],
+  "notes": "generator: v1.2, seed=1281"
+}

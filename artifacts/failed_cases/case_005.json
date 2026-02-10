@@ -1,0 +1,150 @@
+{
+  "case_id": "case_005",
+  "provenance": {
+    "timestamp_utc": "2026-02-07T10:36:17.779518Z",
+    "risk_authority": "rule_engine",
+    "explanation_source": "medgemma",
+    "model_snapshot": "medgemma-1.5-4b-it",
+    "recommendation_source": null,
+    "system_version": "1.0.0",
+    "pipeline": "full_validation"
+  },
+  "input_case": {
+    "visits": [
+      {
+        "visit_id": "v1",
+        "date": "2026-01-18",
+        "gestational_age": 26,
+        "weight": 64.0,
+        "bp": {
+          "systolic": 125,
+          "diastolic": 80
+        },
+        "hemoglobin": 10.5,
+        "proteinuria": "trace",
+        "fundal_height": 24,
+        "fetal_heart_rate": 142
+      },
+      {
+        "visit_id": "v2",
+        "date": "2026-02-03",
+        "gestational_age": 29,
+        "weight": 66.0,
+        "bp": {
+          "systolic": 138,
+          "diastolic": 88
+        },
+        "hemoglobin": 10.2,
+        "proteinuria": "+1",
+        "fundal_height": 27,
+        "fetal_heart_rate": 144,
+        "symptoms": {
+          "visit_id": "V002",
+          "timestamp": "2026-02-07T15:55:18.973718",
+          "raw_symptoms": {
+            "headache": false,
+            "blurred_vision": false,
+            "facial_edema": false,
+            "pedal_edema": true,
+            "dizziness": false,
+            "breathlessness": false,
+            "reduced_fetal_movement": false,
+            "abdominal_pain": false,
+            "nausea_vomiting": false
+          },
+          "present_symptoms": [
+            "pedal_edema"
+          ],
+          "symptom_count": 1,
+          "categories": {
+            "neurological": [],
+            "edema": [
+              "pedal_edema"
+            ],
+            "respiratory": [],
+            "fetal_concern": [],
+            "gi": []
+          },
+          "has_neurological": false,
+          "has_edema": true,
+          "has_respiratory": false,
+          "has_fetal_concern": false,
+          "has_gi": false,
+          "multiple_categories": false,
+          "category_count": 1
+        }
+      }
+    ],
+    "symptom_record": {
+      "visit_id": "V002",
+      "timestamp": "2026-02-07T15:55:18.973718",
+      "raw_symptoms": {
+        "headache": false,
+        "blurred_vision": false,
+        "facial_edema": false,
+        "pedal_edema": true,
+        "dizziness": false,
+        "breathlessness": false,
+        "reduced_fetal_movement": false,
+        "abdominal_pain": false,
+        "nausea_vomiting": false
+      },
+      "present_symptoms": [
+        "pedal_edema"
+      ],
+      "symptom_count": 1,
+      "categories": {
+        "neurological": [],
+        "edema": [
+          "pedal_edema"
+        ],
+        "respiratory": [],
+        "fetal_concern": [],
+        "gi": []
+      },
+      "has_neurological": false,
+      "has_edema": true,
+      "has_respiratory": false,
+      "has_fetal_concern": false,
+      "has_gi": false,
+      "multiple_categories": false,
+      "category_count": 1
+    }
+  },
+  "rule_result": {
+    "risk_category": "MODERATE",
+    "referral_required": false,
+    "trigger_reason": "Persistent proteinuria: +1 (2+ visits) with edema (pedal_edema)",
+    "trigger_visit": 1,
+    "component_risks": {
+      "blood_pressure": {
+        "risk": "LOW",
+        "reason": null,
+        "visit": null
+      },
+      "anemia": {
+        "risk": "LOW",
+        "reason": null,
+        "visit": null
+      },
+      "proteinuria": {
+        "risk": "MODERATE",
+        "reason": "Persistent proteinuria: +1 (2+ visits)",
+        "visit": 1
+      }
+    }
+  },
+  "evidence_summary": [
+    "proteinuria: Persistent proteinuria: +1 (2+ visits)",
+    "Persistent proteinuria: +1 (2+ visits) with edema (pedal_edema)"
+  ],
+  "ai_outputs": {
+    "explanation": {
+      "explanation_text": "---\n**1. Why the evidence matters clinically:**\nPersistent proteinuria, especially when accompanied by edema, is a significant indicator of kidney damage and potential progression to chronic kidney disease (CKD). It suggests impaired glomerular filtration and increased protein leakage into the urine, which can lead to fluid retention and electrolyte imbalances.\n\n**2. Why escalation occurred now:**\nThe combination of persistent proteinuria (+1) and pedal edema (2+ visits) represents a significant clinical concern. The presence of edema suggests fluid overload, potentially related to the underlying kidney disease or its complications. Escalation is warranted to further investigate",
+      "explanation_qc_pass": true,
+      "explanation_source": "medgemma",
+      "model_snapshot": "medgemma-1.5-4b-it"
+    },
+    "recommendations": []
+  }
+}

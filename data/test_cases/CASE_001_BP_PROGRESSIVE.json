@@ -1,0 +1,50 @@
+{
+    "case_id": "CASE_001_BP_PROGRESSIVE",
+    "description": "Progressive BP elevation across 3 ANC visits with headache",
+    "anc_card_image": null,
+    "lab_report_image": null,
+    "lab_report_json": null,
+    "lab_report_date": "2026-01-28",
+    "visits": [
+        {
+            "date": "2025-11-01",
+            "ga_weeks": 20,
+            "bp_systolic": 120,
+            "bp_diastolic": 80,
+            "hb": 11.8,
+            "proteinuria": "trace",
+            "platelets": 180000
+        },
+        {
+            "date": "2025-12-05",
+            "ga_weeks": 24,
+            "bp_systolic": 136,
+            "bp_diastolic": 88,
+            "hb": 10.6,
+            "proteinuria": "+1",
+            "platelets": 175000
+        },
+        {
+            "date": "2026-01-10",
+            "ga_weeks": 28,
+            "bp_systolic": 150,
+            "bp_diastolic": 95,
+            "hb": 10.1,
+            "proteinuria": "+2",
+            "platelets": 170000
+        }
+    ],
+    "symptoms": {
+        "headache": true,
+        "blurred_vision": false,
+        "fever": false,
+        "bleeding_gums": false,
+        "epigastric_pain": false
+    },
+    "expected": {
+        "risk_category": "HIGH",
+        "referral_required": true,
+        "evidence_items_count": 3,
+        "lab_age_warning": false
+    }
+}

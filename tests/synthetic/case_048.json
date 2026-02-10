@@ -1,0 +1,61 @@
+{
+  "case_id": "case_048",
+  "type": "edge_late_visit",
+  "seed": 1282,
+  "patient": {
+    "age": 29,
+    "gravida": 2,
+    "para": 2
+  },
+  "visits": [
+    {
+      "visit_id": "v1",
+      "date": "2025-10-13",
+      "gestational_age": 27,
+      "weight": 63.6763362975801,
+      "bp": {
+        "systolic": 115,
+        "diastolic": 77
+      },
+      "hemoglobin": 9.722916728228876,
+      "proteinuria": "nil",
+      "fundal_height": 24,
+      "fetal_heart_rate": 144
+    },
+    {
+      "visit_id": "v2",
+      "date": "2025-11-10",
+      "gestational_age": 30,
+      "weight": 65.28704590908887,
+      "bp": {
+        "systolic": 127,
+        "diastolic": 81
+      },
+      "hemoglobin": 8.438381522079078,
+      "proteinuria": "nil",
+      "fundal_height": 27,
+      "fetal_heart_rate": 137,
+      "notes": "Late visit - patient delayed due to transport"
+    }
+  ],
+  "current_symptoms": {
+    "symptoms": {
+      "headache": false,
+      "blurred_vision": false,
+      "facial_edema": false,
+      "pedal_edema": false,
+      "dizziness": true,
+      "breathlessness": false,
+      "reduced_fetal_movement": false,
+      "abdominal_pain": false,
+      "nausea_vomiting": false
+    }
+  },
+  "missing_labs": false,
+  "language": "en",
+  "expected_keywords_for_QC": [
+    "hemoglobin: 8.4",
+    "Hb 8.4"
+  ],
+  "notes": "generator: v1.2, seed=1282, severity=moderate"
+}

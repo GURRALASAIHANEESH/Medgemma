@@ -1,0 +1,41 @@
+{
+    "case_id": "CASE_006_LAB_FRESH",
+    "description": "Fresh lab report (3 days old) with moderate BP elevation",
+    "anc_card_image": null,
+    "lab_report_image": null,
+    "lab_report_json": null,
+    "lab_report_date": "2026-02-02",
+    "visits": [
+        {
+            "date": "2025-12-01",
+            "ga_weeks": 20,
+            "bp_systolic": 122,
+            "bp_diastolic": 80,
+            "hb": 11.0,
+            "proteinuria": "trace",
+            "platelets": 180000
+        },
+        {
+            "date": "2026-01-05",
+            "ga_weeks": 24,
+            "bp_systolic": 138,
+            "bp_diastolic": 88,
+            "hb": 10.8,
+            "proteinuria": "+1",
+            "platelets": 175000
+        }
+    ],
+    "symptoms": {
+        "headache": true,
+        "blurred_vision": false,
+        "fever": false,
+        "bleeding_gums": false,
+        "epigastric_pain": false
+    },
+    "expected": {
+        "risk_category": "MODERATE",
+        "referral_required": false,
+        "evidence_items_count": 2,
+        "lab_age_warning": false
+    }
+}

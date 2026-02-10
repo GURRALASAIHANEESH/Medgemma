@@ -1,0 +1,15 @@
+{
+    "patient_id": "DEMO_006",
+    "normalized_vitals": {
+        "systolic_bp": 128,
+        "diastolic_bp": 84,
+        "weight_kg": 65.0,
+        "hemoglobin_g_dl": 11.2,
+        "gestational_age_weeks": 22
+    },
+    "clinical_flags": {
+        "hypertension_detected": false,
+        "anemia_detected": true,
+        "underweight": false
+    }
+}

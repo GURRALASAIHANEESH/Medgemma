@@ -1,0 +1,29 @@
+{
+  "patient_id": "PAC001",
+  "visits": [
+    {
+      "visit_date": "2026-01-20",
+      "hemoglobin": 12.0,
+      "bp_systolic": null,
+      "bp_diastolic": null,
+      "gestational_age": null,
+      "proteinuria": null,
+      "weight": null,
+      "fundal_height": null,
+      "edema": null,
+      "timestamp": "2026-01-20T11:44:22.931893"
+    },
+    {
+      "visit_date": "2026-01-20",
+      "hemoglobin": 12.0,
+      "bp_systolic": null,
+      "bp_diastolic": null,
+      "gestational_age": null,
+      "proteinuria": null,
+      "weight": null,
+      "fundal_height": null,
+      "edema": null,
+      "timestamp": "2026-01-20T11:53:56.765097"
+    }
+  ]
+}

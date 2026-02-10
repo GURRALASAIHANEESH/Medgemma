@@ -1,0 +1,62 @@
+{
+  "case_id": "case_019",
+  "type": "platelet_decline",
+  "seed": 1253,
+  "patient": {
+    "age": 33,
+    "gravida": 3,
+    "para": 3
+  },
+  "visits": [
+    {
+      "visit_id": "v1",
+      "date": "2025-10-31",
+      "gestational_age": 31,
+      "weight": 70.40318662986955,
+      "bp": {
+        "systolic": 133,
+        "diastolic": 80
+      },
+      "hemoglobin": 11.674281495472888,
+      "proteinuria": "nil",
+      "platelets_k_ul": 200,
+      "fundal_height": 29,
+      "fetal_heart_rate": 139
+    },
+    {
+      "visit_id": "v2",
+      "date": "2025-11-14",
+      "gestational_age": 33,
+      "weight": 72.09134199493464,
+      "bp": {
+        "systolic": 147,
+        "diastolic": 88
+      },
+      "hemoglobin": 11.55888613366455,
+      "proteinuria": "+2",
+      "fundal_height": 31,
+      "fetal_heart_rate": 144,
+      "platelets_k_ul": 147
+    }
+  ],
+  "current_symptoms": {
+    "symptoms": {
+      "headache": true,
+      "blurred_vision": false,
+      "facial_edema": false,
+      "pedal_edema": false,
+      "dizziness": false,
+      "breathlessness": false,
+      "reduced_fetal_movement": false,
+      "abdominal_pain": true,
+      "nausea_vomiting": false
+    }
+  },
+  "missing_labs": false,
+  "language": "en",
+  "expected_keywords_for_QC": [
+    "platelets: 147",
+    "proteinuria: +2"
+  ],
+  "notes": "generator: v1.2, seed=1253, missing_latest=False"
+}

@@ -1,0 +1,14 @@
+{
+    "patient_id": "DEMO_006",
+    "final_output": {
+        "risk_level": "Medium",
+        "risk_score": 0.62,
+        "recommendations": [
+            "Monitor blood pressure weekly",
+            "Continue iron supplementation",
+            "Follow-up in 2 weeks"
+        ],
+        "escalation_required": false
+    },
+    "total_processing_time_seconds": 1588.67
+}

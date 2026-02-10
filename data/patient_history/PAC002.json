@@ -1,0 +1,77 @@
+{
+  "patient_id": "PAC002",
+  "visits": [
+    {
+      "visit_date": "2026-01-01",
+      "hemoglobin": 11.5,
+      "bp_systolic": 130,
+      "bp_diastolic": 80,
+      "gestational_age": 28,
+      "proteinuria": "negative",
+      "weight": null,
+      "fundal_height": null,
+      "edema": null,
+      "timestamp": "2026-01-18T18:21:30.092044"
+    },
+    {
+      "visit_date": "2026-01-08",
+      "hemoglobin": 10.2,
+      "bp_systolic": 140,
+      "bp_diastolic": 88,
+      "gestational_age": 30,
+      "proteinuria": "trace",
+      "weight": null,
+      "fundal_height": null,
+      "edema": null,
+      "timestamp": "2026-01-18T18:21:30.106033"
+    },
+    {
+      "visit_date": "2026-01-01",
+      "hemoglobin": 11.5,
+      "bp_systolic": 130,
+      "bp_diastolic": 80,
+      "gestational_age": 28,
+      "proteinuria": "negative",
+      "weight": null,
+      "fundal_height": null,
+      "edema": null,
+      "timestamp": "2026-01-19T11:55:37.525460"
+    },
+    {
+      "visit_date": "2026-01-08",
+      "hemoglobin": 10.2,
+      "bp_systolic": 140,
+      "bp_diastolic": 88,
+      "gestational_age": 30,
+      "proteinuria": "trace",
+      "weight": null,
+      "fundal_height": null,
+      "edema": null,
+      "timestamp": "2026-01-19T11:55:37.536997"
+    },
+    {
+      "visit_date": "2026-01-01",
+      "hemoglobin": 11.5,
+      "bp_systolic": 130,
+      "bp_diastolic": 80,
+      "gestational_age": 28,
+      "proteinuria": "negative",
+      "weight": null,
+      "fundal_height": null,
+      "edema": null,
+      "timestamp": "2026-01-20T10:40:10.198302"
+    },
+    {
+      "visit_date": "2026-01-08",
+      "hemoglobin": 10.2,
+      "bp_systolic": 140,
+      "bp_diastolic": 88,
+      "gestational_age": 30,
+      "proteinuria": "trace",
+      "weight": null,
+      "fundal_height": null,
+      "edema": null,
+      "timestamp": "2026-01-20T10:40:10.227677"
+    }
+  ]
+}

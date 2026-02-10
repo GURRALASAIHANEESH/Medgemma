@@ -1,0 +1,60 @@
+{
+  "case_id": "case_029",
+  "type": "anemia_severe",
+  "seed": 1263,
+  "patient": {
+    "age": 36,
+    "gravida": 3,
+    "para": 0
+  },
+  "visits": [
+    {
+      "visit_id": "v1",
+      "date": "2025-11-30",
+      "gestational_age": 32,
+      "weight": 60.8954562919702,
+      "bp": {
+        "systolic": 117,
+        "diastolic": 80
+      },
+      "hemoglobin": 8.361256943431556,
+      "proteinuria": "nil",
+      "fundal_height": 26,
+      "fetal_heart_rate": 145
+    },
+    {
+      "visit_id": "v2",
+      "date": "2025-12-28",
+      "gestational_age": 35,
+      "weight": 62.317855277230635,
+      "bp": {
+        "systolic": 118,
+        "diastolic": 74
+      },
+      "hemoglobin": 7.620629779031281,
+      "proteinuria": "nil",
+      "fundal_height": 29,
+      "fetal_heart_rate": 145
+    }
+  ],
+  "current_symptoms": {
+    "symptoms": {
+      "headache": false,
+      "blurred_vision": false,
+      "facial_edema": false,
+      "pedal_edema": true,
+      "dizziness": true,
+      "breathlessness": true,
+      "reduced_fetal_movement": false,
+      "abdominal_pain": false,
+      "nausea_vomiting": false
+    }
+  },
+  "missing_labs": false,
+  "language": "en",
+  "expected_keywords_for_QC": [
+    "hemoglobin: 7.6",
+    "Hb 7.6"
+  ],
+  "notes": "generator: v1.2, seed=1263, severity=severe"
+}

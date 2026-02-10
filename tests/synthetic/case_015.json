@@ -1,0 +1,63 @@
+{
+  "case_id": "case_015",
+  "type": "hellp_preeclampsia",
+  "seed": 1249,
+  "patient": {
+    "age": 30,
+    "gravida": 2,
+    "para": 0
+  },
+  "visits": [
+    {
+      "visit_id": "v1",
+      "date": "2025-11-02",
+      "gestational_age": 29,
+      "weight": 67.29797531117755,
+      "bp": {
+        "systolic": 127,
+        "diastolic": 83
+      },
+      "hemoglobin": 11.128860424477214,
+      "proteinuria": "trace",
+      "platelets_k_ul": 196,
+      "fundal_height": 26,
+      "fetal_heart_rate": 145
+    },
+    {
+      "visit_id": "v2",
+      "date": "2025-11-18",
+      "gestational_age": 31,
+      "weight": 69.1056576408706,
+      "bp": {
+        "systolic": 144,
+        "diastolic": 92
+      },
+      "hemoglobin": 10.374535634119702,
+      "proteinuria": "+1",
+      "platelets_k_ul": 132,
+      "fundal_height": 28,
+      "fetal_heart_rate": 146
+    }
+  ],
+  "current_symptoms": {
+    "symptoms": {
+      "headache": false,
+      "blurred_vision": false,
+      "facial_edema": true,
+      "pedal_edema": true,
+      "dizziness": false,
+      "breathlessness": false,
+      "reduced_fetal_movement": false,
+      "abdominal_pain": false,
+      "nausea_vomiting": false
+    }
+  },
+  "missing_labs": false,
+  "language": "en",
+  "expected_keywords_for_QC": [
+    "proteinuria: +1",
+    "platelets: 132",
+    "BP: 144/92"
+  ],
+  "notes": "generator: v1.2, seed=1249"
+}

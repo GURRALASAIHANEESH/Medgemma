@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-02-07T14:45:48.883180Z",
+  "total_cases": 50,
+  "qc_pass_count": 50,
+  "qc_fail_count": 0,
+  "qc_pass_rate_percent": 100.0,
+  "fallback_count": 45,
+  "rule_override_count": 0,
+  "failed_cases": [],
+  "latency_median_ms": 6.8,
+  "latency_total_s": 23.7,
+  "thresholds": {
+    "qc_pass_target": 47,
+    "qc_pass_achieved": true,
+    "fallback_max": 5,
+    "fallback_ok": false,
+    "rule_override_max": 0,
+    "rule_override_ok": true,
+    "median_latency_max_ms": 5000,
+    "median_latency_ok": true
+  },
+  "overall_pass": false
+}

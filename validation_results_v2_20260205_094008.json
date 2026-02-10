@@ -1,0 +1,1501 @@
+{
+  "total": 8,
+  "passed": 8,
+  "failed": 0,
+  "pass_rate": 100.0,
+  "timestamp": "2026-02-05T09:40:08.717474",
+  "test_results": [
+    {
+      "test_name": "Recent Lab Test (≤7 days)",
+      "test_id": "TEST_1_RECENT_LAB",
+      "passed": true,
+      "assertions": [
+        {
+          "check": "lab_age_days == 5",
+          "expected": 5,
+          "actual": 5,
+          "passed": true
+        },
+        {
+          "check": "lab_age_warning is None",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "check": "confidence_score >= 0.70",
+          "expected": ">=0.70",
+          "actual": 0.91,
+          "passed": true
+        },
+        {
+          "check": "lab_age_freshness >= 0.90",
+          "expected": ">=0.90",
+          "actual": 1.0,
+          "passed": true
+        }
+      ],
+      "output": {
+        "case_id": "TEST_RECENT_LAB",
+        "input_sources": {
+          "anc_card_image": null,
+          "lab_report_image": null,
+          "lab_report_date": "2026-01-30"
+        },
+        "lab_age_days": 5,
+        "lab_age_warning": null,
+        "provenance": {
+          "risk_authority": "rule_engine",
+          "explanation_source": "fallback_template",
+          "timestamp_utc": "2026-02-05T04:10:08.680845+00:00",
+          "explanation_generated": true,
+          "model_snapshot_id": null,
+          "ocr_text_hash": null,
+          "lab_report_image_hash": null
+        },
+        "risk_category": "HIGH",
+        "referral_required": true,
+        "trigger_reason": "Significant proteinuria: +2 WITH neurological symptoms (headache, blurred_vision) - PREECLAMPSIA SUSPECTED",
+        "evidence_items": [
+          {
+            "type": "lab",
+            "name": "hemoglobin",
+            "value": 10.5,
+            "unit": "g/dL",
+            "age_days": 5,
+            "delta": -0.7,
+            "percent_change": -6.2
+          },
+          {
+            "type": "lab",
+            "name": "platelets",
+            "value": 85000,
+            "unit": "/uL",
+            "age_days": 5,
+            "delta": -95000,
+            "percent_change": -52.8
+          },
+          {
+            "type": "lab",
+            "name": "bp_systolic",
+            "value": 150,
+            "unit": "mmHg",
+            "age_days": 5,
+            "delta": 22,
+            "percent_change": 17.2
+          },
+          {
+            "type": "lab",
+            "name": "bp_diastolic",
+            "value": 96,
+            "unit": "mmHg",
+            "age_days": 5,
+            "delta": 12,
+            "percent_change": 14.3
+          },
+          {
+            "type": "lab",
+            "name": "proteinuria",
+            "value": "+2",
+            "unit": null,
+            "age_days": 5
+          },
+          {
+            "type": "lab",
+            "name": "wbc",
+            "value": 16500,
+            "unit": "/uL",
+            "age_days": 5,
+            "delta": 8000,
+            "percent_change": 94.1
+          },
+          {
+            "type": "symptom",
+            "name": "headache",
+            "reported": true,
+            "value": null,
+            "unit": null
+          },
+          {
+            "type": "symptom",
+            "name": "blurred_vision",
+            "reported": true,
+            "value": null,
+            "unit": null
+          }
+        ],
+        "evidence_summary": [
+          "platelets dropped 180,000→85,000 (drop 53%)",
+          "blood pressure increased 128→150 mmHg (hypertensive)",
+          "proteinuria progressed trace→+2"
+        ],
+        "temporal_highlight": "Progressive escalation: Blood pressure increased from 128/84 to 150/96 mmHg (hypertensive range); Platelet count declined from 180,000 to 85,000 per uL (drop of 95,000) (severe thrombocytopenia); Proteinuria worsened from trace to +2 (significant proteinuria - preeclampsia concern); plus 2 additional parameter changes from 2026-01-10 to 2026-02-04",
+        "confidence_score": 0.91,
+        "confidence_tier": "HIGH",
+        "uncertainty_reason": "Limited temporal data (only 2 visits)",
+        "confidence_factors": {
+          "temporal_context": 0.7,
+          "symptom_clarity": 0.8,
+          "lab_completeness": 1.0,
+          "lab_age_freshness": 1.0,
+          "risk_clarity": 1.0,
+          "rule_convergence": 1.0
+        },
+        "clinical_explanation": "Risk Category: HIGH\nTrigger: Significant proteinuria: +2 WITH neurological symptoms (headache, blurred_vision) - PREECLAMPSIA SUSPECTED\n\nEvidence-based escalation:\n1. platelets dropped 180,000→85,000 (drop 53%)\n2. blood pressure increased 128→150 mmHg (hypertensive)\n3. proteinuria progressed trace→+2\n\nLaboratory findings:\n- Moderate anemia: Hemoglobin 10.5 g/dL - iron therapy indicated\n- Severe thrombocytopenia: 85,000 per uL - preeclampsia concern\n- Leukocytosis: 16,500 per uL - infection suspected\n\nClinical reasoning: The combination of laboratory trends and clinical symptoms supports HIGH risk classification.\nRecommendation: Urgent referral to higher-level facility for comprehensive evaluation and management.",
+        "asha_explanation": "URGENT ACTION NEEDED\n\nWhat is the problem:\nMother has high blood pressure and protein in urine. This can cause fits and harm mother and baby. Mother's condition is getting worse.\n\nWhat to do:\nTake mother to hospital TODAY. Do not delay — this is urgent. Arrange ambulance if possible.\n\nWarning signs to watch:\n- Severe headache that does not go away\n- Vision problems or seeing spots\n- Fits or convulsions\n- Heavy bleeding from vagina\n- Severe stomach pain\n- Baby not moving as usual\n\nIf any of these happen, go to hospital IMMEDIATELY.\n",
+        "translations": {
+          "english": "URGENT ACTION NEEDED\n\nWhat is the problem:\nMother has high blood pressure and protein in urine. This can cause fits and harm mother and baby. Mother's condition is getting worse.\n\nWhat to do:\nTake mother to hospital TODAY. Do not delay — this is urgent. Arrange ambulance if possible.\n\nWarning signs to watch:\n- Severe headache that does not go away\n- Vision problems or seeing spots\n- Fits or convulsions\n- Heavy bleeding from vagina\n- Severe stomach pain\n- Baby not moving as usual\n\nIf any of these happen, go to hospital IMMEDIATELY.\n",
+          "hindi": "तत्काल कार्रवाई आवश्यक\n\nसमस्या क्या है:\nमाँ को उच्च रक्तचाप है और पेशाब में प्रोटीन है। इससे दौरे पड़ सकते हैं और माँ और बच्चे को नुकसान हो सकता है। माँ की स्थिति बिगड़ रही है।\n\nक्या करना है:\nमाँ को आज अस्पताल ले जाएं। देरी न करें — यह अत्यावश्यक है। संभव हो तो एम्बुलेंस की व्यवस्था करें।\n\nदेखने के लिए चेतावनी संकेत:\n- गंभीर सिरदर्द जो दूर नहीं होता\n- दृष्टि समस्याएं या धब्बे दिखना\n- दौरे या मरोड़\n- योनि से अत्यधिक रक्तस्राव\n- गंभीर पेट दर्द\n- बच्चा सामान्य रूप से हिलडुल नहीं रहा\n\nयदि इनमें से कोई भी हो तो तुरंत अस्पताल जाएं।\n",
+          "telugu": "అత్యవసర చర్య అవసరం\n\nసమస్య ఏమిటి:\nతల్లికి అధిక రక్తపోటు మరియు మూత్రంలో ప్రోటీन్ ఉంది। ఇది మూర్ఛలకు కారణమై తల్లి మరియు బిడ్డకు హాని కలిగించవచ్చు। తల్లి పరిస్థితి మరింత దిగజారుతోంది।\n\nఏమి చేయాలి:\nతల్లిని ఈరోజే ఆసుపత్రికి తీసుకెళ్ళండి। ఆలస్యం చేయవద్దు — ఇది అత్యవసరం। వీలైతే అంబులెన్స్ ఏర్పాటు చేయండి।\n\nగమనించవలసిన హెచ్చరిక సంకేతాలు:\n- తగ్గని తీవ్రమైన తలనొప్పి\n- చూపు సమస్యలు లేదా మచ్చలు కనిపించడం\n- మూర్ఛలు లేదా మెలిపాట\n- యోని నుండి తీవ్రమైన రక్తస్రావం\n- తీవ్రమైన కడుపు నొప్పి\n- బిడ్డ ఎప్పటిలా కదలడం లేదు\n\nవీటిలో ఏదైనా జరిగితే వెంటనే ఆసుపత్రికి వెళ్ళండి।\n",
+          "translation_fallback_flag": false
+        },
+        "laboratory_analysis": {
+          "lab_risk_flags": [
+            "Moderate anemia: Hemoglobin 10.5 g/dL - iron therapy indicated",
+            "Severe thrombocytopenia: 85,000 per uL - preeclampsia concern",
+            "Leukocytosis: 16,500 per uL - infection suspected",
+            "Significant proteinuria: +2 - preeclampsia risk",
+            "MULTI-PARAMETER ABNORMALITY: Multiple organ systems affected"
+          ],
+          "lab_risk_score": 10,
+          "critical_flags": [
+            "SEVERE_THROMBOCYTOPENIA"
+          ]
+        }
+      }
+    },
+    {
+      "test_name": "Old Lab Test (45-75 days)",
+      "test_id": "TEST_2_OLD_LAB",
+      "passed": true,
+      "assertions": [
+        {
+          "check": "lab_age_days == 60",
+          "expected": 60,
+          "actual": 60,
+          "passed": true
+        },
+        {
+          "check": "lab_age_warning == \"old_but_usable\"",
+          "expected": "old_but_usable",
+          "actual": "old_but_usable",
+          "passed": true
+        },
+        {
+          "check": "lab_age_freshness < 0.70",
+          "expected": "<0.70",
+          "actual": 0.6,
+          "passed": true
+        },
+        {
+          "check": "\"lab\" in uncertainty_reason",
+          "expected": "contains \"lab\"",
+          "actual": "limited temporal data (only 2 visits); lab results",
+          "passed": true
+        },
+        {
+          "check": "Lab warning in ASHA text",
+          "expected": "contains warning",
+          "actual": true,
+          "passed": true
+        }
+      ],
+      "output": {
+        "case_id": "TEST_OLD_LAB",
+        "input_sources": {
+          "anc_card_image": null,
+          "lab_report_image": null,
+          "lab_report_date": "2025-12-06"
+        },
+        "lab_age_days": 60,
+        "lab_age_warning": "old_but_usable",
+        "provenance": {
+          "risk_authority": "rule_engine",
+          "explanation_source": "fallback_template",
+          "timestamp_utc": "2026-02-05T04:10:08.684736+00:00",
+          "explanation_generated": true,
+          "model_snapshot_id": null,
+          "ocr_text_hash": null,
+          "lab_report_image_hash": null
+        },
+        "risk_category": "HIGH",
+        "referral_required": true,
+        "trigger_reason": "Significant proteinuria: +2 WITH neurological symptoms (headache, blurred_vision) - PREECLAMPSIA SUSPECTED",
+        "evidence_items": [
+          {
+            "type": "lab",
+            "name": "hemoglobin",
+            "value": 10.5,
+            "unit": "g/dL",
+            "age_days": 60,
+            "delta": -0.7,
+            "percent_change": -6.2
+          },
+          {
+            "type": "lab",
+            "name": "platelets",
+            "value": 85000,
+            "unit": "/uL",
+            "age_days": 60,
+            "delta": -95000,
+            "percent_change": -52.8
+          },
+          {
+            "type": "lab",
+            "name": "bp_systolic",
+            "value": 150,
+            "unit": "mmHg",
+            "age_days": 60,
+            "delta": 22,
+            "percent_change": 17.2
+          },
+          {
+            "type": "lab",
+            "name": "bp_diastolic",
+            "value": 96,
+            "unit": "mmHg",
+            "age_days": 60,
+            "delta": 12,
+            "percent_change": 14.3
+          },
+          {
+            "type": "lab",
+            "name": "proteinuria",
+            "value": "+2",
+            "unit": null,
+            "age_days": 60
+          },
+          {
+            "type": "lab",
+            "name": "wbc",
+            "value": 16500,
+            "unit": "/uL",
+            "age_days": 60,
+            "delta": 8000,
+            "percent_change": 94.1
+          },
+          {
+            "type": "symptom",
+            "name": "headache",
+            "reported": true,
+            "value": null,
+            "unit": null
+          },
+          {
+            "type": "symptom",
+            "name": "blurred_vision",
+            "reported": true,
+            "value": null,
+            "unit": null
+          }
+        ],
+        "evidence_summary": [
+          "platelets dropped 180,000→85,000 (drop 53%)",
+          "blood pressure increased 128→150 mmHg (hypertensive)",
+          "proteinuria progressed trace→+2"
+        ],
+        "temporal_highlight": "Progressive escalation: Blood pressure increased from 128/84 to 150/96 mmHg (hypertensive range); Platelet count declined from 180,000 to 85,000 per uL (drop of 95,000) (severe thrombocytopenia); Proteinuria worsened from trace to +2 (significant proteinuria - preeclampsia concern); plus 2 additional parameter changes from 2026-01-10 to 2026-02-04",
+        "confidence_score": 0.85,
+        "confidence_tier": "HIGH",
+        "uncertainty_reason": "Limited temporal data (only 2 visits); Lab results are stale (>30 days) - consider re-testing",
+        "confidence_factors": {
+          "temporal_context": 0.7,
+          "symptom_clarity": 0.8,
+          "lab_completeness": 1.0,
+          "lab_age_freshness": 0.6,
+          "risk_clarity": 1.0,
+          "rule_convergence": 1.0
+        },
+        "clinical_explanation": "Risk Category: HIGH\nTrigger: Significant proteinuria: +2 WITH neurological symptoms (headache, blurred_vision) - PREECLAMPSIA SUSPECTED\n\nEvidence-based escalation:\n1. platelets dropped 180,000→85,000 (drop 53%)\n2. blood pressure increased 128→150 mmHg (hypertensive)\n3. proteinuria progressed trace→+2\n\nLaboratory findings:\n- Moderate anemia: Hemoglobin 10.5 g/dL - iron therapy indicated\n- Severe thrombocytopenia: 85,000 per uL - preeclampsia concern\n- Leukocytosis: 16,500 per uL - infection suspected\n\nClinical reasoning: The combination of laboratory trends and clinical symptoms supports HIGH risk classification.\nRecommendation: Urgent referral to higher-level facility for comprehensive evaluation and management.",
+        "asha_explanation": "URGENT ACTION NEEDED\n\nWhat is the problem:\nMother has high blood pressure and protein in urine. This can cause fits and harm mother and baby. Mother's condition is getting worse.\n\nWhat to do:\nTake mother to hospital TODAY. Do not delay — this is urgent. Arrange ambulance if possible.\n\nWarning signs to watch:\n- Severe headache that does not go away\n- Vision problems or seeing spots\n- Fits or convulsions\n- Heavy bleeding from vagina\n- Severe stomach pain\n- Baby not moving as usual\n\nIf any of these happen, go to hospital IMMEDIATELY.\n\nNote: Lab report is more than 1 month old. Doctor may need fresh tests.\n",
+        "translations": {
+          "english": "URGENT ACTION NEEDED\n\nWhat is the problem:\nMother has high blood pressure and protein in urine. This can cause fits and harm mother and baby. Mother's condition is getting worse.\n\nWhat to do:\nTake mother to hospital TODAY. Do not delay — this is urgent. Arrange ambulance if possible.\n\nWarning signs to watch:\n- Severe headache that does not go away\n- Vision problems or seeing spots\n- Fits or convulsions\n- Heavy bleeding from vagina\n- Severe stomach pain\n- Baby not moving as usual\n\nIf any of these happen, go to hospital IMMEDIATELY.\n\nNote: Lab report is more than 1 month old. Doctor may need fresh tests.\n",
+          "hindi": "तत्काल कार्रवाई आवश्यक\n\nसमस्या क्या है:\nमाँ को उच्च रक्तचाप है और पेशाब में प्रोटीन है। इससे दौरे पड़ सकते हैं और माँ और बच्चे को नुकसान हो सकता है। माँ की स्थिति बिगड़ रही है।\n\nक्या करना है:\nमाँ को आज अस्पताल ले जाएं। देरी न करें — यह अत्यावश्यक है। संभव हो तो एम्बुलेंस की व्यवस्था करें।\n\nदेखने के लिए चेतावनी संकेत:\n- गंभीर सिरदर्द जो दूर नहीं होता\n- दृष्टि समस्याएं या धब्बे दिखना\n- दौरे या मरोड़\n- योनि से अत्यधिक रक्तस्राव\n- गंभीर पेट दर्द\n- बच्चा सामान्य रूप से हिलडुल नहीं रहा\n\nयदि इनमें से कोई भी हो तो तुरंत अस्पताल जाएं।\n\nनोट: लैब रिपोर्ट 1 महीने से अधिक पुरानी है। डॉक्टर को नए परीक्षण की आवश्यकता हो सकती है।\n",
+          "telugu": "అత్యవసర చర్య అవసరం\n\nసమస్య ఏమిటి:\nతల్లికి అధిక రక్తపోటు మరియు మూత్రంలో ప్రోటీन్ ఉంది। ఇది మూర్ఛలకు కారణమై తల్లి మరియు బిడ్డకు హాని కలిగించవచ్చు। తల్లి పరిస్థితి మరింత దిగజారుతోంది।\n\nఏమి చేయాలి:\nతల్లిని ఈరోజే ఆసుపత్రికి తీసుకెళ్ళండి। ఆలస్యం చేయవద్దు — ఇది అత్యవసరం। వీలైతే అంబులెన్స్ ఏర్పాటు చేయండి।\n\nగమనించవలసిన హెచ్చరిక సంకేతాలు:\n- తగ్గని తీవ్రమైన తలనొప్పి\n- చూపు సమస్యలు లేదా మచ్చలు కనిపించడం\n- మూర్ఛలు లేదా మెలిపాట\n- యోని నుండి తీవ్రమైన రక్తస్రావం\n- తీవ్రమైన కడుపు నొప్పి\n- బిడ్డ ఎప్పటిలా కదలడం లేదు\n\nవీటిలో ఏదైనా జరిగితే వెంటనే ఆసుపత్రికి వెళ్ళండి।\n\nగమనిక: ల్యాబ్ రిపోర్ట్ 1 నెల కంటే పాతది. వైద్యునికి కొత్త పరీక్షలు అవసరం కావచ్చు।\n",
+          "translation_fallback_flag": false
+        },
+        "laboratory_analysis": {
+          "lab_risk_flags": [
+            "Moderate anemia: Hemoglobin 10.5 g/dL - iron therapy indicated",
+            "Severe thrombocytopenia: 85,000 per uL - preeclampsia concern",
+            "Leukocytosis: 16,500 per uL - infection suspected",
+            "Significant proteinuria: +2 - preeclampsia risk",
+            "MULTI-PARAMETER ABNORMALITY: Multiple organ systems affected"
+          ],
+          "lab_risk_score": 10,
+          "critical_flags": [
+            "SEVERE_THROMBOCYTOPENIA"
+          ]
+        }
+      }
+    },
+    {
+      "test_name": "Too-Old Lab Test (>90 days)",
+      "test_id": "TEST_3_TOO_OLD_LAB",
+      "passed": true,
+      "assertions": [
+        {
+          "check": "lab_age_days == 100",
+          "expected": 100,
+          "actual": 100,
+          "passed": true
+        },
+        {
+          "check": "lab_age_warning == \"too_old_recommend_repeat\"",
+          "expected": "too_old_recommend_repeat",
+          "actual": "too_old_recommend_repeat",
+          "passed": true
+        },
+        {
+          "check": "lab_age_freshness <= 0.30",
+          "expected": "<=0.30",
+          "actual": 0.3,
+          "passed": true
+        },
+        {
+          "check": "Mentions >90 days",
+          "expected": "contains \"90\" or \"very old\"",
+          "actual": "limited temporal data (only 2 visits); lab results are very ",
+          "passed": true
+        }
+      ],
+      "output": {
+        "case_id": "TEST_TOO_OLD_LAB",
+        "input_sources": {
+          "anc_card_image": null,
+          "lab_report_image": null,
+          "lab_report_date": "2025-10-27"
+        },
+        "lab_age_days": 100,
+        "lab_age_warning": "too_old_recommend_repeat",
+        "provenance": {
+          "risk_authority": "rule_engine",
+          "explanation_source": "fallback_template",
+          "timestamp_utc": "2026-02-05T04:10:08.690122+00:00",
+          "explanation_generated": true,
+          "model_snapshot_id": null,
+          "ocr_text_hash": null,
+          "lab_report_image_hash": null
+        },
+        "risk_category": "HIGH",
+        "referral_required": true,
+        "trigger_reason": "Significant proteinuria: +2 WITH neurological symptoms (headache, blurred_vision) - PREECLAMPSIA SUSPECTED",
+        "evidence_items": [
+          {
+            "type": "lab",
+            "name": "hemoglobin",
+            "value": 10.5,
+            "unit": "g/dL",
+            "age_days": 100,
+            "delta": -0.7,
+            "percent_change": -6.2
+          },
+          {
+            "type": "lab",
+            "name": "platelets",
+            "value": 85000,
+            "unit": "/uL",
+            "age_days": 100,
+            "delta": -95000,
+            "percent_change": -52.8
+          },
+          {
+            "type": "lab",
+            "name": "bp_systolic",
+            "value": 150,
+            "unit": "mmHg",
+            "age_days": 100,
+            "delta": 22,
+            "percent_change": 17.2
+          },
+          {
+            "type": "lab",
+            "name": "bp_diastolic",
+            "value": 96,
+            "unit": "mmHg",
+            "age_days": 100,
+            "delta": 12,
+            "percent_change": 14.3
+          },
+          {
+            "type": "lab",
+            "name": "proteinuria",
+            "value": "+2",
+            "unit": null,
+            "age_days": 100
+          },
+          {
+            "type": "lab",
+            "name": "wbc",
+            "value": 16500,
+            "unit": "/uL",
+            "age_days": 100,
+            "delta": 8000,
+            "percent_change": 94.1
+          },
+          {
+            "type": "symptom",
+            "name": "headache",
+            "reported": true,
+            "value": null,
+            "unit": null
+          },
+          {
+            "type": "symptom",
+            "name": "blurred_vision",
+            "reported": true,
+            "value": null,
+            "unit": null
+          }
+        ],
+        "evidence_summary": [
+          "platelets dropped 180,000→85,000 (drop 53%)",
+          "blood pressure increased 128→150 mmHg (hypertensive)",
+          "proteinuria progressed trace→+2"
+        ],
+        "temporal_highlight": "Progressive escalation: Blood pressure increased from 128/84 to 150/96 mmHg (hypertensive range); Platelet count declined from 180,000 to 85,000 per uL (drop of 95,000) (severe thrombocytopenia); Proteinuria worsened from trace to +2 (significant proteinuria - preeclampsia concern); plus 2 additional parameter changes from 2026-01-10 to 2026-02-04",
+        "confidence_score": 0.81,
+        "confidence_tier": "MODERATE",
+        "uncertainty_reason": "Limited temporal data (only 2 visits); Lab results are very old (>90 days) - fresh tests recommended. Fresh lab tests strongly recommended.",
+        "confidence_factors": {
+          "temporal_context": 0.7,
+          "symptom_clarity": 0.8,
+          "lab_completeness": 1.0,
+          "lab_age_freshness": 0.3,
+          "risk_clarity": 1.0,
+          "rule_convergence": 1.0
+        },
+        "clinical_explanation": "Risk Category: HIGH\nTrigger: Significant proteinuria: +2 WITH neurological symptoms (headache, blurred_vision) - PREECLAMPSIA SUSPECTED\n\nEvidence-based escalation:\n1. platelets dropped 180,000→85,000 (drop 53%)\n2. blood pressure increased 128→150 mmHg (hypertensive)\n3. proteinuria progressed trace→+2\n\nLaboratory findings:\n- Moderate anemia: Hemoglobin 10.5 g/dL - iron therapy indicated\n- Severe thrombocytopenia: 85,000 per uL - preeclampsia concern\n- Leukocytosis: 16,500 per uL - infection suspected\n\nClinical reasoning: The combination of laboratory trends and clinical symptoms supports HIGH risk classification.\nRecommendation: Urgent referral to higher-level facility for comprehensive evaluation and management.",
+        "asha_explanation": "URGENT ACTION NEEDED\n\nWhat is the problem:\nMother has high blood pressure and protein in urine. This can cause fits and harm mother and baby. Mother's condition is getting worse.\n\nWhat to do:\nTake mother to hospital TODAY. Do not delay — this is urgent. Arrange ambulance if possible.\n\nWarning signs to watch:\n- Severe headache that does not go away\n- Vision problems or seeing spots\n- Fits or convulsions\n- Heavy bleeding from vagina\n- Severe stomach pain\n- Baby not moving as usual\n\nIf any of these happen, go to hospital IMMEDIATELY.\n\nIMPORTANT: Lab report is very old. Fresh blood tests are needed.\n",
+        "translations": {
+          "english": "URGENT ACTION NEEDED\n\nWhat is the problem:\nMother has high blood pressure and protein in urine. This can cause fits and harm mother and baby. Mother's condition is getting worse.\n\nWhat to do:\nTake mother to hospital TODAY. Do not delay — this is urgent. Arrange ambulance if possible.\n\nWarning signs to watch:\n- Severe headache that does not go away\n- Vision problems or seeing spots\n- Fits or convulsions\n- Heavy bleeding from vagina\n- Severe stomach pain\n- Baby not moving as usual\n\nIf any of these happen, go to hospital IMMEDIATELY.\n\nIMPORTANT: Lab report is very old. Fresh blood tests are needed.\n",
+          "hindi": "तत्काल कार्रवाई आवश्यक\n\nसमस्या क्या है:\nमाँ को उच्च रक्तचाप है और पेशाब में प्रोटीन है। इससे दौरे पड़ सकते हैं और माँ और बच्चे को नुकसान हो सकता है। माँ की स्थिति बिगड़ रही है।\n\nक्या करना है:\nमाँ को आज अस्पताल ले जाएं। देरी न करें — यह अत्यावश्यक है। संभव हो तो एम्बुलेंस की व्यवस्था करें।\n\nदेखने के लिए चेतावनी संकेत:\n- गंभीर सिरदर्द जो दूर नहीं होता\n- दृष्टि समस्याएं या धब्बे दिखना\n- दौरे या मरोड़\n- योनि से अत्यधिक रक्तस्राव\n- गंभीर पेट दर्द\n- बच्चा सामान्य रूप से हिलडुल नहीं रहा\n\nयदि इनमें से कोई भी हो तो तुरंत अस्पताल जाएं।\n\nमहत्वपूर्ण: लैब रिपोर्ट बहुत पुरानी है। नए रक्त परीक्षण की आवश्यकता है।\n",
+          "telugu": "అత్యవసర చర్య అవసరం\n\nసమస్య ఏమిటి:\nతల్లికి అధిక రక్తపోటు మరియు మూత్రంలో ప్రోటీन్ ఉంది। ఇది మూర్ఛలకు కారణమై తల్లి మరియు బిడ్డకు హాని కలిగించవచ్చు। తల్లి పరిస్థితి మరింత దిగజారుతోంది।\n\nఏమి చేయాలి:\nతల్లిని ఈరోజే ఆసుపత్రికి తీసుకెళ్ళండి। ఆలస్యం చేయవద్దు — ఇది అత్యవసరం। వీలైతే అంబులెన్స్ ఏర్పాటు చేయండి।\n\nగమనించవలసిన హెచ్చరిక సంకేతాలు:\n- తగ్గని తీవ్రమైన తలనొప్పి\n- చూపు సమస్యలు లేదా మచ్చలు కనిపించడం\n- మూర్ఛలు లేదా మెలిపాట\n- యోని నుండి తీవ్రమైన రక్తస్రావం\n- తీవ్రమైన కడుపు నొప్పి\n- బిడ్డ ఎప్పటిలా కదలడం లేదు\n\nవీటిలో ఏదైనా జరిగితే వెంటనే ఆసుపత్రికి వెళ్ళండి।\n\nముఖ్యమైనది: ల్యాబ్ రిపోర్ట్ చాలా పాతది. కొత్త రక్త పరీక్షలు అవసరం।\n",
+          "translation_fallback_flag": false
+        },
+        "laboratory_analysis": {
+          "lab_risk_flags": [
+            "Moderate anemia: Hemoglobin 10.5 g/dL - iron therapy indicated",
+            "Severe thrombocytopenia: 85,000 per uL - preeclampsia concern",
+            "Leukocytosis: 16,500 per uL - infection suspected",
+            "Significant proteinuria: +2 - preeclampsia risk",
+            "MULTI-PARAMETER ABNORMALITY: Multiple organ systems affected"
+          ],
+          "lab_risk_score": 10,
+          "critical_flags": [
+            "SEVERE_THROMBOCYTOPENIA"
+          ]
+        }
+      }
+    },
+    {
+      "test_name": "Provenance Tracking",
+      "test_id": "TEST_4_PROVENANCE",
+      "passed": true,
+      "assertions": [
+        {
+          "check": "risk_authority == \"rule_engine\"",
+          "expected": "rule_engine",
+          "actual": "rule_engine",
+          "passed": true
+        },
+        {
+          "check": "explanation_source in valid_sources",
+          "expected": "medgemma or fallback_template",
+          "actual": "fallback_template",
+          "passed": true
+        },
+        {
+          "check": "timestamp_utc exists",
+          "expected": "ISO timestamp",
+          "actual": "2026-02-05T04:10:08.",
+          "passed": true
+        },
+        {
+          "check": "explanation_generated is bool",
+          "expected": "True or False",
+          "actual": true,
+          "passed": true
+        },
+        {
+          "check": "input_sources has lab_report_image",
+          "expected": "test_lab.jpg",
+          "actual": "test_lab.jpg",
+          "passed": true
+        },
+        {
+          "check": "input_sources has lab_report_date",
+          "expected": "2026-01-25",
+          "actual": "2026-01-25",
+          "passed": true
+        }
+      ],
+      "output": {
+        "case_id": "TEST_PROVENANCE",
+        "input_sources": {
+          "anc_card_image": "test_anc.jpg",
+          "lab_report_image": "test_lab.jpg",
+          "lab_report_date": "2026-01-25"
+        },
+        "lab_age_days": 10,
+        "lab_age_warning": null,
+        "provenance": {
+          "risk_authority": "rule_engine",
+          "explanation_source": "fallback_template",
+          "timestamp_utc": "2026-02-05T04:10:08.696868+00:00",
+          "explanation_generated": true,
+          "model_snapshot_id": null,
+          "ocr_text_hash": null,
+          "lab_report_image_hash": null
+        },
+        "risk_category": "HIGH",
+        "referral_required": true,
+        "trigger_reason": "Significant proteinuria: +2 WITH neurological symptoms (headache, blurred_vision) - PREECLAMPSIA SUSPECTED",
+        "evidence_items": [
+          {
+            "type": "lab",
+            "name": "hemoglobin",
+            "value": 10.5,
+            "unit": "g/dL",
+            "age_days": 10,
+            "delta": -0.7,
+            "percent_change": -6.2
+          },
+          {
+            "type": "lab",
+            "name": "platelets",
+            "value": 85000,
+            "unit": "/uL",
+            "age_days": 10,
+            "delta": -95000,
+            "percent_change": -52.8
+          },
+          {
+            "type": "lab",
+            "name": "bp_systolic",
+            "value": 150,
+            "unit": "mmHg",
+            "age_days": 10,
+            "delta": 22,
+            "percent_change": 17.2
+          },
+          {
+            "type": "lab",
+            "name": "bp_diastolic",
+            "value": 96,
+            "unit": "mmHg",
+            "age_days": 10,
+            "delta": 12,
+            "percent_change": 14.3
+          },
+          {
+            "type": "lab",
+            "name": "proteinuria",
+            "value": "+2",
+            "unit": null,
+            "age_days": 10
+          },
+          {
+            "type": "lab",
+            "name": "wbc",
+            "value": 16500,
+            "unit": "/uL",
+            "age_days": 10,
+            "delta": 8000,
+            "percent_change": 94.1
+          },
+          {
+            "type": "symptom",
+            "name": "headache",
+            "reported": true,
+            "value": null,
+            "unit": null
+          },
+          {
+            "type": "symptom",
+            "name": "blurred_vision",
+            "reported": true,
+            "value": null,
+            "unit": null
+          }
+        ],
+        "evidence_summary": [
+          "platelets dropped 180,000→85,000 (drop 53%)",
+          "blood pressure increased 128→150 mmHg (hypertensive)",
+          "proteinuria progressed trace→+2"
+        ],
+        "temporal_highlight": "Progressive escalation: Blood pressure increased from 128/84 to 150/96 mmHg (hypertensive range); Platelet count declined from 180,000 to 85,000 per uL (drop of 95,000) (severe thrombocytopenia); Proteinuria worsened from trace to +2 (significant proteinuria - preeclampsia concern); plus 2 additional parameter changes from 2026-01-10 to 2026-02-04",
+        "confidence_score": 0.9,
+        "confidence_tier": "HIGH",
+        "uncertainty_reason": "Limited temporal data (only 2 visits)",
+        "confidence_factors": {
+          "temporal_context": 0.7,
+          "symptom_clarity": 0.8,
+          "lab_completeness": 1.0,
+          "lab_age_freshness": 0.9,
+          "risk_clarity": 1.0,
+          "rule_convergence": 1.0
+        },
+        "clinical_explanation": "Risk Category: HIGH\nTrigger: Significant proteinuria: +2 WITH neurological symptoms (headache, blurred_vision) - PREECLAMPSIA SUSPECTED\n\nEvidence-based escalation:\n1. platelets dropped 180,000→85,000 (drop 53%)\n2. blood pressure increased 128→150 mmHg (hypertensive)\n3. proteinuria progressed trace→+2\n\nLaboratory findings:\n- Moderate anemia: Hemoglobin 10.5 g/dL - iron therapy indicated\n- Severe thrombocytopenia: 85,000 per uL - preeclampsia concern\n- Leukocytosis: 16,500 per uL - infection suspected\n\nClinical reasoning: The combination of laboratory trends and clinical symptoms supports HIGH risk classification.\nRecommendation: Urgent referral to higher-level facility for comprehensive evaluation and management.",
+        "asha_explanation": "URGENT ACTION NEEDED\n\nWhat is the problem:\nMother has high blood pressure and protein in urine. This can cause fits and harm mother and baby. Mother's condition is getting worse.\n\nWhat to do:\nTake mother to hospital TODAY. Do not delay — this is urgent. Arrange ambulance if possible.\n\nWarning signs to watch:\n- Severe headache that does not go away\n- Vision problems or seeing spots\n- Fits or convulsions\n- Heavy bleeding from vagina\n- Severe stomach pain\n- Baby not moving as usual\n\nIf any of these happen, go to hospital IMMEDIATELY.\n",
+        "translations": {
+          "english": "URGENT ACTION NEEDED\n\nWhat is the problem:\nMother has high blood pressure and protein in urine. This can cause fits and harm mother and baby. Mother's condition is getting worse.\n\nWhat to do:\nTake mother to hospital TODAY. Do not delay — this is urgent. Arrange ambulance if possible.\n\nWarning signs to watch:\n- Severe headache that does not go away\n- Vision problems or seeing spots\n- Fits or convulsions\n- Heavy bleeding from vagina\n- Severe stomach pain\n- Baby not moving as usual\n\nIf any of these happen, go to hospital IMMEDIATELY.\n",
+          "hindi": "तत्काल कार्रवाई आवश्यक\n\nसमस्या क्या है:\nमाँ को उच्च रक्तचाप है और पेशाब में प्रोटीन है। इससे दौरे पड़ सकते हैं और माँ और बच्चे को नुकसान हो सकता है। माँ की स्थिति बिगड़ रही है।\n\nक्या करना है:\nमाँ को आज अस्पताल ले जाएं। देरी न करें — यह अत्यावश्यक है। संभव हो तो एम्बुलेंस की व्यवस्था करें।\n\nदेखने के लिए चेतावनी संकेत:\n- गंभीर सिरदर्द जो दूर नहीं होता\n- दृष्टि समस्याएं या धब्बे दिखना\n- दौरे या मरोड़\n- योनि से अत्यधिक रक्तस्राव\n- गंभीर पेट दर्द\n- बच्चा सामान्य रूप से हिलडुल नहीं रहा\n\nयदि इनमें से कोई भी हो तो तुरंत अस्पताल जाएं।\n",
+          "telugu": "అత్యవసర చర్య అవసరం\n\nసమస్య ఏమిటి:\nతల్లికి అధిక రక్తపోటు మరియు మూత్రంలో ప్రోటీन్ ఉంది। ఇది మూర్ఛలకు కారణమై తల్లి మరియు బిడ్డకు హాని కలిగించవచ్చు। తల్లి పరిస్థితి మరింత దిగజారుతోంది।\n\nఏమి చేయాలి:\nతల్లిని ఈరోజే ఆసుపత్రికి తీసుకెళ్ళండి। ఆలస్యం చేయవద్దు — ఇది అత్యవసరం। వీలైతే అంబులెన్స్ ఏర్పాటు చేయండి।\n\nగమనించవలసిన హెచ్చరిక సంకేతాలు:\n- తగ్గని తీవ్రమైన తలనొప్పి\n- చూపు సమస్యలు లేదా మచ్చలు కనిపించడం\n- మూర్ఛలు లేదా మెలిపాట\n- యోని నుండి తీవ్రమైన రక్తస్రావం\n- తీవ్రమైన కడుపు నొప్పి\n- బిడ్డ ఎప్పటిలా కదలడం లేదు\n\nవీటిలో ఏదైనా జరిగితే వెంటనే ఆసుపత్రికి వెళ్ళండి।\n",
+          "translation_fallback_flag": false
+        },
+        "laboratory_analysis": {
+          "lab_risk_flags": [
+            "Moderate anemia: Hemoglobin 10.5 g/dL - iron therapy indicated",
+            "Severe thrombocytopenia: 85,000 per uL - preeclampsia concern",
+            "Leukocytosis: 16,500 per uL - infection suspected",
+            "Significant proteinuria: +2 - preeclampsia risk",
+            "MULTI-PARAMETER ABNORMALITY: Multiple organ systems affected"
+          ],
+          "lab_risk_score": 10,
+          "critical_flags": [
+            "SEVERE_THROMBOCYTOPENIA"
+          ]
+        }
+      }
+    },
+    {
+      "test_name": "Translation Parity",
+      "test_id": "TEST_5_TRANSLATION",
+      "passed": true,
+      "assertions": [
+        {
+          "check": "Hindi translation has no English",
+          "expected": "No English markers",
+          "actual": "Contains English: False",
+          "passed": true
+        },
+        {
+          "check": "Telugu translation has no English",
+          "expected": "No English markers",
+          "actual": "Contains English: False",
+          "passed": true
+        },
+        {
+          "check": "Hindi uses Devanagari script",
+          "expected": "Contains Devanagari",
+          "actual": "Has Devanagari: True",
+          "passed": true
+        },
+        {
+          "check": "Telugu uses Telugu script",
+          "expected": "Contains Telugu script",
+          "actual": "Has Telugu script: True",
+          "passed": true
+        },
+        {
+          "check": "translation_fallback_flag is False",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        }
+      ],
+      "output": {
+        "case_id": "TEST_TRANSLATION",
+        "input_sources": {
+          "anc_card_image": null,
+          "lab_report_image": null,
+          "lab_report_date": "2026-01-25"
+        },
+        "lab_age_days": 10,
+        "lab_age_warning": null,
+        "provenance": {
+          "risk_authority": "rule_engine",
+          "explanation_source": "fallback_template",
+          "timestamp_utc": "2026-02-05T04:10:08.700515+00:00",
+          "explanation_generated": true,
+          "model_snapshot_id": null,
+          "ocr_text_hash": null,
+          "lab_report_image_hash": null
+        },
+        "risk_category": "HIGH",
+        "referral_required": true,
+        "trigger_reason": "Significant proteinuria: +2 WITH neurological symptoms (headache, blurred_vision) - PREECLAMPSIA SUSPECTED",
+        "evidence_items": [
+          {
+            "type": "lab",
+            "name": "hemoglobin",
+            "value": 10.5,
+            "unit": "g/dL",
+            "age_days": 10,
+            "delta": -0.7,
+            "percent_change": -6.2
+          },
+          {
+            "type": "lab",
+            "name": "platelets",
+            "value": 85000,
+            "unit": "/uL",
+            "age_days": 10,
+            "delta": -95000,
+            "percent_change": -52.8
+          },
+          {
+            "type": "lab",
+            "name": "bp_systolic",
+            "value": 150,
+            "unit": "mmHg",
+            "age_days": 10,
+            "delta": 22,
+            "percent_change": 17.2
+          },
+          {
+            "type": "lab",
+            "name": "bp_diastolic",
+            "value": 96,
+            "unit": "mmHg",
+            "age_days": 10,
+            "delta": 12,
+            "percent_change": 14.3
+          },
+          {
+            "type": "lab",
+            "name": "proteinuria",
+            "value": "+2",
+            "unit": null,
+            "age_days": 10
+          },
+          {
+            "type": "lab",
+            "name": "wbc",
+            "value": 16500,
+            "unit": "/uL",
+            "age_days": 10,
+            "delta": 8000,
+            "percent_change": 94.1
+          },
+          {
+            "type": "symptom",
+            "name": "headache",
+            "reported": true,
+            "value": null,
+            "unit": null
+          },
+          {
+            "type": "symptom",
+            "name": "blurred_vision",
+            "reported": true,
+            "value": null,
+            "unit": null
+          }
+        ],
+        "evidence_summary": [
+          "platelets dropped 180,000→85,000 (drop 53%)",
+          "blood pressure increased 128→150 mmHg (hypertensive)",
+          "proteinuria progressed trace→+2"
+        ],
+        "temporal_highlight": "Progressive escalation: Blood pressure increased from 128/84 to 150/96 mmHg (hypertensive range); Platelet count declined from 180,000 to 85,000 per uL (drop of 95,000) (severe thrombocytopenia); Proteinuria worsened from trace to +2 (significant proteinuria - preeclampsia concern); plus 2 additional parameter changes from 2026-01-10 to 2026-02-04",
+        "confidence_score": 0.9,
+        "confidence_tier": "HIGH",
+        "uncertainty_reason": "Limited temporal data (only 2 visits)",
+        "confidence_factors": {
+          "temporal_context": 0.7,
+          "symptom_clarity": 0.8,
+          "lab_completeness": 1.0,
+          "lab_age_freshness": 0.9,
+          "risk_clarity": 1.0,
+          "rule_convergence": 1.0
+        },
+        "clinical_explanation": "Risk Category: HIGH\nTrigger: Significant proteinuria: +2 WITH neurological symptoms (headache, blurred_vision) - PREECLAMPSIA SUSPECTED\n\nEvidence-based escalation:\n1. platelets dropped 180,000→85,000 (drop 53%)\n2. blood pressure increased 128→150 mmHg (hypertensive)\n3. proteinuria progressed trace→+2\n\nLaboratory findings:\n- Moderate anemia: Hemoglobin 10.5 g/dL - iron therapy indicated\n- Severe thrombocytopenia: 85,000 per uL - preeclampsia concern\n- Leukocytosis: 16,500 per uL - infection suspected\n\nClinical reasoning: The combination of laboratory trends and clinical symptoms supports HIGH risk classification.\nRecommendation: Urgent referral to higher-level facility for comprehensive evaluation and management.",
+        "asha_explanation": "URGENT ACTION NEEDED\n\nWhat is the problem:\nMother has high blood pressure and protein in urine. This can cause fits and harm mother and baby. Mother's condition is getting worse.\n\nWhat to do:\nTake mother to hospital TODAY. Do not delay — this is urgent. Arrange ambulance if possible.\n\nWarning signs to watch:\n- Severe headache that does not go away\n- Vision problems or seeing spots\n- Fits or convulsions\n- Heavy bleeding from vagina\n- Severe stomach pain\n- Baby not moving as usual\n\nIf any of these happen, go to hospital IMMEDIATELY.\n",
+        "translations": {
+          "english": "URGENT ACTION NEEDED\n\nWhat is the problem:\nMother has high blood pressure and protein in urine. This can cause fits and harm mother and baby. Mother's condition is getting worse.\n\nWhat to do:\nTake mother to hospital TODAY. Do not delay — this is urgent. Arrange ambulance if possible.\n\nWarning signs to watch:\n- Severe headache that does not go away\n- Vision problems or seeing spots\n- Fits or convulsions\n- Heavy bleeding from vagina\n- Severe stomach pain\n- Baby not moving as usual\n\nIf any of these happen, go to hospital IMMEDIATELY.\n",
+          "hindi": "तत्काल कार्रवाई आवश्यक\n\nसमस्या क्या है:\nमाँ को उच्च रक्तचाप है और पेशाब में प्रोटीन है। इससे दौरे पड़ सकते हैं और माँ और बच्चे को नुकसान हो सकता है। माँ की स्थिति बिगड़ रही है।\n\nक्या करना है:\nमाँ को आज अस्पताल ले जाएं। देरी न करें — यह अत्यावश्यक है। संभव हो तो एम्बुलेंस की व्यवस्था करें।\n\nदेखने के लिए चेतावनी संकेत:\n- गंभीर सिरदर्द जो दूर नहीं होता\n- दृष्टि समस्याएं या धब्बे दिखना\n- दौरे या मरोड़\n- योनि से अत्यधिक रक्तस्राव\n- गंभीर पेट दर्द\n- बच्चा सामान्य रूप से हिलडुल नहीं रहा\n\nयदि इनमें से कोई भी हो तो तुरंत अस्पताल जाएं।\n",
+          "telugu": "అత్యవసర చర్య అవసరం\n\nసమస్య ఏమిటి:\nతల్లికి అధిక రక్తపోటు మరియు మూత్రంలో ప్రోటీन్ ఉంది। ఇది మూర్ఛలకు కారణమై తల్లి మరియు బిడ్డకు హాని కలిగించవచ్చు। తల్లి పరిస్థితి మరింత దిగజారుతోంది।\n\nఏమి చేయాలి:\nతల్లిని ఈరోజే ఆసుపత్రికి తీసుకెళ్ళండి। ఆలస్యం చేయవద్దు — ఇది అత్యవసరం। వీలైతే అంబులెన్స్ ఏర్పాటు చేయండి।\n\nగమనించవలసిన హెచ్చరిక సంకేతాలు:\n- తగ్గని తీవ్రమైన తలనొప్పి\n- చూపు సమస్యలు లేదా మచ్చలు కనిపించడం\n- మూర్ఛలు లేదా మెలిపాట\n- యోని నుండి తీవ్రమైన రక్తస్రావం\n- తీవ్రమైన కడుపు నొప్పి\n- బిడ్డ ఎప్పటిలా కదలడం లేదు\n\nవీటిలో ఏదైనా జరిగితే వెంటనే ఆసుపత్రికి వెళ్ళండి।\n",
+          "translation_fallback_flag": false
+        },
+        "laboratory_analysis": {
+          "lab_risk_flags": [
+            "Moderate anemia: Hemoglobin 10.5 g/dL - iron therapy indicated",
+            "Severe thrombocytopenia: 85,000 per uL - preeclampsia concern",
+            "Leukocytosis: 16,500 per uL - infection suspected",
+            "Significant proteinuria: +2 - preeclampsia risk",
+            "MULTI-PARAMETER ABNORMALITY: Multiple organ systems affected"
+          ],
+          "lab_risk_score": 10,
+          "critical_flags": [
+            "SEVERE_THROMBOCYTOPENIA"
+          ]
+        }
+      }
+    },
+    {
+      "test_name": "Schema v2 Compliance",
+      "test_id": "TEST_6_SCHEMA",
+      "passed": true,
+      "assertions": [
+        {
+          "check": "Field \"case_id\" exists",
+          "expected": "Present",
+          "actual": "Present",
+          "passed": true
+        },
+        {
+          "check": "Field \"input_sources\" exists",
+          "expected": "Present",
+          "actual": "Present",
+          "passed": true
+        },
+        {
+          "check": "Field \"provenance\" exists",
+          "expected": "Present",
+          "actual": "Present",
+          "passed": true
+        },
+        {
+          "check": "Field \"risk_category\" exists",
+          "expected": "Present",
+          "actual": "Present",
+          "passed": true
+        },
+        {
+          "check": "Field \"referral_required\" exists",
+          "expected": "Present",
+          "actual": "Present",
+          "passed": true
+        },
+        {
+          "check": "Field \"trigger_reason\" exists",
+          "expected": "Present",
+          "actual": "Present",
+          "passed": true
+        },
+        {
+          "check": "Field \"evidence_items\" exists",
+          "expected": "Present",
+          "actual": "Present",
+          "passed": true
+        },
+        {
+          "check": "Field \"confidence_score\" exists",
+          "expected": "Present",
+          "actual": "Present",
+          "passed": true
+        },
+        {
+          "check": "Field \"uncertainty_reason\" exists",
+          "expected": "Present",
+          "actual": "Present",
+          "passed": true
+        },
+        {
+          "check": "Field \"clinical_explanation\" exists",
+          "expected": "Present",
+          "actual": "Present",
+          "passed": true
+        },
+        {
+          "check": "Field \"asha_explanation\" exists",
+          "expected": "Present",
+          "actual": "Present",
+          "passed": true
+        },
+        {
+          "check": "Field \"translations\" exists",
+          "expected": "Present",
+          "actual": "Present",
+          "passed": true
+        },
+        {
+          "check": "evidence_items is list",
+          "expected": "list",
+          "actual": "list",
+          "passed": true
+        },
+        {
+          "check": "confidence_score is number",
+          "expected": "float",
+          "actual": "float",
+          "passed": true
+        },
+        {
+          "check": "translations is dict",
+          "expected": "dict",
+          "actual": "dict",
+          "passed": true
+        }
+      ],
+      "output": {
+        "case_id": "TEST_SCHEMA",
+        "input_sources": {
+          "anc_card_image": null,
+          "lab_report_image": null,
+          "lab_report_date": "2026-01-20"
+        },
+        "lab_age_days": 15,
+        "lab_age_warning": null,
+        "provenance": {
+          "risk_authority": "rule_engine",
+          "explanation_source": "fallback_template",
+          "timestamp_utc": "2026-02-05T04:10:08.704228+00:00",
+          "explanation_generated": true,
+          "model_snapshot_id": null,
+          "ocr_text_hash": null,
+          "lab_report_image_hash": null
+        },
+        "risk_category": "HIGH",
+        "referral_required": true,
+        "trigger_reason": "Significant proteinuria: +2 WITH neurological symptoms (headache, blurred_vision) - PREECLAMPSIA SUSPECTED",
+        "evidence_items": [
+          {
+            "type": "lab",
+            "name": "hemoglobin",
+            "value": 10.5,
+            "unit": "g/dL",
+            "age_days": 15,
+            "delta": -0.7,
+            "percent_change": -6.2
+          },
+          {
+            "type": "lab",
+            "name": "platelets",
+            "value": 85000,
+            "unit": "/uL",
+            "age_days": 15,
+            "delta": -95000,
+            "percent_change": -52.8
+          },
+          {
+            "type": "lab",
+            "name": "bp_systolic",
+            "value": 150,
+            "unit": "mmHg",
+            "age_days": 15,
+            "delta": 22,
+            "percent_change": 17.2
+          },
+          {
+            "type": "lab",
+            "name": "bp_diastolic",
+            "value": 96,
+            "unit": "mmHg",
+            "age_days": 15,
+            "delta": 12,
+            "percent_change": 14.3
+          },
+          {
+            "type": "lab",
+            "name": "proteinuria",
+            "value": "+2",
+            "unit": null,
+            "age_days": 15
+          },
+          {
+            "type": "lab",
+            "name": "wbc",
+            "value": 16500,
+            "unit": "/uL",
+            "age_days": 15,
+            "delta": 8000,
+            "percent_change": 94.1
+          },
+          {
+            "type": "symptom",
+            "name": "headache",
+            "reported": true,
+            "value": null,
+            "unit": null
+          },
+          {
+            "type": "symptom",
+            "name": "blurred_vision",
+            "reported": true,
+            "value": null,
+            "unit": null
+          }
+        ],
+        "evidence_summary": [
+          "platelets dropped 180,000→85,000 (drop 53%)",
+          "blood pressure increased 128→150 mmHg (hypertensive)",
+          "proteinuria progressed trace→+2"
+        ],
+        "temporal_highlight": "Progressive escalation: Blood pressure increased from 128/84 to 150/96 mmHg (hypertensive range); Platelet count declined from 180,000 to 85,000 per uL (drop of 95,000) (severe thrombocytopenia); Proteinuria worsened from trace to +2 (significant proteinuria - preeclampsia concern); plus 2 additional parameter changes from 2026-01-10 to 2026-02-04",
+        "confidence_score": 0.9,
+        "confidence_tier": "HIGH",
+        "uncertainty_reason": "Limited temporal data (only 2 visits)",
+        "confidence_factors": {
+          "temporal_context": 0.7,
+          "symptom_clarity": 0.8,
+          "lab_completeness": 1.0,
+          "lab_age_freshness": 0.9,
+          "risk_clarity": 1.0,
+          "rule_convergence": 1.0
+        },
+        "clinical_explanation": "Risk Category: HIGH\nTrigger: Significant proteinuria: +2 WITH neurological symptoms (headache, blurred_vision) - PREECLAMPSIA SUSPECTED\n\nEvidence-based escalation:\n1. platelets dropped 180,000→85,000 (drop 53%)\n2. blood pressure increased 128→150 mmHg (hypertensive)\n3. proteinuria progressed trace→+2\n\nLaboratory findings:\n- Moderate anemia: Hemoglobin 10.5 g/dL - iron therapy indicated\n- Severe thrombocytopenia: 85,000 per uL - preeclampsia concern\n- Leukocytosis: 16,500 per uL - infection suspected\n\nClinical reasoning: The combination of laboratory trends and clinical symptoms supports HIGH risk classification.\nRecommendation: Urgent referral to higher-level facility for comprehensive evaluation and management.",
+        "asha_explanation": "URGENT ACTION NEEDED\n\nWhat is the problem:\nMother has high blood pressure and protein in urine. This can cause fits and harm mother and baby. Mother's condition is getting worse.\n\nWhat to do:\nTake mother to hospital TODAY. Do not delay — this is urgent. Arrange ambulance if possible.\n\nWarning signs to watch:\n- Severe headache that does not go away\n- Vision problems or seeing spots\n- Fits or convulsions\n- Heavy bleeding from vagina\n- Severe stomach pain\n- Baby not moving as usual\n\nIf any of these happen, go to hospital IMMEDIATELY.\n",
+        "translations": {
+          "english": "URGENT ACTION NEEDED\n\nWhat is the problem:\nMother has high blood pressure and protein in urine. This can cause fits and harm mother and baby. Mother's condition is getting worse.\n\nWhat to do:\nTake mother to hospital TODAY. Do not delay — this is urgent. Arrange ambulance if possible.\n\nWarning signs to watch:\n- Severe headache that does not go away\n- Vision problems or seeing spots\n- Fits or convulsions\n- Heavy bleeding from vagina\n- Severe stomach pain\n- Baby not moving as usual\n\nIf any of these happen, go to hospital IMMEDIATELY.\n",
+          "hindi": "तत्काल कार्रवाई आवश्यक\n\nसमस्या क्या है:\nमाँ को उच्च रक्तचाप है और पेशाब में प्रोटीन है। इससे दौरे पड़ सकते हैं और माँ और बच्चे को नुकसान हो सकता है। माँ की स्थिति बिगड़ रही है।\n\nक्या करना है:\nमाँ को आज अस्पताल ले जाएं। देरी न करें — यह अत्यावश्यक है। संभव हो तो एम्बुलेंस की व्यवस्था करें।\n\nदेखने के लिए चेतावनी संकेत:\n- गंभीर सिरदर्द जो दूर नहीं होता\n- दृष्टि समस्याएं या धब्बे दिखना\n- दौरे या मरोड़\n- योनि से अत्यधिक रक्तस्राव\n- गंभीर पेट दर्द\n- बच्चा सामान्य रूप से हिलडुल नहीं रहा\n\nयदि इनमें से कोई भी हो तो तुरंत अस्पताल जाएं।\n",
+          "telugu": "అత్యవసర చర్య అవసరం\n\nసమస్య ఏమిటి:\nతల్లికి అధిక రక్తపోటు మరియు మూత్రంలో ప్రోటీन్ ఉంది। ఇది మూర్ఛలకు కారణమై తల్లి మరియు బిడ్డకు హాని కలిగించవచ్చు। తల్లి పరిస్థితి మరింత దిగజారుతోంది।\n\nఏమి చేయాలి:\nతల్లిని ఈరోజే ఆసుపత్రికి తీసుకెళ్ళండి। ఆలస్యం చేయవద్దు — ఇది అత్యవసరం। వీలైతే అంబులెన్స్ ఏర్పాటు చేయండి।\n\nగమనించవలసిన హెచ్చరిక సంకేతాలు:\n- తగ్గని తీవ్రమైన తలనొప్పి\n- చూపు సమస్యలు లేదా మచ్చలు కనిపించడం\n- మూర్ఛలు లేదా మెలిపాట\n- యోని నుండి తీవ్రమైన రక్తస్రావం\n- తీవ్రమైన కడుపు నొప్పి\n- బిడ్డ ఎప్పటిలా కదలడం లేదు\n\nవీటిలో ఏదైనా జరిగితే వెంటనే ఆసుపత్రికి వెళ్ళండి।\n",
+          "translation_fallback_flag": false
+        },
+        "laboratory_analysis": {
+          "lab_risk_flags": [
+            "Moderate anemia: Hemoglobin 10.5 g/dL - iron therapy indicated",
+            "Severe thrombocytopenia: 85,000 per uL - preeclampsia concern",
+            "Leukocytosis: 16,500 per uL - infection suspected",
+            "Significant proteinuria: +2 - preeclampsia risk",
+            "MULTI-PARAMETER ABNORMALITY: Multiple organ systems affected"
+          ],
+          "lab_risk_score": 10,
+          "critical_flags": [
+            "SEVERE_THROMBOCYTOPENIA"
+          ]
+        }
+      }
+    },
+    {
+      "test_name": "Evidence Summary Generation",
+      "test_id": "TEST_7_EVIDENCE",
+      "passed": true,
+      "assertions": [
+        {
+          "check": "evidence_summary exists and not empty",
+          "expected": "List with items",
+          "actual": "3 items",
+          "passed": true
+        },
+        {
+          "check": "evidence_items exists and not empty",
+          "expected": "List with items",
+          "actual": "8 items",
+          "passed": true
+        },
+        {
+          "check": "evidence_summary has ≤3 items",
+          "expected": "≤3",
+          "actual": 3,
+          "passed": true
+        },
+        {
+          "check": "evidence_item has \"type\" field",
+          "expected": "Present",
+          "actual": true,
+          "passed": true
+        },
+        {
+          "check": "evidence_item has \"name\" field",
+          "expected": "Present",
+          "actual": true,
+          "passed": true
+        }
+      ],
+      "output": {
+        "case_id": "TEST_EVIDENCE",
+        "input_sources": {
+          "anc_card_image": null,
+          "lab_report_image": null,
+          "lab_report_date": "2026-01-25"
+        },
+        "lab_age_days": 10,
+        "lab_age_warning": null,
+        "provenance": {
+          "risk_authority": "rule_engine",
+          "explanation_source": "fallback_template",
+          "timestamp_utc": "2026-02-05T04:10:08.709714+00:00",
+          "explanation_generated": true,
+          "model_snapshot_id": null,
+          "ocr_text_hash": null,
+          "lab_report_image_hash": null
+        },
+        "risk_category": "HIGH",
+        "referral_required": true,
+        "trigger_reason": "Significant proteinuria: +2 WITH neurological symptoms (headache, blurred_vision) - PREECLAMPSIA SUSPECTED",
+        "evidence_items": [
+          {
+            "type": "lab",
+            "name": "hemoglobin",
+            "value": 10.5,
+            "unit": "g/dL",
+            "age_days": 10,
+            "delta": -0.7,
+            "percent_change": -6.2
+          },
+          {
+            "type": "lab",
+            "name": "platelets",
+            "value": 85000,
+            "unit": "/uL",
+            "age_days": 10,
+            "delta": -95000,
+            "percent_change": -52.8
+          },
+          {
+            "type": "lab",
+            "name": "bp_systolic",
+            "value": 150,
+            "unit": "mmHg",
+            "age_days": 10,
+            "delta": 22,
+            "percent_change": 17.2
+          },
+          {
+            "type": "lab",
+            "name": "bp_diastolic",
+            "value": 96,
+            "unit": "mmHg",
+            "age_days": 10,
+            "delta": 12,
+            "percent_change": 14.3
+          },
+          {
+            "type": "lab",
+            "name": "proteinuria",
+            "value": "+2",
+            "unit": null,
+            "age_days": 10
+          },
+          {
+            "type": "lab",
+            "name": "wbc",
+            "value": 16500,
+            "unit": "/uL",
+            "age_days": 10,
+            "delta": 8000,
+            "percent_change": 94.1
+          },
+          {
+            "type": "symptom",
+            "name": "headache",
+            "reported": true,
+            "value": null,
+            "unit": null
+          },
+          {
+            "type": "symptom",
+            "name": "blurred_vision",
+            "reported": true,
+            "value": null,
+            "unit": null
+          }
+        ],
+        "evidence_summary": [
+          "platelets dropped 180,000→85,000 (drop 53%)",
+          "blood pressure increased 128→150 mmHg (hypertensive)",
+          "proteinuria progressed trace→+2"
+        ],
+        "temporal_highlight": "Progressive escalation: Blood pressure increased from 128/84 to 150/96 mmHg (hypertensive range); Platelet count declined from 180,000 to 85,000 per uL (drop of 95,000) (severe thrombocytopenia); Proteinuria worsened from trace to +2 (significant proteinuria - preeclampsia concern); plus 2 additional parameter changes from 2026-01-10 to 2026-02-04",
+        "confidence_score": 0.9,
+        "confidence_tier": "HIGH",
+        "uncertainty_reason": "Limited temporal data (only 2 visits)",
+        "confidence_factors": {
+          "temporal_context": 0.7,
+          "symptom_clarity": 0.8,
+          "lab_completeness": 1.0,
+          "lab_age_freshness": 0.9,
+          "risk_clarity": 1.0,
+          "rule_convergence": 1.0
+        },
+        "clinical_explanation": "Risk Category: HIGH\nTrigger: Significant proteinuria: +2 WITH neurological symptoms (headache, blurred_vision) - PREECLAMPSIA SUSPECTED\n\nEvidence-based escalation:\n1. platelets dropped 180,000→85,000 (drop 53%)\n2. blood pressure increased 128→150 mmHg (hypertensive)\n3. proteinuria progressed trace→+2\n\nLaboratory findings:\n- Moderate anemia: Hemoglobin 10.5 g/dL - iron therapy indicated\n- Severe thrombocytopenia: 85,000 per uL - preeclampsia concern\n- Leukocytosis: 16,500 per uL - infection suspected\n\nClinical reasoning: The combination of laboratory trends and clinical symptoms supports HIGH risk classification.\nRecommendation: Urgent referral to higher-level facility for comprehensive evaluation and management.",
+        "asha_explanation": "URGENT ACTION NEEDED\n\nWhat is the problem:\nMother has high blood pressure and protein in urine. This can cause fits and harm mother and baby. Mother's condition is getting worse.\n\nWhat to do:\nTake mother to hospital TODAY. Do not delay — this is urgent. Arrange ambulance if possible.\n\nWarning signs to watch:\n- Severe headache that does not go away\n- Vision problems or seeing spots\n- Fits or convulsions\n- Heavy bleeding from vagina\n- Severe stomach pain\n- Baby not moving as usual\n\nIf any of these happen, go to hospital IMMEDIATELY.\n",
+        "translations": {
+          "english": "URGENT ACTION NEEDED\n\nWhat is the problem:\nMother has high blood pressure and protein in urine. This can cause fits and harm mother and baby. Mother's condition is getting worse.\n\nWhat to do:\nTake mother to hospital TODAY. Do not delay — this is urgent. Arrange ambulance if possible.\n\nWarning signs to watch:\n- Severe headache that does not go away\n- Vision problems or seeing spots\n- Fits or convulsions\n- Heavy bleeding from vagina\n- Severe stomach pain\n- Baby not moving as usual\n\nIf any of these happen, go to hospital IMMEDIATELY.\n",
+          "hindi": "तत्काल कार्रवाई आवश्यक\n\nसमस्या क्या है:\nमाँ को उच्च रक्तचाप है और पेशाब में प्रोटीन है। इससे दौरे पड़ सकते हैं और माँ और बच्चे को नुकसान हो सकता है। माँ की स्थिति बिगड़ रही है।\n\nक्या करना है:\nमाँ को आज अस्पताल ले जाएं। देरी न करें — यह अत्यावश्यक है। संभव हो तो एम्बुलेंस की व्यवस्था करें।\n\nदेखने के लिए चेतावनी संकेत:\n- गंभीर सिरदर्द जो दूर नहीं होता\n- दृष्टि समस्याएं या धब्बे दिखना\n- दौरे या मरोड़\n- योनि से अत्यधिक रक्तस्राव\n- गंभीर पेट दर्द\n- बच्चा सामान्य रूप से हिलडुल नहीं रहा\n\nयदि इनमें से कोई भी हो तो तुरंत अस्पताल जाएं।\n",
+          "telugu": "అత్యవసర చర్య అవసరం\n\nసమస్య ఏమిటి:\nతల్లికి అధిక రక్తపోటు మరియు మూత్రంలో ప్రోటీन్ ఉంది। ఇది మూర్ఛలకు కారణమై తల్లి మరియు బిడ్డకు హాని కలిగించవచ్చు। తల్లి పరిస్థితి మరింత దిగజారుతోంది।\n\nఏమి చేయాలి:\nతల్లిని ఈరోజే ఆసుపత్రికి తీసుకెళ్ళండి। ఆలస్యం చేయవద్దు — ఇది అత్యవసరం। వీలైతే అంబులెన్స్ ఏర్పాటు చేయండి।\n\nగమనించవలసిన హెచ్చరిక సంకేతాలు:\n- తగ్గని తీవ్రమైన తలనొప్పి\n- చూపు సమస్యలు లేదా మచ్చలు కనిపించడం\n- మూర్ఛలు లేదా మెలిపాట\n- యోని నుండి తీవ్రమైన రక్తస్రావం\n- తీవ్రమైన కడుపు నొప్పి\n- బిడ్డ ఎప్పటిలా కదలడం లేదు\n\nవీటిలో ఏదైనా జరిగితే వెంటనే ఆసుపత్రికి వెళ్ళండి।\n",
+          "translation_fallback_flag": false
+        },
+        "laboratory_analysis": {
+          "lab_risk_flags": [
+            "Moderate anemia: Hemoglobin 10.5 g/dL - iron therapy indicated",
+            "Severe thrombocytopenia: 85,000 per uL - preeclampsia concern",
+            "Leukocytosis: 16,500 per uL - infection suspected",
+            "Significant proteinuria: +2 - preeclampsia risk",
+            "MULTI-PARAMETER ABNORMALITY: Multiple organ systems affected"
+          ],
+          "lab_risk_score": 10,
+          "critical_flags": [
+            "SEVERE_THROMBOCYTOPENIA"
+          ]
+        }
+      }
+    },
+    {
+      "test_name": "Confidence Penalty on Old Labs",
+      "test_id": "TEST_8_CONFIDENCE_PENALTY",
+      "passed": true,
+      "assertions": [
+        {
+          "check": "Fresh lab confidence > Old lab confidence",
+          "expected": "Fresh > Old",
+          "actual": "Fresh=0.91, Old=0.81",
+          "passed": true
+        },
+        {
+          "check": "Fresh lab freshness factor > Old lab",
+          "expected": "Fresh > Old",
+          "actual": "Fresh=1.0, Old=0.3",
+          "passed": true
+        },
+        {
+          "check": "Old lab freshness ≤0.30",
+          "expected": "≤0.30",
+          "actual": 0.3,
+          "passed": true
+        }
+      ],
+      "output": {
+        "fresh": {
+          "case_id": "TEST_CONFIDENCE_FRESH",
+          "input_sources": {
+            "anc_card_image": null,
+            "lab_report_image": null,
+            "lab_report_date": "2026-01-30"
+          },
+          "lab_age_days": 5,
+          "lab_age_warning": null,
+          "provenance": {
+            "risk_authority": "rule_engine",
+            "explanation_source": "fallback_template",
+            "timestamp_utc": "2026-02-05T04:10:08.713274+00:00",
+            "explanation_generated": true,
+            "model_snapshot_id": null,
+            "ocr_text_hash": null,
+            "lab_report_image_hash": null
+          },
+          "risk_category": "HIGH",
+          "referral_required": true,
+          "trigger_reason": "Significant proteinuria: +2 WITH neurological symptoms (headache, blurred_vision) - PREECLAMPSIA SUSPECTED",
+          "evidence_items": [
+            {
+              "type": "lab",
+              "name": "hemoglobin",
+              "value": 10.5,
+              "unit": "g/dL",
+              "age_days": 5,
+              "delta": -0.7,
+              "percent_change": -6.2
+            },
+            {
+              "type": "lab",
+              "name": "platelets",
+              "value": 85000,
+              "unit": "/uL",
+              "age_days": 5,
+              "delta": -95000,
+              "percent_change": -52.8
+            },
+            {
+              "type": "lab",
+              "name": "bp_systolic",
+              "value": 150,
+              "unit": "mmHg",
+              "age_days": 5,
+              "delta": 22,
+              "percent_change": 17.2
+            },
+            {
+              "type": "lab",
+              "name": "bp_diastolic",
+              "value": 96,
+              "unit": "mmHg",
+              "age_days": 5,
+              "delta": 12,
+              "percent_change": 14.3
+            },
+            {
+              "type": "lab",
+              "name": "proteinuria",
+              "value": "+2",
+              "unit": null,
+              "age_days": 5
+            },
+            {
+              "type": "lab",
+              "name": "wbc",
+              "value": 16500,
+              "unit": "/uL",
+              "age_days": 5,
+              "delta": 8000,
+              "percent_change": 94.1
+            },
+            {
+              "type": "symptom",
+              "name": "headache",
+              "reported": true,
+              "value": null,
+              "unit": null
+            },
+            {
+              "type": "symptom",
+              "name": "blurred_vision",
+              "reported": true,
+              "value": null,
+              "unit": null
+            }
+          ],
+          "evidence_summary": [
+            "platelets dropped 180,000→85,000 (drop 53%)",
+            "blood pressure increased 128→150 mmHg (hypertensive)",
+            "proteinuria progressed trace→+2"
+          ],
+          "temporal_highlight": "Progressive escalation: Blood pressure increased from 128/84 to 150/96 mmHg (hypertensive range); Platelet count declined from 180,000 to 85,000 per uL (drop of 95,000) (severe thrombocytopenia); Proteinuria worsened from trace to +2 (significant proteinuria - preeclampsia concern); plus 2 additional parameter changes from 2026-01-10 to 2026-02-04",
+          "confidence_score": 0.91,
+          "confidence_tier": "HIGH",
+          "uncertainty_reason": "Limited temporal data (only 2 visits)",
+          "confidence_factors": {
+            "temporal_context": 0.7,
+            "symptom_clarity": 0.8,
+            "lab_completeness": 1.0,
+            "lab_age_freshness": 1.0,
+            "risk_clarity": 1.0,
+            "rule_convergence": 1.0
+          },
+          "clinical_explanation": "Risk Category: HIGH\nTrigger: Significant proteinuria: +2 WITH neurological symptoms (headache, blurred_vision) - PREECLAMPSIA SUSPECTED\n\nEvidence-based escalation:\n1. platelets dropped 180,000→85,000 (drop 53%)\n2. blood pressure increased 128→150 mmHg (hypertensive)\n3. proteinuria progressed trace→+2\n\nLaboratory findings:\n- Moderate anemia: Hemoglobin 10.5 g/dL - iron therapy indicated\n- Severe thrombocytopenia: 85,000 per uL - preeclampsia concern\n- Leukocytosis: 16,500 per uL - infection suspected\n\nClinical reasoning: The combination of laboratory trends and clinical symptoms supports HIGH risk classification.\nRecommendation: Urgent referral to higher-level facility for comprehensive evaluation and management.",
+          "asha_explanation": "URGENT ACTION NEEDED\n\nWhat is the problem:\nMother has high blood pressure and protein in urine. This can cause fits and harm mother and baby. Mother's condition is getting worse.\n\nWhat to do:\nTake mother to hospital TODAY. Do not delay — this is urgent. Arrange ambulance if possible.\n\nWarning signs to watch:\n- Severe headache that does not go away\n- Vision problems or seeing spots\n- Fits or convulsions\n- Heavy bleeding from vagina\n- Severe stomach pain\n- Baby not moving as usual\n\nIf any of these happen, go to hospital IMMEDIATELY.\n",
+          "translations": {
+            "english": "URGENT ACTION NEEDED\n\nWhat is the problem:\nMother has high blood pressure and protein in urine. This can cause fits and harm mother and baby. Mother's condition is getting worse.\n\nWhat to do:\nTake mother to hospital TODAY. Do not delay — this is urgent. Arrange ambulance if possible.\n\nWarning signs to watch:\n- Severe headache that does not go away\n- Vision problems or seeing spots\n- Fits or convulsions\n- Heavy bleeding from vagina\n- Severe stomach pain\n- Baby not moving as usual\n\nIf any of these happen, go to hospital IMMEDIATELY.\n",
+            "hindi": "तत्काल कार्रवाई आवश्यक\n\nसमस्या क्या है:\nमाँ को उच्च रक्तचाप है और पेशाब में प्रोटीन है। इससे दौरे पड़ सकते हैं और माँ और बच्चे को नुकसान हो सकता है। माँ की स्थिति बिगड़ रही है।\n\nक्या करना है:\nमाँ को आज अस्पताल ले जाएं। देरी न करें — यह अत्यावश्यक है। संभव हो तो एम्बुलेंस की व्यवस्था करें।\n\nदेखने के लिए चेतावनी संकेत:\n- गंभीर सिरदर्द जो दूर नहीं होता\n- दृष्टि समस्याएं या धब्बे दिखना\n- दौरे या मरोड़\n- योनि से अत्यधिक रक्तस्राव\n- गंभीर पेट दर्द\n- बच्चा सामान्य रूप से हिलडुल नहीं रहा\n\nयदि इनमें से कोई भी हो तो तुरंत अस्पताल जाएं।\n",
+            "telugu": "అత్యవసర చర్య అవసరం\n\nసమస్య ఏమిటి:\nతల్లికి అధిక రక్తపోటు మరియు మూత్రంలో ప్రోటీन్ ఉంది। ఇది మూర్ఛలకు కారణమై తల్లి మరియు బిడ్డకు హాని కలిగించవచ్చు। తల్లి పరిస్థితి మరింత దిగజారుతోంది।\n\nఏమి చేయాలి:\nతల్లిని ఈరోజే ఆసుపత్రికి తీసుకెళ్ళండి। ఆలస్యం చేయవద్దు — ఇది అత్యవసరం। వీలైతే అంబులెన్స్ ఏర్పాటు చేయండి।\n\nగమనించవలసిన హెచ్చరిక సంకేతాలు:\n- తగ్గని తీవ్రమైన తలనొప్పి\n- చూపు సమస్యలు లేదా మచ్చలు కనిపించడం\n- మూర్ఛలు లేదా మెలిపాట\n- యోని నుండి తీవ్రమైన రక్తస్రావం\n- తీవ్రమైన కడుపు నొప్పి\n- బిడ్డ ఎప్పటిలా కదలడం లేదు\n\nవీటిలో ఏదైనా జరిగితే వెంటనే ఆసుపత్రికి వెళ్ళండి।\n",
+            "translation_fallback_flag": false
+          },
+          "laboratory_analysis": {
+            "lab_risk_flags": [
+              "Moderate anemia: Hemoglobin 10.5 g/dL - iron therapy indicated",
+              "Severe thrombocytopenia: 85,000 per uL - preeclampsia concern",
+              "Leukocytosis: 16,500 per uL - infection suspected",
+              "Significant proteinuria: +2 - preeclampsia risk",
+              "MULTI-PARAMETER ABNORMALITY: Multiple organ systems affected"
+            ],
+            "lab_risk_score": 10,
+            "critical_flags": [
+              "SEVERE_THROMBOCYTOPENIA"
+            ]
+          }
+        },
+        "old": {
+          "case_id": "TEST_CONFIDENCE_OLD",
+          "input_sources": {
+            "anc_card_image": null,
+            "lab_report_image": null,
+            "lab_report_date": "2025-10-27"
+          },
+          "lab_age_days": 100,
+          "lab_age_warning": "too_old_recommend_repeat",
+          "provenance": {
+            "risk_authority": "rule_engine",
+            "explanation_source": "fallback_template",
+            "timestamp_utc": "2026-02-05T04:10:08.715967+00:00",
+            "explanation_generated": true,
+            "model_snapshot_id": null,
+            "ocr_text_hash": null,
+            "lab_report_image_hash": null
+          },
+          "risk_category": "HIGH",
+          "referral_required": true,
+          "trigger_reason": "Significant proteinuria: +2 WITH neurological symptoms (headache, blurred_vision) - PREECLAMPSIA SUSPECTED",
+          "evidence_items": [
+            {
+              "type": "lab",
+              "name": "hemoglobin",
+              "value": 10.5,
+              "unit": "g/dL",
+              "age_days": 100,
+              "delta": -0.7,
+              "percent_change": -6.2
+            },
+            {
+              "type": "lab",
+              "name": "platelets",
+              "value": 85000,
+              "unit": "/uL",
+              "age_days": 100,
+              "delta": -95000,
+              "percent_change": -52.8
+            },
+            {
+              "type": "lab",
+              "name": "bp_systolic",
+              "value": 150,
+              "unit": "mmHg",
+              "age_days": 100,
+              "delta": 22,
+              "percent_change": 17.2
+            },
+            {
+              "type": "lab",
+              "name": "bp_diastolic",
+              "value": 96,
+              "unit": "mmHg",
+              "age_days": 100,
+              "delta": 12,
+              "percent_change": 14.3
+            },
+            {
+              "type": "lab",
+              "name": "proteinuria",
+              "value": "+2",
+              "unit": null,
+              "age_days": 100
+            },
+            {
+              "type": "lab",
+              "name": "wbc",
+              "value": 16500,
+              "unit": "/uL",
+              "age_days": 100,
+              "delta": 8000,
+              "percent_change": 94.1
+            },
+            {
+              "type": "symptom",
+              "name": "headache",
+              "reported": true,
+              "value": null,
+              "unit": null
+            },
+            {
+              "type": "symptom",
+              "name": "blurred_vision",
+              "reported": true,
+              "value": null,
+              "unit": null
+            }
+          ],
+          "evidence_summary": [
+            "platelets dropped 180,000→85,000 (drop 53%)",
+            "blood pressure increased 128→150 mmHg (hypertensive)",
+            "proteinuria progressed trace→+2"
+          ],
+          "temporal_highlight": "Progressive escalation: Blood pressure increased from 128/84 to 150/96 mmHg (hypertensive range); Platelet count declined from 180,000 to 85,000 per uL (drop of 95,000) (severe thrombocytopenia); Proteinuria worsened from trace to +2 (significant proteinuria - preeclampsia concern); plus 2 additional parameter changes from 2026-01-10 to 2026-02-04",
+          "confidence_score": 0.81,
+          "confidence_tier": "MODERATE",
+          "uncertainty_reason": "Limited temporal data (only 2 visits); Lab results are very old (>90 days) - fresh tests recommended. Fresh lab tests strongly recommended.",
+          "confidence_factors": {
+            "temporal_context": 0.7,
+            "symptom_clarity": 0.8,
+            "lab_completeness": 1.0,
+            "lab_age_freshness": 0.3,
+            "risk_clarity": 1.0,
+            "rule_convergence": 1.0
+          },
+          "clinical_explanation": "Risk Category: HIGH\nTrigger: Significant proteinuria: +2 WITH neurological symptoms (headache, blurred_vision) - PREECLAMPSIA SUSPECTED\n\nEvidence-based escalation:\n1. platelets dropped 180,000→85,000 (drop 53%)\n2. blood pressure increased 128→150 mmHg (hypertensive)\n3. proteinuria progressed trace→+2\n\nLaboratory findings:\n- Moderate anemia: Hemoglobin 10.5 g/dL - iron therapy indicated\n- Severe thrombocytopenia: 85,000 per uL - preeclampsia concern\n- Leukocytosis: 16,500 per uL - infection suspected\n\nClinical reasoning: The combination of laboratory trends and clinical symptoms supports HIGH risk classification.\nRecommendation: Urgent referral to higher-level facility for comprehensive evaluation and management.",
+          "asha_explanation": "URGENT ACTION NEEDED\n\nWhat is the problem:\nMother has high blood pressure and protein in urine. This can cause fits and harm mother and baby. Mother's condition is getting worse.\n\nWhat to do:\nTake mother to hospital TODAY. Do not delay — this is urgent. Arrange ambulance if possible.\n\nWarning signs to watch:\n- Severe headache that does not go away\n- Vision problems or seeing spots\n- Fits or convulsions\n- Heavy bleeding from vagina\n- Severe stomach pain\n- Baby not moving as usual\n\nIf any of these happen, go to hospital IMMEDIATELY.\n\nIMPORTANT: Lab report is very old. Fresh blood tests are needed.\n",
+          "translations": {
+            "english": "URGENT ACTION NEEDED\n\nWhat is the problem:\nMother has high blood pressure and protein in urine. This can cause fits and harm mother and baby. Mother's condition is getting worse.\n\nWhat to do:\nTake mother to hospital TODAY. Do not delay — this is urgent. Arrange ambulance if possible.\n\nWarning signs to watch:\n- Severe headache that does not go away\n- Vision problems or seeing spots\n- Fits or convulsions\n- Heavy bleeding from vagina\n- Severe stomach pain\n- Baby not moving as usual\n\nIf any of these happen, go to hospital IMMEDIATELY.\n\nIMPORTANT: Lab report is very old. Fresh blood tests are needed.\n",
+            "hindi": "तत्काल कार्रवाई आवश्यक\n\nसमस्या क्या है:\nमाँ को उच्च रक्तचाप है और पेशाब में प्रोटीन है। इससे दौरे पड़ सकते हैं और माँ और बच्चे को नुकसान हो सकता है। माँ की स्थिति बिगड़ रही है।\n\nक्या करना है:\nमाँ को आज अस्पताल ले जाएं। देरी न करें — यह अत्यावश्यक है। संभव हो तो एम्बुलेंस की व्यवस्था करें।\n\nदेखने के लिए चेतावनी संकेत:\n- गंभीर सिरदर्द जो दूर नहीं होता\n- दृष्टि समस्याएं या धब्बे दिखना\n- दौरे या मरोड़\n- योनि से अत्यधिक रक्तस्राव\n- गंभीर पेट दर्द\n- बच्चा सामान्य रूप से हिलडुल नहीं रहा\n\nयदि इनमें से कोई भी हो तो तुरंत अस्पताल जाएं।\n\nमहत्वपूर्ण: लैब रिपोर्ट बहुत पुरानी है। नए रक्त परीक्षण की आवश्यकता है।\n",
+            "telugu": "అత్యవసర చర్య అవసరం\n\nసమస్య ఏమిటి:\nతల్లికి అధిక రక్తపోటు మరియు మూత్రంలో ప్రోటీन్ ఉంది। ఇది మూర్ఛలకు కారణమై తల్లి మరియు బిడ్డకు హాని కలిగించవచ్చు। తల్లి పరిస్థితి మరింత దిగజారుతోంది।\n\nఏమి చేయాలి:\nతల్లిని ఈరోజే ఆసుపత్రికి తీసుకెళ్ళండి। ఆలస్యం చేయవద్దు — ఇది అత్యవసరం। వీలైతే అంబులెన్స్ ఏర్పాటు చేయండి।\n\nగమనించవలసిన హెచ్చరిక సంకేతాలు:\n- తగ్గని తీవ్రమైన తలనొప్పి\n- చూపు సమస్యలు లేదా మచ్చలు కనిపించడం\n- మూర్ఛలు లేదా మెలిపాట\n- యోని నుండి తీవ్రమైన రక్తస్రావం\n- తీవ్రమైన కడుపు నొప్పి\n- బిడ్డ ఎప్పటిలా కదలడం లేదు\n\nవీటిలో ఏదైనా జరిగితే వెంటనే ఆసుపత్రికి వెళ్ళండి।\n\nముఖ్యమైనది: ల్యాబ్ రిపోర్ట్ చాలా పాతది. కొత్త రక్త పరీక్షలు అవసరం।\n",
+            "translation_fallback_flag": false
+          },
+          "laboratory_analysis": {
+            "lab_risk_flags": [
+              "Moderate anemia: Hemoglobin 10.5 g/dL - iron therapy indicated",
+              "Severe thrombocytopenia: 85,000 per uL - preeclampsia concern",
+              "Leukocytosis: 16,500 per uL - infection suspected",
+              "Significant proteinuria: +2 - preeclampsia risk",
+              "MULTI-PARAMETER ABNORMALITY: Multiple organ systems affected"
+            ],
+            "lab_risk_score": 10,
+            "critical_flags": [
+              "SEVERE_THROMBOCYTOPENIA"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

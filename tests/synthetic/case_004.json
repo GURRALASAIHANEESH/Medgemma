@@ -1,0 +1,62 @@
+{
+  "case_id": "case_004",
+  "type": "severe_htn_validated",
+  "seed": 9004,
+  "patient": {
+    "age": 32,
+    "gravida": 3,
+    "para": 2
+  },
+  "visits": [
+    {
+      "visit_id": "v1",
+      "date": "2026-01-25",
+      "gestational_age": 34,
+      "weight": 70.0,
+      "bp": {
+        "systolic": 138,
+        "diastolic": 88
+      },
+      "hemoglobin": 11.0,
+      "proteinuria": "nil",
+      "fundal_height": 32,
+      "fetal_heart_rate": 140
+    },
+    {
+      "visit_id": "v2",
+      "date": "2026-02-07",
+      "gestational_age": 36,
+      "weight": 72.0,
+      "bp": {
+        "systolic": 168,
+        "diastolic": 108
+      },
+      "hemoglobin": 10.8,
+      "proteinuria": "+2",
+      "fundal_height": 34,
+      "fetal_heart_rate": 148
+    }
+  ],
+  "current_symptoms": {
+    "symptoms": {
+      "headache": true,
+      "blurred_vision": false,
+      "facial_edema": true,
+      "pedal_edema": true,
+      "dizziness": false,
+      "breathlessness": false,
+      "reduced_fetal_movement": false,
+      "abdominal_pain": false,
+      "nausea_vomiting": false
+    }
+  },
+  "missing_labs": false,
+  "language": "en",
+  "expected_keywords_for_QC": [
+    "BP: 168/108",
+    "proteinuria: +2",
+    "severe hypertension",
+    "headache"
+  ],
+  "notes": "Validated integration test case - severe hypertension"
+}

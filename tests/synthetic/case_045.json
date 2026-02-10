@@ -1,0 +1,63 @@
+{
+  "case_id": "case_045",
+  "type": "edge_ocr_noise",
+  "seed": 1279,
+  "patient": {
+    "age": 36,
+    "gravida": 4,
+    "para": 3
+  },
+  "visits": [
+    {
+      "visit_id": "v1",
+      "date": "2025-10-31",
+      "gestational_age": 33,
+      "weight": 69.99270089699017,
+      "bp": {
+        "systolic": 131,
+        "diastolic": 83
+      },
+      "hemoglobin": 10.912197895860679,
+      "proteinuria": "nil",
+      "platelets_k_ul": 195,
+      "fundal_height": 29,
+      "fetal_heart_rate": 147
+    },
+    {
+      "visit_id": "v2",
+      "date": "2025-11-17",
+      "gestational_age": 35,
+      "weight": 71.08961871039075,
+      "bp": {
+        "systolic": 143,
+        "diastolic": 90
+      },
+      "hemoglobin": 10.688797477267414,
+      "proteinuria": "+1",
+      "fundal_height": 31,
+      "fetal_heart_rate": 146,
+      "platelets_k_ul": 138,
+      "notes": "Platlt: 95 x10^3/uL (OCR noise)"
+    }
+  ],
+  "current_symptoms": {
+    "symptoms": {
+      "headache": true,
+      "blurred_vision": false,
+      "facial_edema": false,
+      "pedal_edema": false,
+      "dizziness": false,
+      "breathlessness": false,
+      "reduced_fetal_movement": false,
+      "abdominal_pain": true,
+      "nausea_vomiting": false
+    }
+  },
+  "missing_labs": false,
+  "language": "en",
+  "expected_keywords_for_QC": [
+    "platelets: 138",
+    "proteinuria: +1"
+  ],
+  "notes": "generator: v1.2, seed=1279, missing_latest=False"
+}

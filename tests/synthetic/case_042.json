@@ -1,0 +1,60 @@
+{
+  "case_id": "case_042",
+  "type": "low_risk",
+  "seed": 1276,
+  "patient": {
+    "age": 26,
+    "gravida": 1,
+    "para": 0
+  },
+  "visits": [
+    {
+      "visit_id": "v1",
+      "date": "2025-11-04",
+      "gestational_age": 22,
+      "weight": 60.91921368743076,
+      "bp": {
+        "systolic": 112,
+        "diastolic": 78
+      },
+      "hemoglobin": 11.149963784845545,
+      "proteinuria": "nil",
+      "fundal_height": 20,
+      "fetal_heart_rate": 142
+    },
+    {
+      "visit_id": "v2",
+      "date": "2025-12-04",
+      "gestational_age": 26,
+      "weight": 62.927335316454666,
+      "bp": {
+        "systolic": 121,
+        "diastolic": 72
+      },
+      "hemoglobin": 10.665907584886508,
+      "proteinuria": "nil",
+      "fundal_height": 24,
+      "fetal_heart_rate": 143
+    }
+  ],
+  "current_symptoms": {
+    "symptoms": {
+      "headache": false,
+      "blurred_vision": false,
+      "facial_edema": false,
+      "pedal_edema": false,
+      "dizziness": false,
+      "breathlessness": false,
+      "reduced_fetal_movement": false,
+      "abdominal_pain": false,
+      "nausea_vomiting": false
+    }
+  },
+  "missing_labs": false,
+  "language": "en",
+  "expected_keywords_for_QC": [
+    "hemoglobin: 10.7",
+    "proteinuria: nil"
+  ],
+  "notes": "generator: v1.2, seed=1276"
+}

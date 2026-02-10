@@ -1,0 +1,62 @@
+{
+  "case_id": "case_002",
+  "type": "severe_anemia_validated",
+  "seed": 9002,
+  "patient": {
+    "age": 25,
+    "gravida": 1,
+    "para": 0
+  },
+  "visits": [
+    {
+      "visit_id": "v1",
+      "date": "2026-01-15",
+      "gestational_age": 28,
+      "weight": 62.0,
+      "bp": {
+        "systolic": 118,
+        "diastolic": 76
+      },
+      "hemoglobin": 9.5,
+      "proteinuria": "nil",
+      "fundal_height": 26,
+      "fetal_heart_rate": 140
+    },
+    {
+      "visit_id": "v2",
+      "date": "2026-02-05",
+      "gestational_age": 31,
+      "weight": 63.5,
+      "bp": {
+        "systolic": 120,
+        "diastolic": 78
+      },
+      "hemoglobin": 7.8,
+      "proteinuria": "nil",
+      "fundal_height": 29,
+      "fetal_heart_rate": 145
+    }
+  ],
+  "current_symptoms": {
+    "symptoms": {
+      "headache": false,
+      "blurred_vision": false,
+      "facial_edema": false,
+      "pedal_edema": false,
+      "dizziness": true,
+      "breathlessness": true,
+      "reduced_fetal_movement": false,
+      "abdominal_pain": false,
+      "nausea_vomiting": false
+    }
+  },
+  "missing_labs": false,
+  "language": "en",
+  "expected_keywords_for_QC": [
+    "hemoglobin: 7.8",
+    "Hb 7.8",
+    "breathlessness",
+    "anemia"
+  ],
+  "notes": "Validated integration test case - severe anemia"
+}

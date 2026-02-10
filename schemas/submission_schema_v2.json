@@ -1,0 +1,224 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "PregnancyBridge Submission Schema v2",
+    "type": "object",
+    "required": [
+        "case_id",
+        "input_sources",
+        "provenance",
+        "risk_category",
+        "referral_required",
+        "evidence_items"
+    ],
+    "properties": {
+        "case_id": {
+            "type": "string",
+            "description": "Unique case identifier"
+        },
+        "input_sources": {
+            "type": "object",
+            "properties": {
+                "anc_card_image": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "lab_report_image": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "lab_report_date": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                }
+            }
+        },
+        "lab_age_days": {
+            "type": [
+                "integer",
+                "null"
+            ],
+            "description": "Days since lab report date"
+        },
+        "lab_age_warning": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "enum": [
+                "stale_lab_30d",
+                "old_but_usable",
+                "too_old_recommend_repeat",
+                null
+            ]
+        },
+        "provenance": {
+            "type": "object",
+            "required": [
+                "risk_authority",
+                "explanation_source",
+                "timestamp_utc"
+            ],
+            "properties": {
+                "risk_authority": {
+                    "type": "string",
+                    "enum": [
+                        "rule_engine"
+                    ]
+                },
+                "explanation_source": {
+                    "type": "string",
+                    "enum": [
+                        "medgemma",
+                        "fallback_template"
+                    ]
+                },
+                "timestamp_utc": {
+                    "type": "string"
+                },
+                "explanation_generated": {
+                    "type": "boolean"
+                },
+                "model_snapshot_id": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "ocr_text_hash": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "lab_report_image_hash": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            }
+        },
+        "risk_category": {
+            "type": "string",
+            "enum": [
+                "LOW",
+                "MODERATE",
+                "HIGH"
+            ]
+        },
+        "referral_required": {
+            "type": "boolean"
+        },
+        "trigger_reason": {
+            "type": "string"
+        },
+        "evidence_items": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "lab",
+                            "symptom",
+                            "temporal"
+                        ]
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": [
+                            "number",
+                            "boolean",
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "unit": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "age_days": {
+                        "type": [
+                            "integer",
+                            "null"
+                        ]
+                    },
+                    "reported": {
+                        "type": [
+                            "boolean",
+                            "null"
+                        ]
+                    },
+                    "delta": {
+                        "type": [
+                            "number",
+                            "null"
+                        ]
+                    },
+                    "percent_change": {
+                        "type": [
+                            "number",
+                            "null"
+                        ]
+                    }
+                },
+                "required": [
+                    "type",
+                    "name"
+                ]
+            }
+        },
+        "evidence_summary": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "temporal_highlight": {
+            "type": "string"
+        },
+        "confidence_score": {
+            "type": "number",
+            "minimum": 0.0,
+            "maximum": 1.0
+        },
+        "uncertainty_reason": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "clinical_explanation": {
+            "type": "string"
+        },
+        "asha_explanation": {
+            "type": "string"
+        },
+        "translations": {
+            "type": "object",
+            "properties": {
+                "hindi": {
+                    "type": "string"
+                },
+                "telugu": {
+                    "type": "string"
+                },
+                "translation_fallback_flag": {
+                    "type": "boolean"
+                }
+            }
+        }
+    }
+}

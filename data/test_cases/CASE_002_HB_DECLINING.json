@@ -1,0 +1,52 @@
+{
+    "case_id": "CASE_002_HB_DECLINING",
+    "description": "Progressive hemoglobin decline with fatigue symptoms",
+    "anc_card_image": null,
+    "lab_report_image": null,
+    "lab_report_json": null,
+    "lab_report_date": "2026-01-25",
+    "visits": [
+        {
+            "date": "2025-10-15",
+            "ga_weeks": 16,
+            "bp_systolic": 118,
+            "bp_diastolic": 78,
+            "hb": 11.5,
+            "proteinuria": "nil",
+            "platelets": 200000
+        },
+        {
+            "date": "2025-11-20",
+            "ga_weeks": 20,
+            "bp_systolic": 120,
+            "bp_diastolic": 80,
+            "hb": 10.2,
+            "proteinuria": "nil",
+            "platelets": 195000
+        },
+        {
+            "date": "2025-12-28",
+            "ga_weeks": 24,
+            "bp_systolic": 122,
+            "bp_diastolic": 82,
+            "hb": 8.9,
+            "proteinuria": "nil",
+            "platelets": 190000
+        }
+    ],
+    "symptoms": {
+        "headache": false,
+        "blurred_vision": false,
+        "fever": false,
+        "bleeding_gums": false,
+        "epigastric_pain": false,
+        "fatigue": true,
+        "dizziness": true
+    },
+    "expected": {
+        "risk_category": "HIGH",
+        "referral_required": true,
+        "evidence_items_count": 2,
+        "lab_age_warning": false
+    }
+}

@@ -1,0 +1,61 @@
+{
+  "case_id": "case_005",
+  "type": "moderate_risk_validated",
+  "seed": 9005,
+  "patient": {
+    "age": 29,
+    "gravida": 2,
+    "para": 1
+  },
+  "visits": [
+    {
+      "visit_id": "v1",
+      "date": "2026-01-18",
+      "gestational_age": 26,
+      "weight": 64.0,
+      "bp": {
+        "systolic": 125,
+        "diastolic": 80
+      },
+      "hemoglobin": 10.5,
+      "proteinuria": "trace",
+      "fundal_height": 24,
+      "fetal_heart_rate": 142
+    },
+    {
+      "visit_id": "v2",
+      "date": "2026-02-03",
+      "gestational_age": 29,
+      "weight": 66.0,
+      "bp": {
+        "systolic": 138,
+        "diastolic": 88
+      },
+      "hemoglobin": 10.2,
+      "proteinuria": "+1",
+      "fundal_height": 27,
+      "fetal_heart_rate": 144
+    }
+  ],
+  "current_symptoms": {
+    "symptoms": {
+      "headache": false,
+      "blurred_vision": false,
+      "facial_edema": false,
+      "pedal_edema": true,
+      "dizziness": false,
+      "breathlessness": false,
+      "reduced_fetal_movement": false,
+      "abdominal_pain": false,
+      "nausea_vomiting": false
+    }
+  },
+  "missing_labs": false,
+  "language": "en",
+  "expected_keywords_for_QC": [
+    "BP: 138/88",
+    "proteinuria: +1",
+    "hemoglobin: 10.2"
+  ],
+  "notes": "Validated integration test case - moderate risk"
+}

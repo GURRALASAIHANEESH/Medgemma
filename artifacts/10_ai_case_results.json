@@ -1,0 +1,57 @@
+{
+  "timestamp": "2026-02-10T05:37:30.379297Z",
+  "total_cases": 10,
+  "ai_success_count": 0,
+  "results": [
+    {
+      "case_id": "case_001",
+      "error": "'SymptomIntake' object has no attribute 'extract_symptoms_from_case'",
+      "ai_worked": false
+    },
+    {
+      "case_id": "case_006",
+      "error": "'SymptomIntake' object has no attribute 'extract_symptoms_from_case'",
+      "ai_worked": false
+    },
+    {
+      "case_id": "case_016",
+      "error": "'SymptomIntake' object has no attribute 'extract_symptoms_from_case'",
+      "ai_worked": false
+    },
+    {
+      "case_id": "case_024",
+      "error": "'SymptomIntake' object has no attribute 'extract_symptoms_from_case'",
+      "ai_worked": false
+    },
+    {
+      "case_id": "case_029",
+      "error": "'SymptomIntake' object has no attribute 'extract_symptoms_from_case'",
+      "ai_worked": false
+    },
+    {
+      "case_id": "case_032",
+      "error": "'SymptomIntake' object has no attribute 'extract_symptoms_from_case'",
+      "ai_worked": false
+    },
+    {
+      "case_id": "case_038",
+      "error": "'SymptomIntake' object has no attribute 'extract_symptoms_from_case'",
+      "ai_worked": false
+    },
+    {
+      "case_id": "case_044",
+      "error": "'SymptomIntake' object has no attribute 'extract_symptoms_from_case'",
+      "ai_worked": false
+    },
+    {
+      "case_id": "case_046",
+      "error": "'charmap' codec can't decode byte 0x8d in position 927: character maps to <undefined>",
+      "ai_worked": false
+    },
+    {
+      "case_id": "case_048",
+      "error": "'SymptomIntake' object has no attribute 'extract_symptoms_from_case'",
+      "ai_worked": false
+    }
+  ]
+}

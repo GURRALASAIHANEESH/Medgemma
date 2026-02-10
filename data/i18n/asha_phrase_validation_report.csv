@@ -1,0 +1,13 @@
+ASHA Phrase Library Validation Report
+Total Phrases,41
+
+Language,Phrases Present,Missing,Coverage %
+EN,41,0,100.0%
+HI,41,0,100.0%
+TE,41,0,100.0%
+
+Missing Translations
+Phrase ID,Language
+
+English Leaks Detected
+Phrase ID,Language,Leaked Words,Full Text

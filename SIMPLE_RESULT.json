@@ -1,0 +1,104 @@
+{
+  "case_id": "SIMPLE_IMAGE_001",
+  "input_sources": {
+    "anc_card_image": "D:\\MedGemma\\data\\images\\test1.png",
+    "lab_report_image": "D:\\MedGemma\\data\\images\\test1.png",
+    "lab_report_date": "2026-01-02"
+  },
+  "lab_age_days": 34,
+  "lab_age_warning": "old_but_usable",
+  "provenance": {
+    "risk_authority": "rule_engine",
+    "explanation_source": "medgemma",
+    "timestamp_utc": "2026-02-05T04:23:43.670309+00:00",
+    "explanation_generated": true,
+    "model_snapshot_id": "b05b6fa90147b76639de6522a843ff1ebd8dd832",
+    "ocr_text_hash": null,
+    "lab_report_image_hash": "372afbce4bf06de3abe547029052689e94e6574ccdc15e8ce7e2d5515cfd12dd"
+  },
+  "risk_category": "MODERATE",
+  "referral_required": false,
+  "trigger_reason": "Multiple symptoms present (persistent vomiting, vaginal pain, chills) despite normal laboratory values",
+  "evidence_items": [
+    {
+      "type": "lab",
+      "name": "hemoglobin",
+      "value": 9.0,
+      "unit": "g/dL",
+      "age_days": 34
+    },
+    {
+      "type": "lab",
+      "name": "platelets",
+      "value": 140000,
+      "unit": "/uL",
+      "age_days": 34
+    },
+    {
+      "type": "lab",
+      "name": "bp_systolic",
+      "value": 120,
+      "unit": "mmHg",
+      "age_days": 34
+    },
+    {
+      "type": "lab",
+      "name": "bp_diastolic",
+      "value": 80,
+      "unit": "mmHg",
+      "age_days": 34
+    },
+    {
+      "type": "symptom",
+      "name": "persistent vomiting",
+      "reported": true,
+      "value": null,
+      "unit": null
+    },
+    {
+      "type": "symptom",
+      "name": "vaginal pain",
+      "reported": true,
+      "value": null,
+      "unit": null
+    },
+    {
+      "type": "symptom",
+      "name": "chills",
+      "reported": true,
+      "value": null,
+      "unit": null
+    }
+  ],
+  "evidence_summary": [
+    "new other symptoms (persistent vomiting, vaginal pain, chills)"
+  ],
+  "temporal_highlight": "Single visit assessment - no temporal trend data available",
+  "confidence_score": 0.7,
+  "confidence_tier": "MODERATE",
+  "uncertainty_reason": "Single visit assessment without temporal trend data; Lab results are stale (>30 days) - consider re-testing",
+  "confidence_factors": {
+    "temporal_context": 0.4,
+    "symptom_clarity": 1.0,
+    "lab_completeness": 0.72,
+    "lab_age_freshness": 0.6,
+    "risk_clarity": 0.7,
+    "rule_convergence": 0.9
+  },
+  "clinical_explanation": "The patient is a 65-year-old male presenting with a 2-week history of progressive shortness of breath, fatigue, and occasional chest pain. He has a history of hypertension and hyperlipidemia, both treated with medications. He denies fever, cough, or recent travel. His vital signs show a heart rate of 110 bpm, blood pressure of 140/90 mmHg, and respiratory rate of 22 breaths/min. Physical examination reveals bilateral crackles in the lungs, jugular venous distension (JVD), and peripheral edema. These",
+  "asha_explanation": "What is the problem:\nMother has multiple health problems that need attention.\n\nWhat to do:\nTake mother to hospital this week. Book appointment with doctor. Explain all symptoms to doctor.\n\nWarning signs to watch:\n- Severe headache that does not go away\n- Vision problems or seeing spots\n- Fits or convulsions\n- Heavy bleeding from vagina\n- Severe stomach pain\n- Baby not moving as usual\n\nIf any of these happen, go to hospital IMMEDIATELY.\n\nNote: Lab report is more than 1 month old. Doctor may need fresh tests.\n\nEarly treatment prevents serious problems.\nThis will keep mother and baby safe.",
+  "translations": {
+    "english": "What is the problem:\nMother has multiple health problems that need attention.\n\nWhat to do:\nTake mother to hospital this week. Book appointment with doctor. Explain all symptoms to doctor.\n\nWarning signs to watch:\n- Severe headache that does not go away\n- Vision problems or seeing spots\n- Fits or convulsions\n- Heavy bleeding from vagina\n- Severe stomach pain\n- Baby not moving as usual\n\nIf any of these happen, go to hospital IMMEDIATELY.\n\nNote: Lab report is more than 1 month old. Doctor may need fresh tests.\n\nEarly treatment prevents serious problems.\nThis will keep mother and baby safe.",
+    "hindi": "समस्या क्या है:\nमाँ को कई स्वास्थ्य समस्याएं हैं जिन पर ध्यान देने की आवश्यकता है।\n\nक्या करना है:\nइस सप्ताह माँ को अस्पताल ले जाएं। डॉक्टर से अपॉइंटमेंट बुक करें। डॉक्टर को सभी लक्षण बताएं।\n\nदेखने के लिए चेतावनी संकेत:\n- गंभीर सिरदर्द जो दूर नहीं होता\n- दृष्टि समस्याएं या धब्बे दिखना\n- दौरे या मरोड़\n- योनि से अत्यधिक रक्तस्राव\n- गंभीर पेट दर्द\n- बच्चा सामान्य रूप से हिलडुल नहीं रहा\n\nयदि इनमें से कोई भी हो तो तुरंत अस्पताल जाएं।\n\nनोट: लैब रिपोर्ट 1 महीने से अधिक पुरानी है। डॉक्टर को नए परीक्षण की आवश्यकता हो सकती है।\n\nशीघ्र उपचार गंभीर समस्याओं को रोकता है।\nइससे माँ और बच्चा सुरक्षित रहेंगे।",
+    "telugu": "సమస్య ఏమిటి:\nతల్లికి శ్రద్ధ అవసరమైన అనేక ఆరోగ్య సమస్యలు ఉన్నాయి।\n\nఏమి చేయాలి:\nఈ వారం తల్లిని ఆసుపత్రికి తీసుకెళ్ళండి। వైద్యునితో అపాయింట్‌మెంట్ బుక్ చేయండి। అన్ని లక్షణాలను వైద్యునికి వివరించండి।\n\nగమనించవలసిన హెచ్చరిక సంకేతాలు:\n- తగ్గని తీవ్రమైన తలనొప్పి\n- చూపు సమస్యలు లేదా మచ్చలు కనిపించడం\n- మూర్ఛలు లేదా మెలిపాట\n- యోని నుండి తీవ్రమైన రక్తస్రావం\n- తీవ్రమైన కడుపు నొప్పి\n- బిడ్డ ఎప్పటిలా కదలడం లేదు\n\nవీటిలో ఏదైనా జరిగితే వెంటనే ఆసుపత్రికి వెళ్ళండి।\n\nగమనిక: ల్యాబ్ రిపోర్ట్ 1 నెల కంటే పాతది. వైద్యునికి కొత్త పరీక్షలు అవసరం కావచ్చు।\n\nముందస్తు చికిత్స తీవ్రమైన సమస్యలను నివారిస్తుంది।\nఇది తల్లి మరియు బిడ్డను సురక్షితంగా ఉంచుతుంది।",
+    "translation_fallback_flag": false
+  },
+  "laboratory_analysis": {
+    "lab_risk_flags": [
+      "Moderate anemia: Hemoglobin 9.0 g/dL - iron therapy indicated",
+      "Mild thrombocytopenia: 140,000 per uL - monitor closely"
+    ],
+    "lab_risk_score": 4,
+    "critical_flags": []
+  }
+}

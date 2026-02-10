@@ -1,0 +1,31 @@
+{
+  "case_id": "case_012",
+  "timestamp": "2026-02-08T08:55:39.868944Z",
+  "rule_assessment": {
+    "risk_category": "HIGH",
+    "evidence": [],
+    "primary_reason": ""
+  },
+  "ai_explanation": {
+    "source": "medgemma",
+    "text": "---\n\n**Explanation:**\n\n*   **Why the evidence matters clinically:** The patient's elevated blood pressure (bp) and proteinuria, along with reduced hemoglobin and platelets, indicate potential preeclampsia or HELLP syndrome. These conditions significantly increase the risk of adverse maternal and fetal outcomes, including preterm birth, placental abruption, and fetal growth restriction.\n*   **Why escalation occurred now:** The combination of these findings, particularly the proteinuria and thrombocytopenia (platelets < 100,000/µL), meets the criteria for high-risk preeclampsia, necessitating immediate further evaluation and management to prevent severe complications.\n*   **What complication(s) this aims to prevent:** This escalation aims to prevent severe maternal complications like eclampsia, stroke, liver rupture, and renal failure, as well as fetal complications such as intrauterine growth restriction, placental abruption, and preterm delivery.\n\n---\n\n**Critique:**\n\n*   **Format:** Exactly 3 short bullet lines. (OK)\n*   **Content:**\n    *   a. why the evidence matters clinically: Describes the significance of the findings (elevated BP, proteinuria, low Hb, low platelets) in the context of preeclampsia/HELLP and potential outcomes. (OK)\n    *   b. why escalation occurred now: Explains that the combination of findings meets criteria for high-risk preeclampsia, requiring immediate action. (OK)\n    *   c. what complication(s) this aims to prevent: Lists potential severe maternal and fetal complications that are being addressed. (OK)\n*   **Verbatim String:** Includes \"platelets < 100,000/µL\" verbatim. (OK)\n*   **No Changes:** Does not change risk_category or recommend actions beyond explanation. (OK)\n*   **Conciseness:** The explanation is concise and clinical. (OK)\n*   **Target Audience:** Targeted to a clinician reviewer. (OK)\n\n**Confidence Score:** 5/5 - The output meets all requirements.\n\n**Final Output:**\n```\nExplanation:\n\n*   **Why the evidence matters clinically:** The patient's elevated blood pressure (bp) and proteinuria, along with reduced hemoglobin and platelets, indicate potential preeclampsia or HELLP syndrome. These conditions significantly increase the risk of adverse maternal and fetal outcomes, including preterm birth, placental abruption, and fetal growth restriction.\n*   **Why escalation occurred now:**",
+    "qc_pass": true,
+    "confidence": null,
+    "inference_time_ms": 1620042
+  },
+  "symptoms": {
+    "visit_id": "v2",
+    "gestational_age": 30,
+    "weight": 67.90502992788677,
+    "bp": {
+      "systolic": 143,
+      "diastolic": 93
+    },
+    "hemoglobin": 9.794065765436354,
+    "proteinuria": "+2",
+    "platelets_k_ul": 164,
+    "fundal_height": 30,
+    "fetal_heart_rate": 137
+  },
+  "visits_analyzed": 2
+}

@@ -1,0 +1,30 @@
+{
+  "case_id": "case_032",
+  "timestamp": "2026-02-08T10:47:10.876916Z",
+  "rule_assessment": {
+    "risk_category": "HIGH",
+    "evidence": [],
+    "primary_reason": ""
+  },
+  "ai_explanation": {
+    "source": "medgemma",
+    "text": "```\n1) The evidence summary is currently empty, meaning no specific clinical findings are documented.\n2) Escalation occurred because the risk category is HIGH, indicating a significant level of concern.\n3) This aims to prevent complications associated with high-risk pregnancies, such as preterm birth, fetal growth restriction, and preeclampsia.\n```\n```\n1) The evidence summary is currently empty, meaning no specific clinical findings are documented.\n2) Escalation occurred because the risk category is HIGH, indicating a significant level of concern.\n3) This aims to prevent complications associated with high-risk pregnancies, such as preterm birth, fetal growth restriction, and preeclampsia.\n```\n```\n1) The evidence summary is currently empty, meaning no specific clinical findings are documented.\n2) Escalation occurred because the risk category is HIGH, indicating a significant level of concern.\n3) This aims to prevent complications associated with high-risk pregnancies, such as preterm birth, fetal growth restriction, and preeclampsia.\n```\n```\n1) The evidence summary is currently empty, meaning no specific clinical findings are documented.\n2) Escalation occurred because the risk category is HIGH, indicating a significant level of concern.\n3) This aims to prevent complications associated with high-risk pregnancies, such as preterm birth, fetal growth restriction, and preeclampsia.\n```\n```\n1) The evidence summary is currently empty, meaning no specific clinical findings are documented.\n2) Escalation occurred because the risk category is HIGH, indicating a significant level of concern.\n3) This aims to prevent complications associated with high-risk pregnancies, such as preterm birth, fetal growth restriction, and preeclampsia.\n```\n```\n1) The evidence summary is currently empty, meaning no specific clinical findings are documented.\n2) Escalation occurred because the risk category is HIGH, indicating a significant level of concern.\n3) This aims to prevent complications associated with high-risk pregnancies, such as preterm birth, fetal growth restriction, and preeclampsia.\n```\n```\n1) The evidence summary is currently empty, meaning no specific clinical findings are documented.\n2) Escalation occurred because the risk category is HIGH, indicating a significant level of concern.\n3) This aims to prevent complications associated with high-risk pregnancies, such as preterm birth, fetal growth restriction, and preeclampsia.\n```\n```\n1) The evidence summary is currently empty, meaning no specific clinical findings are documented.\n2)",
+    "qc_pass": true,
+    "confidence": null,
+    "inference_time_ms": 1657308
+  },
+  "symptoms": {
+    "visit_id": "v2",
+    "gestational_age": 34,
+    "weight": 77.00134845112629,
+    "bp": {
+      "systolic": 175,
+      "diastolic": 115
+    },
+    "hemoglobin": 11.140778457485695,
+    "proteinuria": "+3",
+    "fundal_height": 33,
+    "fetal_heart_rate": 138
+  },
+  "visits_analyzed": 2
+}

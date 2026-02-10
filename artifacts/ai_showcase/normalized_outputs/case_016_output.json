@@ -1,0 +1,31 @@
+{
+  "case_id": "case_016",
+  "timestamp": "2026-02-08T09:23:04.265283Z",
+  "rule_assessment": {
+    "risk_category": "HIGH",
+    "evidence": [],
+    "primary_reason": ""
+  },
+  "ai_explanation": {
+    "source": "medgemma",
+    "text": "```\nClinical significance: The elevated weight and blood pressure suggest potential hypertensive disorders of pregnancy. Increased proteinuria is a key indicator of kidney involvement in these conditions. Low hemoglobin raises concern for anemia, which can be associated with chronic disease or blood loss. Thrombocytopenia (low platelets) is a concerning sign that may indicate underlying systemic disease or HELLP syndrome. Abnormal fundal height could suggest growth restriction. Fetal heart rate monitoring is crucial for assessing fetal well-being.\n\nEscalation rationale: The combination of multiple abnormal findings (hypertension, proteinuria, thrombocytopenia, anemia, abnormal fundal height) places the patient at high risk for severe maternal and fetal complications, including preeclampsia, HELLP syndrome, placental abruption, and fetal growth restriction. This warrants immediate further investigation and close monitoring.\n\nComplication prevention: This review aims to prevent severe maternal complications such as preeclampsia, HELLP syndrome, and eclampsia. It also aims to prevent fetal complications such as growth restriction and stillbirth associated with these conditions.\n```\n```\nClinical significance: The elevated weight and blood pressure suggest potential hypertensive disorders of pregnancy. Increased proteinuria is a key indicator of kidney involvement in these conditions. Low hemoglobin raises concern for anemia, which can be associated with chronic disease or blood loss. Thrombocytopenia (low platelets) is a concerning sign that may indicate underlying systemic disease or HELLP syndrome. Abnormal fundal height could suggest growth restriction. Fetal heart rate monitoring is crucial for assessing fetal well-being.\n\nEscalation rationale: The combination of multiple abnormal findings (hypertension, proteinuria, thrombocytopenia, anemia, abnormal fundal height) places the patient at high risk for severe maternal and fetal complications, including preeclampsia, HELLP syndrome, placental abruption, and fetal growth restriction. This warrants immediate further investigation and close monitoring.\n\nComplication prevention: This review aims to prevent severe maternal complications such as preeclampsia, HELLP syndrome, and eclampsia. It also aims to prevent fetal complications such as growth restriction and stillbirth associated with these conditions.\n```\n```\nClinical significance: The elevated weight and blood pressure suggest potential hypertensive disorders of pregnancy. Increased proteinuria is a key indicator of kidney involvement in these conditions. Low hemoglobin raises concern for anemia, which can be associated with chronic disease or blood loss. Thrombocytopenia (low platelets) is a concerning sign that may indicate underlying systemic disease or HELLP syndrome. Abnormal fundal height could suggest growth restriction. Fetal heart rate monitoring is crucial",
+    "qc_pass": true,
+    "confidence": null,
+    "inference_time_ms": 1644388
+  },
+  "symptoms": {
+    "visit_id": "v2",
+    "gestational_age": 35,
+    "weight": 70.64090395123267,
+    "bp": {
+      "systolic": 132,
+      "diastolic": 91
+    },
+    "hemoglobin": 10.764451003277802,
+    "proteinuria": "+2",
+    "platelets_k_ul": 126,
+    "fundal_height": 31,
+    "fetal_heart_rate": 144
+  },
+  "visits_analyzed": 2
+}

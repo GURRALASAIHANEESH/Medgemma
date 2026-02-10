@@ -1,0 +1,41 @@
+{
+  "patient_name": "Ana Betz",
+  "patient_id": "PAC001",
+  "visit_date": "2026-01-18",
+  "clinical_values": {
+    "hemoglobin": 9.2,
+    "bp_systolic": 155,
+    "bp_diastolic": 98,
+    "gestational_age": 34,
+    "proteinuria": "3+",
+    "weight": 70.5,
+    "fundal_height": 31,
+    "edema": true
+  },
+  "risk_assessment": {
+    "level": "red",
+    "score": 12,
+    "factors": [
+      "Mild anemia (Hb 9.2 g/dL)",
+      "Stage 2 hypertension (BP 155/98)",
+      "Severe proteinuria (3+)",
+      "Edema present",
+      "Pre-eclampsia symptoms: headache, visual changes, swelling, abdominal pain",
+      "PRE-ECLAMPSIA LIKELY: Hypertension + Proteinuria",
+      "Persistent proteinuria across visits"
+    ],
+    "recommendations": [
+      "Oral iron supplementation advised",
+      "Assess for pre-eclampsia symptoms",
+      "Monitor BP weekly, consider antihypertensive therapy",
+      "High risk for pre-eclampsia - immediate evaluation",
+      "Monitor for progression, assess BP and proteinuria",
+      "Screen for pre-eclampsia (BP, proteinuria, liver/kidney function)",
+      "URGENT: Immediate referral to hospital for pre-eclampsia workup",
+      "Consider magnesium sulfate prophylaxis, monitor for eclampsia",
+      "Late preterm - monitor for preterm labor signs",
+      "Monitor kidney function, consider specialist referral"
+    ]
+  },
+  "timestamp": "2026-01-20T10:40:10.193626"
+}

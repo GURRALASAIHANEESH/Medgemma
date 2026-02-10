@@ -1,0 +1,43 @@
+# Virtual Environment
+venv/
+env/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Model files (too large for git)
+model_offload/
+medgemma_clean/
+*.bin
+*.safetensors
+
+# Artifacts
+artifacts/backend_runs/
+outputs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test outputs
+*.log
+*.txt

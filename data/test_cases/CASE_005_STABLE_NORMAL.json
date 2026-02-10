@@ -1,0 +1,50 @@
+{
+    "case_id": "CASE_005_STABLE_NORMAL",
+    "description": "All vitals normal and stable across visits",
+    "anc_card_image": null,
+    "lab_report_image": null,
+    "lab_report_json": null,
+    "lab_report_date": "2026-02-02",
+    "visits": [
+        {
+            "date": "2025-11-05",
+            "ga_weeks": 16,
+            "bp_systolic": 118,
+            "bp_diastolic": 76,
+            "hb": 12.2,
+            "proteinuria": "nil",
+            "platelets": 220000
+        },
+        {
+            "date": "2025-12-10",
+            "ga_weeks": 20,
+            "bp_systolic": 120,
+            "bp_diastolic": 78,
+            "hb": 12.0,
+            "proteinuria": "nil",
+            "platelets": 215000
+        },
+        {
+            "date": "2026-01-15",
+            "ga_weeks": 24,
+            "bp_systolic": 119,
+            "bp_diastolic": 77,
+            "hb": 11.9,
+            "proteinuria": "nil",
+            "platelets": 210000
+        }
+    ],
+    "symptoms": {
+        "headache": false,
+        "blurred_vision": false,
+        "fever": false,
+        "bleeding_gums": false,
+        "epigastric_pain": false
+    },
+    "expected": {
+        "risk_category": "LOW",
+        "referral_required": false,
+        "evidence_items_count": 0,
+        "lab_age_warning": false
+    }
+}

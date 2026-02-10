@@ -1,0 +1,32 @@
+{
+  "showcase_case_count": 10,
+  "ai_success_count": 10,
+  "fallback_count": 0,
+  "average_confidence": null,
+  "median_inference_time_ms": 1644388,
+  "hardware_used": "CPU",
+  "case_ids": [
+    "case_006",
+    "case_012",
+    "case_016",
+    "case_022",
+    "case_028",
+    "case_032",
+    "case_038",
+    "case_041",
+    "case_045",
+    "case_048"
+  ],
+  "notes": {
+    "case_006": "MedGemma successfully generated clinical explanation",
+    "case_012": "MedGemma successfully generated clinical explanation",
+    "case_016": "MedGemma successfully generated clinical explanation",
+    "case_022": "MedGemma successfully generated clinical explanation",
+    "case_028": "MedGemma successfully generated clinical explanation",
+    "case_032": "MedGemma successfully generated clinical explanation",
+    "case_038": "MedGemma successfully generated clinical explanation",
+    "case_041": "MedGemma successfully generated clinical explanation",
+    "case_045": "MedGemma successfully generated clinical explanation",
+    "case_048": "MedGemma successfully generated clinical explanation"
+  }
+}

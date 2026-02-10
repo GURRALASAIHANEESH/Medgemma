@@ -1,0 +1,292 @@
+{
+    "patients": [
+        {
+            "id": "DEMO_001",
+            "name": "Lakshmi Devi",
+            "age": 24,
+            "phoneNumber": "9876543210",
+            "lmpDate": "2025-09-15",
+            "village": "Koduru",
+            "riskLevel": "High",
+            "createdAt": "2026-01-05T09:30:00Z",
+            "lastVisit": "2026-02-08T14:20:00Z"
+        },
+        {
+            "id": "DEMO_002",
+            "name": "Rajeshwari Patel",
+            "age": 29,
+            "phoneNumber": "9123456789",
+            "lmpDate": "2025-10-10",
+            "village": "Bellampalli",
+            "riskLevel": "Medium",
+            "createdAt": "2026-01-08T11:15:00Z",
+            "lastVisit": "2026-02-07T10:45:00Z"
+        },
+        {
+            "id": "DEMO_003",
+            "name": "Sunita Kumari",
+            "age": 21,
+            "phoneNumber": "8765432109",
+            "lmpDate": "2025-11-01",
+            "village": "Mancherial",
+            "riskLevel": "Low",
+            "createdAt": "2026-01-12T08:00:00Z",
+            "lastVisit": "2026-02-06T16:30:00Z"
+        },
+        {
+            "id": "DEMO_004",
+            "name": "Anita Reddy",
+            "age": 32,
+            "phoneNumber": "7890123456",
+            "lmpDate": "2025-08-20",
+            "village": "Nirmal",
+            "riskLevel": "High",
+            "createdAt": "2026-01-15T13:45:00Z",
+            "lastVisit": "2026-02-08T11:00:00Z"
+        },
+        {
+            "id": "DEMO_005",
+            "name": "Priya Sharma",
+            "age": 26,
+            "phoneNumber": "9988776655",
+            "lmpDate": "2025-10-25",
+            "village": "Asifabad",
+            "riskLevel": "Low",
+            "createdAt": "2026-01-18T10:20:00Z",
+            "lastVisit": "2026-02-05T09:15:00Z"
+        },
+        {
+            "id": "DEMO_006",
+            "name": "Kavitha Naik",
+            "age": 28,
+            "phoneNumber": "8877665544",
+            "lmpDate": "2025-09-05",
+            "village": "Khanapur",
+            "riskLevel": "Medium",
+            "createdAt": "2026-01-20T14:00:00Z",
+            "lastVisit": "2026-02-09T08:30:00Z"
+        },
+        {
+            "id": "DEMO_007",
+            "name": "Meena Yadav",
+            "age": 23,
+            "phoneNumber": "7766554433",
+            "lmpDate": "2025-11-15",
+            "village": "Utnoor",
+            "riskLevel": "Low",
+            "createdAt": "2026-01-22T09:45:00Z",
+            "lastVisit": "2026-02-04T15:20:00Z"
+        },
+        {
+            "id": "DEMO_008",
+            "name": "Shanthi Bai",
+            "age": 35,
+            "phoneNumber": "6655443322",
+            "lmpDate": "2025-08-10",
+            "village": "Tiryani",
+            "riskLevel": "High",
+            "createdAt": "2026-01-25T11:30:00Z",
+            "lastVisit": "2026-02-08T13:40:00Z"
+        },
+        {
+            "id": "DEMO_009",
+            "name": "Geetha Devi",
+            "age": 27,
+            "phoneNumber": "9876501234",
+            "lmpDate": "2025-10-05",
+            "village": "Luxettipet",
+            "riskLevel": "Medium",
+            "createdAt": "2026-01-28T08:15:00Z",
+            "lastVisit": "2026-02-07T12:00:00Z"
+        },
+        {
+            "id": "DEMO_010",
+            "name": "Padma Lakshmi",
+            "age": 22,
+            "phoneNumber": "8765012345",
+            "lmpDate": "2025-11-20",
+            "village": "Jannaram",
+            "riskLevel": "Low",
+            "createdAt": "2026-02-01T10:00:00Z",
+            "lastVisit": "2026-02-08T17:00:00Z"
+        }
+    ],
+    "visits": [
+        {
+            "id": "VISIT_001_001",
+            "patientId": "DEMO_001",
+            "visitDate": "2026-01-15T10:00:00Z",
+            "bloodPressure": "145/95",
+            "weight": 62,
+            "hemoglobin": 10.2,
+            "riskLevel": "High",
+            "recommendations": [
+                "Immediate referral to PHC for hypertension management",
+                "Monitor blood pressure daily",
+                "Iron and folic acid supplementation required"
+            ],
+            "processingStatus": "Completed",
+            "createdAt": "2026-01-15T10:00:00Z"
+        },
+        {
+            "id": "VISIT_001_002",
+            "patientId": "DEMO_001",
+            "visitDate": "2026-02-08T14:20:00Z",
+            "bloodPressure": "142/92",
+            "weight": 63,
+            "hemoglobin": 10.5,
+            "riskLevel": "High",
+            "recommendations": [
+                "Continue PHC monitoring",
+                "Blood pressure still elevated - medication review needed",
+                "Continue iron supplementation"
+            ],
+            "processingStatus": "Completed",
+            "createdAt": "2026-02-08T14:20:00Z"
+        },
+        {
+            "id": "VISIT_002_001",
+            "patientId": "DEMO_002",
+            "visitDate": "2026-02-07T10:45:00Z",
+            "bloodPressure": "132/86",
+            "weight": 58,
+            "hemoglobin": 11.8,
+            "riskLevel": "Medium",
+            "recommendations": [
+                "Schedule follow-up within 1 week",
+                "Monitor blood pressure regularly",
+                "Continue routine antenatal care"
+            ],
+            "processingStatus": "Completed",
+            "createdAt": "2026-02-07T10:45:00Z"
+        },
+        {
+            "id": "VISIT_003_001",
+            "patientId": "DEMO_003",
+            "visitDate": "2026-02-06T16:30:00Z",
+            "bloodPressure": "118/76",
+            "weight": 55,
+            "hemoglobin": 12.1,
+            "riskLevel": "Low",
+            "recommendations": [
+                "Continue routine antenatal care",
+                "Next visit in 4 weeks",
+                "Maintain healthy diet and regular exercise"
+            ],
+            "processingStatus": "Completed",
+            "createdAt": "2026-02-06T16:30:00Z"
+        },
+        {
+            "id": "VISIT_004_001",
+            "patientId": "DEMO_004",
+            "visitDate": "2026-02-08T11:00:00Z",
+            "bloodPressure": "152/98",
+            "weight": 68,
+            "hemoglobin": 9.8,
+            "riskLevel": "High",
+            "recommendations": [
+                "Urgent referral to District Hospital",
+                "Severe hypertension detected",
+                "Immediate iron supplementation and monitoring"
+            ],
+            "processingStatus": "Completed",
+            "createdAt": "2026-02-08T11:00:00Z"
+        },
+        {
+            "id": "VISIT_005_001",
+            "patientId": "DEMO_005",
+            "visitDate": "2026-02-05T09:15:00Z",
+            "bloodPressure": "115/72",
+            "weight": 60,
+            "hemoglobin": 12.5,
+            "riskLevel": "Low",
+            "recommendations": [
+                "Excellent vitals - continue current care",
+                "Next visit in 4 weeks",
+                "Keep up good nutrition"
+            ],
+            "processingStatus": "Completed",
+            "createdAt": "2026-02-05T09:15:00Z"
+        },
+        {
+            "id": "VISIT_006_001",
+            "patientId": "DEMO_006",
+            "visitDate": "2026-02-09T08:30:00Z",
+            "bloodPressure": "128/84",
+            "weight": 65,
+            "hemoglobin": 11.2,
+            "riskLevel": "Medium",
+            "recommendations": [
+                "Monitor blood pressure weekly",
+                "Continue iron supplementation",
+                "Follow-up in 2 weeks"
+            ],
+            "processingStatus": "Completed",
+            "createdAt": "2026-02-09T08:30:00Z"
+        },
+        {
+            "id": "VISIT_007_001",
+            "patientId": "DEMO_007",
+            "visitDate": "2026-02-04T15:20:00Z",
+            "bloodPressure": "112/70",
+            "weight": 52,
+            "hemoglobin": 12.0,
+            "riskLevel": "Low",
+            "recommendations": [
+                "All parameters normal",
+                "Continue routine care",
+                "Next visit in 4 weeks"
+            ],
+            "processingStatus": "Completed",
+            "createdAt": "2026-02-04T15:20:00Z"
+        },
+        {
+            "id": "VISIT_008_001",
+            "patientId": "DEMO_008",
+            "visitDate": "2026-02-08T13:40:00Z",
+            "bloodPressure": "148/94",
+            "weight": 70,
+            "hemoglobin": 10.0,
+            "riskLevel": "High",
+            "recommendations": [
+                "Immediate PHC referral required",
+                "High risk pregnancy - close monitoring needed",
+                "Start iron and antihypertensive medication"
+            ],
+            "processingStatus": "Completed",
+            "createdAt": "2026-02-08T13:40:00Z"
+        },
+        {
+            "id": "VISIT_009_001",
+            "patientId": "DEMO_009",
+            "visitDate": "2026-02-07T12:00:00Z",
+            "bloodPressure": "130/85",
+            "weight": 59,
+            "hemoglobin": 11.5,
+            "riskLevel": "Medium",
+            "recommendations": [
+                "Blood pressure borderline - monitor closely",
+                "Schedule follow-up in 1 week",
+                "Continue current supplements"
+            ],
+            "processingStatus": "Completed",
+            "createdAt": "2026-02-07T12:00:00Z"
+        },
+        {
+            "id": "VISIT_010_001",
+            "patientId": "DEMO_010",
+            "visitDate": "2026-02-08T17:00:00Z",
+            "bloodPressure": "116/74",
+            "weight": 54,
+            "hemoglobin": 12.3,
+            "riskLevel": "Low",
+            "recommendations": [
+                "Perfect health indicators",
+                "Maintain current lifestyle",
+                "Next visit in 4 weeks"
+            ],
+            "processingStatus": "Completed",
+            "createdAt": "2026-02-08T17:00:00Z"
+        }
+    ]
+}

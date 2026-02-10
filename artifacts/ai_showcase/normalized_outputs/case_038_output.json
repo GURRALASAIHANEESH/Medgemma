@@ -1,0 +1,30 @@
+{
+  "case_id": "case_038",
+  "timestamp": "2026-02-08T11:14:02.008892Z",
+  "rule_assessment": {
+    "risk_category": "LOW",
+    "evidence": [],
+    "primary_reason": ""
+  },
+  "ai_explanation": {
+    "source": "medgemma",
+    "text": "---\n```\n*   **Evidence Summary:** The patient's weight is 110 lbs, BP is 130/80 mmHg, hemoglobin is 11.5 g/dL, proteinuria is negative, fundal height is 33 cm, and fetal heart rate is 140 bpm.\n*   **Clinical Relevance:** Weight and BP are within normal limits, but hemoglobin is borderline low, and fundal height is slightly above expected for gestational age, suggesting potential intrauterine growth restriction (IUGR).\n*   **Escalation:** Escalation occurred because the borderline low hemoglobin and slightly increased fundal height warrant further investigation for potential fetal compromise or placental insufficiency, raising the risk of adverse pregnancy outcomes.\n*   **Prevention:** This review aims to prevent complications such as fetal growth restriction, preterm birth, and low birth weight associated with underlying placental issues or maternal anemia.\n```\n---\n```\n*   **Evidence Summary:** The patient's weight is 110 lbs, BP is 130/80 mmHg, hemoglobin is 11.5 g/dL, proteinuria is negative, fundal height is 33 cm, and fetal heart rate is 140 bpm.\n*   **Clinical Relevance:** Weight and BP are within normal limits, but hemoglobin is borderline low, and fundal height is slightly above expected for gestational age, suggesting potential intrauterine growth restriction (IUGR).\n*   **Escalation:** Escalation occurred because the borderline low hemoglobin and slightly increased fundal height warrant further investigation for potential fetal compromise or placental insufficiency, raising the risk of adverse pregnancy outcomes.\n*   **Prevention:** This review aims to prevent complications such as fetal growth restriction, preterm birth, and low birth weight associated with underlying placental issues or maternal anemia.\n```\n---\n```\n*   **Evidence Summary:** The patient's weight is 110 lbs, BP is 130/80 mmHg, hemoglobin is 11.5 g/dL, proteinuria is negative, fundal height is 33 cm, and fetal heart rate is 140 bpm.\n*   **Clinical Relevance:** Weight and BP are within normal limits, but hemoglobin is borderline low, and fundal height is slightly above expected for gestational age, suggesting potential intrauterine growth restriction (IUGR).\n*   **Escalation:** Escalation occurred because the borderline low hemoglobin and slightly increased fundal height warrant further investigation for",
+    "qc_pass": true,
+    "confidence": null,
+    "inference_time_ms": 1611105
+  },
+  "symptoms": {
+    "visit_id": "v2",
+    "gestational_age": 32,
+    "weight": 60.028118917664365,
+    "bp": {
+      "systolic": 117,
+      "diastolic": 73
+    },
+    "hemoglobin": 11.08147603288295,
+    "proteinuria": "nil",
+    "fundal_height": 23,
+    "fetal_heart_rate": 141
+  },
+  "visits_analyzed": 2
+}

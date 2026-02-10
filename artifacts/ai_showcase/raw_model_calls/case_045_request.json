@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-02-08T11:41:02.451545Z",
+  "case_id": "case_045",
+  "evidence_summary": [],
+  "rule_reason": "",
+  "risk_category": "MODERATE",
+  "symptoms": {
+    "visit_id": "v2",
+    "gestational_age": 35,
+    "weight": 71.08961871039075,
+    "bp": {
+      "systolic": 143,
+      "diastolic": 90
+    },
+    "hemoglobin": 10.688797477267414,
+    "proteinuria": "+1",
+    "platelets_k_ul": 138,
+    "fundal_height": 31,
+    "fetal_heart_rate": 146,
+    "notes": "Platlt: 95 x10^3/uL (OCR noise)"
+  },
+  "lab_age_days": 0
+}

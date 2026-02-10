@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-02-08T11:14:02.035891Z",
+  "case_id": "case_041",
+  "evidence_summary": [],
+  "rule_reason": "",
+  "risk_category": "LOW",
+  "symptoms": {
+    "visit_id": "v2",
+    "gestational_age": 28,
+    "weight": 67.23824373520598,
+    "bp": {
+      "systolic": 123,
+      "diastolic": 78
+    },
+    "hemoglobin": 11.791957205575644,
+    "proteinuria": "nil",
+    "fundal_height": 22,
+    "fetal_heart_rate": 141
+  },
+  "lab_age_days": 0
+}

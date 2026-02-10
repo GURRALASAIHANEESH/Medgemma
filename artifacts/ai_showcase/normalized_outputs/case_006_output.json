@@ -1,0 +1,31 @@
+{
+  "case_id": "case_006",
+  "timestamp": "2026-02-08T08:28:39.817602Z",
+  "rule_assessment": {
+    "risk_category": "MODERATE",
+    "evidence": [],
+    "primary_reason": ""
+  },
+  "ai_explanation": {
+    "source": "medgemma",
+    "text": "---\n## Explanation for Moderate Risk Category\n\n**Why the evidence matters clinically:**\n\n*   The combination of elevated blood pressure and proteinuria indicates potential preeclampsia, a serious condition affecting both mother and fetus.\n\n**Why escalation occurred now:**\n\n*   The patient's gestational age, coupled with these findings, places her at increased risk for developing severe preeclampsia and associated complications like eclampsia and fetal growth restriction.\n\n**What complication(s) this aims to prevent:**\n\n*   This moderate risk category focuses on monitoring for the progression to severe preeclampsia, placental abruption, and fetal compromise.\n---\n## Reviewer Notes\n\n*   **evidence_summary:** none\n*   **symptoms:** visit_id, gestational_age, weight, bp, hemoglobin, proteinuria, platelets_k_ul, fundal_height, fetal_heart_rate\n*   **lab_age_days:** 0\n\n---\n**Explanation for Moderate Risk Category**\n\n**Why the evidence matters clinically:**\n\n*   Elevated blood pressure (BP) and proteinuria are key indicators of potential preeclampsia, a condition that can significantly impact maternal and fetal health if not managed appropriately.\n\n**Why escalation occurred now:**\n\n*   Given the patient's gestational age and the presence of these concerning signs, the risk of developing severe preeclampsia increases, necessitating closer monitoring and potential intervention.\n\n**What complication(s) this aims to prevent:**\n\n*   This moderate risk level serves as an alert to anticipate the potential progression to severe preeclampsia, eclampsia, HELLP syndrome, and fetal growth restriction.\n\n---\n**Reviewer Notes**\n\n*   **evidence_summary:** none\n*   **symptoms:** visit_id, gestational_age, weight, bp, hemoglobin, proteinuria, platelets_k_ul, fundal_height, fetal_heart_rate\n*   **lab_age_days:** 0\n\n---\n**Explanation for Moderate Risk Category**\n\n**Why the evidence matters clinically:**\n\n*   The presence of elevated blood pressure (BP) and proteinuria, even without severe symptoms, signals a potential risk for developing preeclampsia, a major cause of maternal and fetal morbidity.\n\n**Why escalation occurred now:**\n\n*   Based on the combination of these findings at this specific gestational age, the risk of progression to severe preeclampsia and associated adverse outcomes warrants increased surveillance and potential management adjustments.\n\n**What complication(s) this aims to prevent:**\n\n*   This",
+    "qc_pass": true,
+    "confidence": null,
+    "inference_time_ms": 1641634
+  },
+  "symptoms": {
+    "visit_id": "v2",
+    "gestational_age": 33,
+    "weight": 66.21833108442964,
+    "bp": {
+      "systolic": 150,
+      "diastolic": 95
+    },
+    "hemoglobin": 10.101257041970253,
+    "proteinuria": "+1",
+    "platelets_k_ul": 129,
+    "fundal_height": 29,
+    "fetal_heart_rate": 141
+  },
+  "visits_analyzed": 2
+}

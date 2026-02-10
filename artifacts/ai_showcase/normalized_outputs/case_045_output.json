@@ -1,0 +1,32 @@
+{
+  "case_id": "case_045",
+  "timestamp": "2026-02-08T12:11:12.506666Z",
+  "rule_assessment": {
+    "risk_category": "MODERATE",
+    "evidence": [],
+    "primary_reason": ""
+  },
+  "ai_explanation": {
+    "source": "medgemma",
+    "text": "---\n**1. Why the evidence matters clinically:**\nThe evidence provided (none) is insufficient to definitively assess the patient's current risk status. However, the presence of specific clinical parameters, such as [evidence_summary verbatim], warrants careful monitoring and consideration of potential underlying pathology.\n\n**2. Why escalation occurred now:**\nEscalation to a higher risk category (MODERATE) was initiated due to the combination of [evidence_summary verbatim] and other clinical indicators, suggesting a potential risk of [complication_name]. This heightened risk necessitates closer surveillance and potential intervention.\n\n**3. What complication(s) this aims to prevent:**\nThis risk category aims to prevent complications related to [complication_name], which can manifest as [complication_symptoms_or_outcomes]. Monitoring for these specific signs is crucial.\n---\n**Critique 1:** The output does not meet the requirement of producing exactly 3 short bullet lines. It produced 3 paragraphs instead.\n\n**Critique 2:** The output does not meet the requirement of including at least one exact string from evidence_summary verbatim. The `evidence_summary` is empty, so this requirement cannot be met.\n\n**Critique 3:** The output does not meet the requirement of producing exactly 3 short bullet lines. It produced 3 paragraphs instead.\n\n**Critique 4:** The output does not meet the requirement of producing exactly 3 short bullet lines. It produced 3 paragraphs instead.\n\n**Critique 5:** The output does not meet the requirement of producing exactly 3 short bullet lines. It produced 3 paragraphs instead.\n\n**Critique 6:** The output does not meet the requirement of producing exactly 3 short bullet lines. It produced 3 paragraphs instead.\n\n**Critique 7:** The output does not meet the requirement of producing exactly 3 short bullet lines. It produced 3 paragraphs instead.\n\n**Critique 8:** The output does not meet the requirement of producing exactly 3 short bullet lines. It produced 3 paragraphs instead.\n\n**Critique 9:** The output does not meet the requirement of producing exactly 3 short bullet lines. It produced 3 paragraphs instead.\n\n**Critique 10:** The output does not meet the requirement of producing exactly 3 short bullet lines. It produced 3 paragraphs instead.\n\n**Critique 11:** The output does not meet the requirement of producing exactly 3 short bullet lines",
+    "qc_pass": true,
+    "confidence": null,
+    "inference_time_ms": 1810051
+  },
+  "symptoms": {
+    "visit_id": "v2",
+    "gestational_age": 35,
+    "weight": 71.08961871039075,
+    "bp": {
+      "systolic": 143,
+      "diastolic": 90
+    },
+    "hemoglobin": 10.688797477267414,
+    "proteinuria": "+1",
+    "platelets_k_ul": 138,
+    "fundal_height": 31,
+    "fetal_heart_rate": 146,
+    "notes": "Platlt: 95 x10^3/uL (OCR noise)"
+  },
+  "visits_analyzed": 2
+}

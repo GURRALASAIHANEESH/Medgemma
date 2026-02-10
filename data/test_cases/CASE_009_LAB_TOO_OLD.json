@@ -1,0 +1,41 @@
+{
+    "case_id": "CASE_009_LAB_TOO_OLD",
+    "description": "Lab report 120 days old, recommend retest",
+    "anc_card_image": null,
+    "lab_report_image": null,
+    "lab_report_json": null,
+    "lab_report_date": "2025-10-05",
+    "visits": [
+        {
+            "date": "2025-08-15",
+            "ga_weeks": 14,
+            "bp_systolic": 130,
+            "bp_diastolic": 85,
+            "hb": 10.9,
+            "proteinuria": "trace",
+            "platelets": 175000
+        },
+        {
+            "date": "2025-09-20",
+            "ga_weeks": 18,
+            "bp_systolic": 136,
+            "bp_diastolic": 88,
+            "hb": 10.6,
+            "proteinuria": "+1",
+            "platelets": 170000
+        }
+    ],
+    "symptoms": {
+        "headache": false,
+        "blurred_vision": false,
+        "fever": false,
+        "bleeding_gums": false,
+        "epigastric_pain": false
+    },
+    "expected": {
+        "risk_category": "MODERATE",
+        "referral_required": false,
+        "evidence_items_count": 1,
+        "lab_age_warning": true
+    }
+}

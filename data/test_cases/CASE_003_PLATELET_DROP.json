@@ -1,0 +1,50 @@
+{
+    "case_id": "CASE_003_PLATELET_DROP",
+    "description": "Progressive platelet decline with bleeding gums",
+    "anc_card_image": null,
+    "lab_report_image": null,
+    "lab_report_json": null,
+    "lab_report_date": "2026-02-01",
+    "visits": [
+        {
+            "date": "2025-11-10",
+            "ga_weeks": 22,
+            "bp_systolic": 115,
+            "bp_diastolic": 75,
+            "hb": 11.2,
+            "proteinuria": "nil",
+            "platelets": 180000
+        },
+        {
+            "date": "2025-12-15",
+            "ga_weeks": 26,
+            "bp_systolic": 118,
+            "bp_diastolic": 76,
+            "hb": 11.0,
+            "proteinuria": "nil",
+            "platelets": 120000
+        },
+        {
+            "date": "2026-01-20",
+            "ga_weeks": 30,
+            "bp_systolic": 120,
+            "bp_diastolic": 78,
+            "hb": 10.8,
+            "proteinuria": "trace",
+            "platelets": 85000
+        }
+    ],
+    "symptoms": {
+        "headache": false,
+        "blurred_vision": false,
+        "fever": false,
+        "bleeding_gums": true,
+        "epigastric_pain": false
+    },
+    "expected": {
+        "risk_category": "HIGH",
+        "referral_required": true,
+        "evidence_items_count": 2,
+        "lab_age_warning": false
+    }
+}

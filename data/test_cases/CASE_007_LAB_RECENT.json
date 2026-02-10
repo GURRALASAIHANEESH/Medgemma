@@ -1,0 +1,41 @@
+{
+    "case_id": "CASE_007_LAB_RECENT",
+    "description": "Lab report 25 days old with minor confidence penalty",
+    "anc_card_image": null,
+    "lab_report_image": null,
+    "lab_report_json": null,
+    "lab_report_date": "2026-01-10",
+    "visits": [
+        {
+            "date": "2025-11-20",
+            "ga_weeks": 18,
+            "bp_systolic": 125,
+            "bp_diastolic": 82,
+            "hb": 10.5,
+            "proteinuria": "trace",
+            "platelets": 160000
+        },
+        {
+            "date": "2025-12-25",
+            "ga_weeks": 22,
+            "bp_systolic": 135,
+            "bp_diastolic": 87,
+            "hb": 10.2,
+            "proteinuria": "+1",
+            "platelets": 155000
+        }
+    ],
+    "symptoms": {
+        "headache": false,
+        "blurred_vision": false,
+        "fever": false,
+        "bleeding_gums": false,
+        "epigastric_pain": false
+    },
+    "expected": {
+        "risk_category": "MODERATE",
+        "referral_required": false,
+        "evidence_items_count": 2,
+        "lab_age_warning": false
+    }
+}

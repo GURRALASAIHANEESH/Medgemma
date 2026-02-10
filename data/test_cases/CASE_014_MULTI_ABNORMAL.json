@@ -1,0 +1,42 @@
+{
+    "case_id": "CASE_014_MULTI_ABNORMAL",
+    "description": "Multiple abnormalities: low platelets, proteinuria, high BP",
+    "anc_card_image": null,
+    "lab_report_image": null,
+    "lab_report_json": null,
+    "lab_report_date": "2026-02-01",
+    "visits": [
+        {
+            "date": "2025-11-01",
+            "ga_weeks": 18,
+            "bp_systolic": 125,
+            "bp_diastolic": 82,
+            "hb": 11.0,
+            "proteinuria": "trace",
+            "platelets": 180000
+        },
+        {
+            "date": "2025-12-05",
+            "ga_weeks": 22,
+            "bp_systolic": 140,
+            "bp_diastolic": 92,
+            "hb": 10.5,
+            "proteinuria": "+2",
+            "platelets": 95000
+        }
+    ],
+    "symptoms": {
+        "headache": true,
+        "blurred_vision": true,
+        "fever": false,
+        "bleeding_gums": true,
+        "epigastric_pain": false,
+        "edema": true
+    },
+    "expected": {
+        "risk_category": "HIGH",
+        "referral_required": true,
+        "evidence_items_count": 4,
+        "lab_age_warning": false
+    }
+}

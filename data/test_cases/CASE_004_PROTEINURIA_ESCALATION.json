@@ -1,0 +1,51 @@
+{
+    "case_id": "CASE_004_PROTEINURIA_ESCALATION",
+    "description": "Progressive proteinuria with edema",
+    "anc_card_image": null,
+    "lab_report_image": null,
+    "lab_report_json": null,
+    "lab_report_date": "2026-01-30",
+    "visits": [
+        {
+            "date": "2025-10-20",
+            "ga_weeks": 18,
+            "bp_systolic": 125,
+            "bp_diastolic": 82,
+            "hb": 11.5,
+            "proteinuria": "trace",
+            "platelets": 190000
+        },
+        {
+            "date": "2025-11-25",
+            "ga_weeks": 22,
+            "bp_systolic": 132,
+            "bp_diastolic": 86,
+            "hb": 11.2,
+            "proteinuria": "+1",
+            "platelets": 185000
+        },
+        {
+            "date": "2026-01-05",
+            "ga_weeks": 26,
+            "bp_systolic": 138,
+            "bp_diastolic": 90,
+            "hb": 11.0,
+            "proteinuria": "+3",
+            "platelets": 180000
+        }
+    ],
+    "symptoms": {
+        "headache": true,
+        "blurred_vision": false,
+        "fever": false,
+        "bleeding_gums": false,
+        "epigastric_pain": false,
+        "edema": true
+    },
+    "expected": {
+        "risk_category": "HIGH",
+        "referral_required": true,
+        "evidence_items_count": 3,
+        "lab_age_warning": false
+    }
+}
